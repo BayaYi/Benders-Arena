@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class DiceMechanics : MonoBehaviour
 {
+    public int DiceType = 0;
+    public int DiceAmount = 0;
     public int[] dices = null;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +18,7 @@ public class DiceMechanics : MonoBehaviour
     void Update()
     {
 
-        allDices(6,3);
+        allDices(DiceType,DiceAmount); 
         DiceToConsole();
         
     }
