@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class CharacterCreating : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public string characterName;
+    public string alignment;
+    public int strength;
+    public int dexterity;
+    public int constitution;
+    public int intelligence;
+    public int physicalPower;
+    public int chiPower;
+    public int charisma;
     void Start()
     {
-        
+        Debug.Log("7 puaný maksimum 3 minimum -2 olmak üzere statlara daðýtýn");
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+
     }
 }
