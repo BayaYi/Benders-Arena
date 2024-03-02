@@ -13,13 +13,23 @@ public class DiceMechanics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(ShowDice(6));//Show Random Dice Numbers
+        
     }
 
-    public int ShowDice(int DiceType)
+    public int dice(int DiceType)//Istenilen Yuze Sahip Zar Donduren Class
     {
-        int randomDice = Random.Range(0, DiceType);
-        return randomDice;
+        int dice = Random.Range(0, DiceType);
+        return dice;
     }
 
+
+    public int[] allDices(int DiceType,int DiceAmount)
+    {
+        int[] allDices = null;
+        for(int i = 0;i < DiceAmount; i++)
+        {
+            allDices[i] = dice(DiceType);
+        }
+        return allDices[DiceAmount];
+    }
 }
