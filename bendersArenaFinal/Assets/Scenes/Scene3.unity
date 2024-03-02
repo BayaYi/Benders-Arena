@@ -1020,7 +1020,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 552754470}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1238809844}
+        m_TargetAssemblyTypeName: Scene3Code, Assembly-CSharp
+        m_MethodName: GeriGit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &552754470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1140,7 +1152,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 701353003}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1238809844}
+        m_TargetAssemblyTypeName: Scene3Code, Assembly-CSharp
+        m_MethodName: SettingsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &701353003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2002,6 +2026,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125064533}
   m_CullTransparentMesh: 1
+--- !u!1 &1238809843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1238809845}
+  - component: {fileID: 1238809844}
+  m_Layer: 0
+  m_Name: Scene3GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1238809844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238809843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aea4668ba0a28d45afdc1e03ff8773e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "geriD\xF6n\xFC\u015FSahneIndex": 0
+--- !u!4 &1238809845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238809843}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 444.24384, y: 199.83684, z: 0.33485413}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1298073428
 GameObject:
   m_ObjectHideFlags: 0
@@ -3319,3 +3388,4 @@ SceneRoots:
   - {fileID: 157723051}
   - {fileID: 2105426219}
   - {fileID: 1114524390}
+  - {fileID: 1238809845}
