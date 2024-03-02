@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DiceMechanics : MonoBehaviour
 {
+    public int[] dices = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,23 +15,32 @@ public class DiceMechanics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        allDices(6,3);
+        DiceToConsole();
         
     }
 
     public int dice(int DiceType)//Istenilen Yuze Sahip Zar Donduren Class
     {
-        int dice = Random.Range(0, DiceType);
+        int dice = UnityEngine.Random.Range(1, DiceType);
         return dice;
     }
 
 
-    public int[] allDices(int DiceType,int DiceAmount)
+    public void allDices(int DiceType,int DiceAmount)
     {
-        int[] allDices = null;
+        
         for(int i = 0;i < DiceAmount; i++)
         {
-            allDices[i] = dice(DiceType);
+            dices[i] = dice(DiceType);
         }
-        return allDices[DiceAmount];
+    }
+
+    public void DiceToConsole() {
+        Debug.Log(String.Join("/",
+            new List<int>(dices)
+            .ConvertAll(i => i.ToString())
+            .ToArray()));
     }
 }
