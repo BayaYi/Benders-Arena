@@ -38,6 +38,14 @@ public class Scene1Code : MonoBehaviour
         SceneManager.LoadScene(geriDönüşSahneIndex);
     }
 
+    public void CreativeButton()
+    {
+        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+        SceneManager.LoadScene(3);
+    }
+
+     // Butona tıklanınca çalışacak fonksiyon
+
 }
 
 

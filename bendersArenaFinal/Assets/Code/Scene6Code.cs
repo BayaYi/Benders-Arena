@@ -28,4 +28,9 @@ public class Scene6Code : MonoBehaviour
         // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
         SceneManager.LoadScene(2);
     }
+    public void AddNewScenarioButton()
+    {
+        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+        SceneManager.LoadScene(7);
+    }
 }
