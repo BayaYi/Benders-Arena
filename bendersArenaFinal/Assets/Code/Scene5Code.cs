@@ -28,4 +28,14 @@ public class Scene5Code : MonoBehaviour
         // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
         SceneManager.LoadScene(2);
     }
+    public void CreateANewLobbyButton()
+    {
+        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+        SceneManager.LoadScene(6);
+    }
+    public void JoinANewLobbyButton()
+    {
+        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+        SceneManager.LoadScene(5);
+    }
 }
