@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene9.unity
     guid: d54ec653ec520b8499be5b673ef494ae
+  - enabled: 1
+    path: "Assets/Scenes/Karakter Ka\u011F\u0131d\u0131.unity"
+    guid: 9981490c6a2055240b9fa7aeb167dc14
+  - enabled: 1
+    path: "Assets/Scenes/Karakter Ka\u011F\u0131d\u01312.unity"
+    guid: 6d91faea56baf644896ac484e3ec1345
   m_configObjects: {}
