@@ -29,7 +29,7 @@ public class DiceMechanics : MonoBehaviour
         return dice;
     }
 
-
+    //Bir diziye istenilen türdeki zarýn istenilen sayýda atýp sonucunu döndüren method
     public void allDices(int DiceType,int DiceAmount)
     {
         
