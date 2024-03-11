@@ -31,9 +31,12 @@ public struct Weapon
 public class ShortBow
 {
     Weapon bowWeapon = new Weapon();
-    //bowWeapon.isMelee== true;
+     bowWeapon.isMelee = false;
 }
 public class LongBow 
 {
     public Weapon longBowBase;
+}
+void Update{
+    Debug.log(ShortBow.bowWeapon.isMelee);
 }
