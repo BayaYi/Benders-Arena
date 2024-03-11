@@ -54,16 +54,4 @@ public class ActionableTypes : MonoBehaviour
         weapon.damageDice = 10;
         weapon.diceNumber = 2;
     }
-}
-public class ShortBow
-{
-    Weapon bowWeapon = new Weapon();
-     bowWeapon.isMelee = false;
-}
-public class LongBow 
-{
-    public Weapon longBowBase;
-}
-void Update{
-    Debug.log(ShortBow.bowWeapon.isMelee);
-}
+}//yeni kod
