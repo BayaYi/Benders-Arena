@@ -5,15 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class Scene22Code : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
 
+ // Geri dönüş yapılacak sahnenin index değeri
+    public int geriDönüşSahneIndex = 0; // Varsayılan olarak ilk sahne index'i (0) kullanılır.
+
+void Start()
+    {
+        // Eğer geri dönüş yapılacak sahnenin index'i belirtilmemişse, ilk sahne index'ini al
+        if (geriDönüşSahneIndex == -1)
+        {
+            geriDönüşSahneIndex = 0;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    // Geri gitme işlevini sağlayan metod
+    public void GeriGit()
     {
-
+        // Belirtilen sahneye geri dön
+        SceneManager.LoadScene(geriDönüşSahneIndex);
     }
 }
