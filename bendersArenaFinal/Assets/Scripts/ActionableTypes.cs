@@ -54,4 +54,4 @@ public class ActionableTypes : MonoBehaviour
         weapon.damageDice = 10;
         weapon.diceNumber = 2;
     }
-}
+}//yeni kod
