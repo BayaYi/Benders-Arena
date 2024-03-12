@@ -5,16 +5,28 @@ using UnityEngine.UI;
 
 public class ArtiCode : MonoBehaviour
 {
-    [SerializeField] Text txtDisplayNumber;
+    [SerializeField] private Text txtDisplayNumber;
+    private int counter = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        DisplayTheNumber();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void IncreaseAndDisplay()
     {
+        IncreaseTheValueBy1();
+        DisplayTheNumber();
+    }
 
+    private void IncreaseTheValueBy1()
+    {
+        counter++;
+    }
+
+    private void DisplayTheNumber()
+    {
+        txtDisplayNumber.text = counter.ToString();
     }
 }

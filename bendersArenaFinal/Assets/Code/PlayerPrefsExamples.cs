@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class PlayerPrefsExamples : MonoBehaviour
 {
+
     [SerializeField] private InputField _nameInput;
     [SerializeField] private InputField _experienceInput;
     [SerializeField] private InputField _levelInput;
     private string _name;
     private float _experience;
     private int _level;
+
+
 
     public void SavePlayerData()
     {
@@ -37,7 +41,7 @@ public class PlayerPrefsExamples : MonoBehaviour
 
     public void QueryNameData()
     {
-        if(PlayerPrefs.HasKey("Name")) 
+        if(PlayerPrefs.HasKey("Name"))
         {
             Debug.Log("PlayerPrefs has 'Name' key!");
             return;
@@ -54,4 +58,6 @@ public class PlayerPrefsExamples : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
     }
+
+
 }
