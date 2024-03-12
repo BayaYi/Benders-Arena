@@ -37,7 +37,7 @@ public class PlayerPrefsExamples : MonoBehaviour
 
     public void QueryNameData()
     {
-        if(PlayerPrefs.HasKey("Name")) 
+        if(PlayerPrefs.HasKey("Name"))
         {
             Debug.Log("PlayerPrefs has 'Name' key!");
             return;
