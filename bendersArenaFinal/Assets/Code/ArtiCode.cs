@@ -6,45 +6,66 @@ using UnityEngine.UI;
 public class ArtiCode : MonoBehaviour
 {
     [SerializeField] private Text txtDisplayNumber;
-    private int counter = 0;
+    [SerializeField] private Text txtDisplayNumber1;
+    private int counter1 = 0;
+    private int counter2 = 0;
     private const int MaxValue = 7; // Artırma ve azaltma sınırları
 
     // Start is called before the first frame update
     void Start()
     {
-        DisplayTheNumber();
+        DisplayTheNumbers();
     }
 
-    public void IncreaseAndDisplay()
+    public void IncreaseAndDisplay1()
     {
-        if (counter < MaxValue) // Artırma sınırını kontrol et
+        if (counter1 < MaxValue) // Artırma sınırını kontrol et
         {
-            IncreaseTheValueBy1();
-            DisplayTheNumber();
+            IncreaseTheValueBy1(ref counter1);
+            DisplayTheNumbers();
         }
     }
 
-    public void DecreaseAndDisplay()
+    public void DecreaseAndDisplay1()
     {
-        if (counter > -MaxValue) // Azaltma sınırını kontrol et
+        if (counter1 > -MaxValue) // Azaltma sınırını kontrol et
         {
-            DecreaseTheValueBy1();
-            DisplayTheNumber();
+            DecreaseTheValueBy1(ref counter1);
+            DisplayTheNumbers();
         }
     }
 
-    private void IncreaseTheValueBy1()
+    public void IncreaseAndDisplay2()
     {
-        counter++;
+        if (counter2 < MaxValue) // Artırma sınırını kontrol et
+        {
+            IncreaseTheValueBy1(ref counter2);
+            DisplayTheNumbers();
+        }
     }
 
-    private void DecreaseTheValueBy1()
+    public void DecreaseAndDisplay2()
     {
-        counter--;
+        if (counter2 > -MaxValue) // Azaltma sınırını kontrol et
+        {
+            DecreaseTheValueBy1(ref counter2);
+            DisplayTheNumbers();
+        }
     }
 
-    private void DisplayTheNumber()
+    private void IncreaseTheValueBy1(ref int value)
     {
-        txtDisplayNumber.text = counter.ToString();
+        value++;
+    }
+
+    private void DecreaseTheValueBy1(ref int value)
+    {
+        value--;
+    }
+
+    private void DisplayTheNumbers()
+    {
+        txtDisplayNumber.text = counter1.ToString();
+        txtDisplayNumber1.text = counter2.ToString();
     }
 }
