@@ -22,6 +22,7 @@ public class PlayerPrefsExamples : MonoBehaviour
         _experience = float.Parse(_experienceInput.text);
         _level = int.Parse(_levelInput.text);
 
+
         PlayerPrefs.SetString("Name", _name);
         PlayerPrefs.SetFloat("Experience", _experience);
         PlayerPrefs.SetInt("Level", _level);
