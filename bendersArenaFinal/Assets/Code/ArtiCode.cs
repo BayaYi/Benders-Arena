@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,45 +9,49 @@ public class ArtiCode : MonoBehaviour
     private int counter2 = 0;
     private const int MaxValue = 7; // Artırma ve azaltma sınırları
 
-    // Start is called before the first frame update
     void Start()
     {
+        LoadCounters(); // Kaydedilen değerleri yükle
         DisplayTheNumbers();
     }
 
     public void IncreaseAndDisplay1()
     {
-        if (counter1 < MaxValue) // Artırma sınırını kontrol et
+        if (counter1 < MaxValue)
         {
             IncreaseTheValueBy1(ref counter1);
             DisplayTheNumbers();
+            SaveCounters(); // Değişiklikleri kaydet
         }
     }
 
     public void DecreaseAndDisplay1()
     {
-        if (counter1 > -MaxValue) // Azaltma sınırını kontrol et
+        if (counter1 > -MaxValue)
         {
             DecreaseTheValueBy1(ref counter1);
             DisplayTheNumbers();
+            SaveCounters(); // Değişiklikleri kaydet
         }
     }
 
     public void IncreaseAndDisplay2()
     {
-        if (counter2 < MaxValue) // Artırma sınırını kontrol et
+        if (counter2 < MaxValue)
         {
             IncreaseTheValueBy1(ref counter2);
             DisplayTheNumbers();
+            SaveCounters(); // Değişiklikleri kaydet
         }
     }
 
     public void DecreaseAndDisplay2()
     {
-        if (counter2 > -MaxValue) // Azaltma sınırını kontrol et
+        if (counter2 > -MaxValue)
         {
             DecreaseTheValueBy1(ref counter2);
             DisplayTheNumbers();
+            SaveCounters(); // Değişiklikleri kaydet
         }
     }
 
@@ -67,5 +69,26 @@ public class ArtiCode : MonoBehaviour
     {
         txtDisplayNumber.text = counter1.ToString();
         txtDisplayNumber1.text = counter2.ToString();
+    }
+
+    private void SaveCounters()
+    {
+        PlayerPrefs.SetInt("Counter1", counter1);
+        PlayerPrefs.SetInt("Counter2", counter2);
+        PlayerPrefs.Save();
+    }
+
+    private void LoadCounters()
+    {
+        counter1 = PlayerPrefs.GetInt("Counter1", 0);
+        counter2 = PlayerPrefs.GetInt("Counter2", 0);
+    }
+
+    public void DeleteAllData()
+    {
+        PlayerPrefs.DeleteAll();
+        counter1 = 0;
+        counter2 = 0;
+        DisplayTheNumbers();
     }
 }
