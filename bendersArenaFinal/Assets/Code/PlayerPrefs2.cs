@@ -9,9 +9,11 @@ public class PlayerPrefs2 : MonoBehaviour
     [SerializeField] private Text _experienceText;
     [SerializeField] private Text _levelText;
 
+
     private string _name;
     private float _experience;
     private int _level;
+
 
     private void Start()
     {
