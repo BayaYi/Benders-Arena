@@ -863,6 +863,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 359107119}
+        m_TargetAssemblyTypeName: "puanTextG\xF6sterCode, Assembly-CSharp"
+        m_MethodName: ArttirmaButonunaTiklandi
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &291620411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -980,6 +992,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314926440}
   m_CullTransparentMesh: 1
+--- !u!1 &330904198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 330904201}
+  - component: {fileID: 330904200}
+  - component: {fileID: 330904199}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &330904199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330904198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ae6a337a0ea76714c9a83d0b5185b5cf, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &330904200
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330904198}
+  m_CullTransparentMesh: 1
+--- !u!224 &330904201
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330904198}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 802000784}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 19, y: 1}
+  m_SizeDelta: {x: 70, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &357903813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,6 +1172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name1Text: {fileID: 693656228}
+  _kalanHakText: {fileID: 1680210453}
 --- !u!4 &359107120
 Transform:
   m_ObjectHideFlags: 0
@@ -1274,6 +1362,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 816391623}
+        m_TargetAssemblyTypeName: PuanInputKaydetCode, Assembly-CSharp
+        m_MethodName: DeleteAllData1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &395966468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1407,6 +1507,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 359107119}
+        m_TargetAssemblyTypeName: "puanTextG\xF6sterCode, Assembly-CSharp"
+        m_MethodName: ArttirmaButonunaTiklandi
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &397491167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1516,7 +1628,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "puanlara \xE7er\xE7eve koyulacak\nikinci k\u0131s\u0131ma zar puanl\u0131
-    alan neklenecek\nelement se\xE7im "
+    alan neklenecek\nDelete Butonu Save gibi d\xFCzenlecek"
 --- !u!222 &464711395
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1687,6 +1799,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 359107119}
+        m_TargetAssemblyTypeName: "puanTextG\xF6sterCode, Assembly-CSharp"
+        m_MethodName: ArttirmaButonunaTiklandi
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1351687275}
         m_TargetAssemblyTypeName: ArttirmaCode, Assembly-CSharp
         m_MethodName: IncreaseAndDisplay7
@@ -2037,7 +2161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 38, y: -2}
+  m_AnchoredPosition: {x: 37, y: -2}
   m_SizeDelta: {x: 50, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &799694596
@@ -2112,11 +2236,12 @@ RectTransform:
   - {fileID: 60011172}
   - {fileID: 357903814}
   - {fileID: 619588531}
+  - {fileID: 330904201}
   m_Father: {fileID: 1055858722}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -314, y: -47.000004}
+  m_AnchoredPosition: {x: -310, y: -50}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &802000785
@@ -2162,7 +2287,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 802000786}
   m_Template: {fileID: 619588531}
   m_CaptionText: {fileID: 60011173}
-  m_CaptionImage: {fileID: 0}
+  m_CaptionImage: {fileID: 330904199}
   m_ItemText: {fileID: 1196019366}
   m_ItemImage: {fileID: 799694596}
   m_Value: 0
@@ -2178,7 +2303,19 @@ MonoBehaviour:
       m_Image: {fileID: 21300000, guid: 64ee2b80b78845d4ca0c19732fdc9ab2, type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1585988801}
+        m_TargetAssemblyTypeName: PuanDropdownKaydet, Assembly-CSharp
+        m_MethodName: SecilenElementiKaydet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &802000786
 MonoBehaviour:
@@ -2263,7 +2400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name1Input: {fileID: 1122496876}
-  _elementDropdown: {fileID: 802000785}
+  _kalanHakText: {fileID: 1680210453}
 --- !u!1 &851114167
 GameObject:
   m_ObjectHideFlags: 0
@@ -3736,6 +3873,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 359107119}
+        m_TargetAssemblyTypeName: "puanTextG\xF6sterCode, Assembly-CSharp"
+        m_MethodName: ArttirmaButonunaTiklandi
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1366468346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3932,6 +4081,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533876252}
   m_CullTransparentMesh: 1
+--- !u!1 &1585988800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1585988802}
+  - component: {fileID: 1585988801}
+  m_Layer: 0
+  m_Name: DropdownGameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1585988801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585988800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41d559a479aa1b4abd571c713a77841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _elementDropdown: {fileID: 802000785}
+--- !u!4 &1585988802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585988800}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 563.18, y: 187.42839, z: -23.024597}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1590577041
 GameObject:
   m_ObjectHideFlags: 0
@@ -4266,6 +4460,7 @@ GameObject:
   - component: {fileID: 1680210452}
   - component: {fileID: 1680210454}
   - component: {fileID: 1680210453}
+  - component: {fileID: 1680210455}
   m_Layer: 5
   m_Name: "Da\u011F\u0131t\u0131lacakPuanDe\u011FeriText"
   m_TagString: Untagged
@@ -4334,6 +4529,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680210451}
   m_CullTransparentMesh: 1
+--- !u!114 &1680210455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680210451}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1779107501
 GameObject:
   m_ObjectHideFlags: 0
@@ -4461,6 +4671,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 359107119}
+        m_TargetAssemblyTypeName: "puanTextG\xF6sterCode, Assembly-CSharp"
+        m_MethodName: ArttirmaButonunaTiklandi
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4594,6 +4816,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 359107119}
+        m_TargetAssemblyTypeName: "puanTextG\xF6sterCode, Assembly-CSharp"
+        m_MethodName: ArttirmaButonunaTiklandi
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5506,6 +5740,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 359107119}
+        m_TargetAssemblyTypeName: "puanTextG\xF6sterCode, Assembly-CSharp"
+        m_MethodName: ArttirmaButonunaTiklandi
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2024875526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5918,3 +6164,4 @@ SceneRoots:
   - {fileID: 1351687276}
   - {fileID: 816391622}
   - {fileID: 359107120}
+  - {fileID: 1585988802}
