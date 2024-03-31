@@ -30,5 +30,30 @@ public class puanTextGösterCode : MonoBehaviour
 
 
     }
+
+
+
+    [SerializeField] private Text _kalanHakText;
+    private int _kalanHak = 7;
+
+    private void Start1()
+    {
+        // Başlangıçta kalan hakkı ekrana yazdır
+        _kalanHakText.text = _kalanHak.ToString();
+    }
+
+    public void ArttirmaButonunaTiklandi(int artisMiktari)
+    {
+        // Arttırma butonlarından birine tıklandığında çalışır
+        _kalanHak -= artisMiktari;
+
+        // Negatif değerleri engelle
+        _kalanHak = Mathf.Max(_kalanHak, 0);
+
+        // Yeni kalan hakkı ekrana yazdır
+        _kalanHakText.text = _kalanHak.ToString();
+    }
 }
+
+
 

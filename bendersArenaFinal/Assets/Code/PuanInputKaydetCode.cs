@@ -8,21 +8,21 @@ public class PuanInputKaydetCode : MonoBehaviour
 {
 
     [SerializeField] private InputField _name1Input;
-    [SerializeField] private Dropdown _elementDropdown;
+    [SerializeField] private Text _kalanHakText;
 
     private string _name1;
-    private string _element;
+    private string _kalanHak;
 
     public void SavePlayerData()
     {
         _name1 = _name1Input.text;
-       _element = _elementDropdown.options[_elementDropdown.value].text;
+        _kalanHak = _kalanHakText.text;
 
 
 
 
         PlayerPrefs.SetString("Name", _name1);
-        PlayerPrefs.SetString("Element", _element);
+         PlayerPrefs.SetString("KalanHak", _kalanHak);
 
         PlayerPrefs.Save();
     }
