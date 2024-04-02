@@ -45,4 +45,10 @@ public class DiceMechanics : MonoBehaviour
             .ConvertAll(i => i.ToString())
             .ToArray()));
     }
+
+    //public void baseDiceForCharacterCreating()
+    //{
+        
+    //}
+
 }
