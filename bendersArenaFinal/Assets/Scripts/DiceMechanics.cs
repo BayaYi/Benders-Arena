@@ -17,38 +17,49 @@ public class DiceMechanics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //allDices(DiceType, DiceAmount);
+        //DiceToConsole();
+        int[] statDiceResults = diceRollsForStats();
+        DiceToConsole(statDiceResults);
 
-        allDices(DiceType,DiceAmount); 
-        DiceToConsole();
-        
     }
 
     public int dice(int DiceType)//Istenilen Yuze Sahip Zar Donduren Class
     {
-        int dice = UnityEngine.Random.Range(1, DiceType);
+        int dice = UnityEngine.Random.Range(1, DiceType+1);
         return dice;
     }
 
     //Bir diziye istenilen türdeki zarýn istenilen sayýda atýp sonucunu döndüren method
-    public void allDices(int DiceType,int DiceAmount)
+    public int[] allDices(int DiceType,int DiceAmount)
     {
-        
-        for(int i = 0;i < DiceAmount; i++)
+        dices = new int[DiceAmount];
+        for (int i = 0;i < DiceAmount; i++)
         {
             dices[i] = dice(DiceType);
         }
+        return dices;
     }
 
-    public void DiceToConsole() {
+    public void DiceToConsole(int[] results) {
         Debug.Log(String.Join("/",
-            new List<int>(dices)
+            new List<int>(results)
             .ConvertAll(i => i.ToString())
             .ToArray()));
     }
 
-    //public void baseDiceForCharacterCreating()
-    //{
-        
-    //}
-
+    public int[] diceRollsForStats()
+    {
+        int[] distirubutableDiceResults = new int[7];
+        for (int i = 0; i < 6; i++)
+        {
+            int[] dice = allDices(6, 4);
+            Array.Sort(dice);
+            int total = dice[1] + dice[2] + dice[3];
+            double average = total / 3.0;
+            int roundedDownAverage = (int)Math.Floor(average)+1;
+            distirubutableDiceResults[i] = roundedDownAverage;
+        }
+        return distirubutableDiceResults;
+    }
 }
