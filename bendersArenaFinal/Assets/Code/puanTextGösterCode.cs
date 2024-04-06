@@ -24,25 +24,6 @@ public class puanTextGösterCode : MonoBehaviour
 
     }
 
-
-    [SerializeField] private Text txtDisplayNumber2;
-
-    private string txtDisplay;
-
-    public void Start3()
-    {
-        // İlk sahnede veriyi kaydetmiş varsayalım
-        // Bu verileri burada alıyoruz:
-        txtDisplay = PlayerPrefs.GetString("");
-
-
-
-        // UI elemanlarını güncelle
-        txtDisplayNumber2.text = "" + txtDisplay;
-
-
-    }
-
     [SerializeField] private Text _kalanHakText;
     private int _kalanHak = 7;
 

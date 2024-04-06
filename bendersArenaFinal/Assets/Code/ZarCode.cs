@@ -4,111 +4,120 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ZarCode : MonoBehaviour
-
 {
-    public Text diceResultText;// UI metin nesnesi
+    public Text diceResultText;
     public Text diceResultText1;
     public Text diceResultText2;
     public Text diceResultText3;
     public Text diceResultText4;
     public Text diceResultText5;
     public Text diceResultText6;
-    private int lastRolledValue = 0;
+    private int[] lastRolledValues = new int[6]; // Diziyi 6 elemanlı yapmalısınız
 
-    public void Start()
+    void Start()
     {
-        // Butona tıklanınca zarı atmak için butonun onClick eventini kullanalım
-        // Bu örnekte butonun adı "RollButton" olsun
-        GameObject rollButton = GameObject.Find("RollButton");
-        rollButton.GetComponent<Button>().onClick.AddListener(RollDice);
+        LoadData(); // Oyun başladığında kayıtlı zar sonuçlarını yükle
     }
 
-    public void RollDice()
+    // Zar atma fonksiyonları
+    public void RollDice(Text diceResultText, int index)
     {
-        // Rastgele bir sayı üretelim (1 ile 7 arasında)
-        int rolledValue = Random.Range(1,7);
-
-        // Üretilen değeri UI metin nesnesine yazdıralım
-        diceResultText.text = "" + rolledValue;
-
-        // Son atılan değeri kaydedelim
-        lastRolledValue = rolledValue;
-    }
-    public void RollDice1()
-    {
-        // Rastgele bir sayı üretelim (1 ile 7 arasında)
-        int rolledValue = Random.Range(1,7);
-
-        // Üretilen değeri UI metin nesnesine yazdıralım
-        diceResultText1.text = "" + rolledValue;
-
-        // Son atılan değeri kaydedelim
-        lastRolledValue = rolledValue;
-    }
-    public void RollDice2()
-    {
-        // Rastgele bir sayı üretelim (1 ile 7 arasında)
-        int rolledValue = Random.Range(1,7);
-
-        // Üretilen değeri UI metin nesnesine yazdıralım
-        diceResultText2.text = "" + rolledValue;
-
-        // Son atılan değeri kaydedelim
-        lastRolledValue = rolledValue;
+        int rolledValue = Random.Range(1, 7);
+        diceResultText.text = rolledValue.ToString();
+        lastRolledValues[index] = rolledValue; // Zar sonucunu sakla
+        SaveData(); // Zar sonucunu kaydet
     }
 
-public void RollDice3()
+    // Zar atma butonları için çağrılacak fonksiyonlar
+    public void OnRollButtonClicked()
     {
-        // Rastgele bir sayı üretelim (1 ile 7 arasında)
-        int rolledValue = Random.Range(1,7);
-
-        // Üretilen değeri UI metin nesnesine yazdıralım
-        diceResultText3.text = "" + rolledValue;
-
-        // Son atılan değeri kaydedelim
-        lastRolledValue = rolledValue;
+        RollDice(diceResultText, 0);
     }
 
-    public void RollDice4()
+    public void OnRollButton1Clicked()
     {
-        // Rastgele bir sayı üretelim (1 ile 7 arasında)
-        int rolledValue = Random.Range(1,7);
-
-        // Üretilen değeri UI metin nesnesine yazdıralım
-        diceResultText4.text = "" + rolledValue;
-
-        // Son atılan değeri kaydedelim
-        lastRolledValue = rolledValue;
+        RollDice(diceResultText1, 1);
     }
-    public void RollDice5()
+
+    public void OnRollButton2Clicked()
     {
-        // Rastgele bir sayı üretelim (1 ile 7 arasında)
-        int rolledValue = Random.Range(1,7);
-
-        // Üretilen değeri UI metin nesnesine yazdıralım
-        diceResultText5.text = "" + rolledValue;
-
-        // Son atılan değeri kaydedelim
-        lastRolledValue = rolledValue;
+        RollDice(diceResultText2, 2);
     }
-    public void RollDice6()
+
+    public void OnRollButton3Clicked()
     {
-        // Rastgele bir sayı üretelim (1 ile 7 arasında)
-        int rolledValue = Random.Range(1,7);
-
-        // Üretilen değeri UI metin nesnesine yazdıralım
-        diceResultText6.text = "" + rolledValue;
-
-        // Son atılan değeri kaydedelim
-        lastRolledValue = rolledValue;
+        RollDice(diceResultText3, 3);
     }
-    // Bu fonksiyon son atılan zar değerini döndürür
-    public int GetLastRolledValue()
+
+    public void OnRollButton4Clicked()
     {
-        return lastRolledValue;
+        RollDice(diceResultText4, 4);
+    }
+
+    public void OnRollButton5Clicked()
+    {
+        RollDice(diceResultText5, 5);
+    }
+
+    public void OnRollButton6Clicked()
+    {
+        RollDice(diceResultText6, 6);
+    }
+
+    // Verileri kaydetmek için kullanılacak fonksiyon
+    public void SaveData()
+    {
+        for (int i = 0; i < lastRolledValues.Length; i++)
+        {
+            PlayerPrefs.SetInt("LastRolledValue" + i, lastRolledValues[i]);
+        }
+        PlayerPrefs.Save();
+    }
+
+    // Kayıtlı verileri yüklemek için kullanılacak fonksiyon
+    public void LoadData()
+    {
+        for (int i = 0; i < lastRolledValues.Length; i++)
+        {
+            if (PlayerPrefs.HasKey("LastRolledValue" + i))
+            {
+                lastRolledValues[i] = PlayerPrefs.GetInt("LastRolledValue" + i);
+                // Ekranda gösterme işlemi burada yapılmalı
+                switch (i)
+                {
+                    case 0:
+                        diceResultText.text = lastRolledValues[i].ToString();
+                        break;
+                    case 1:
+                        diceResultText1.text = lastRolledValues[i].ToString();
+                        break;
+                    case 2:
+                        diceResultText2.text = lastRolledValues[i].ToString();
+                        break;
+                    case 3:
+                        diceResultText3.text = lastRolledValues[i].ToString();
+                        break;
+                    case 4:
+                        diceResultText4.text = lastRolledValues[i].ToString();
+                        break;
+                    case 5:
+                        diceResultText5.text = lastRolledValues[i].ToString();
+                        break;
+                    case 6:
+                        diceResultText6.text = lastRolledValues[i].ToString();
+                        break;
+                }
+            }
+        }
+    }
+
+    // Kayıtlı verileri silmek için kullanılacak fonksiyon
+    public void DeleteData()
+    {
+        for (int i = 0; i < lastRolledValues.Length; i++)
+        {
+            PlayerPrefs.DeleteKey("LastRolledValue" + i);
+        }
+        PlayerPrefs.Save();
     }
 }
-
-
-
-
