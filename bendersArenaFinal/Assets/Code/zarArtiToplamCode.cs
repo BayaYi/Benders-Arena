@@ -54,7 +54,7 @@ public class zarArtiToplamCode : MonoBehaviour
         int totalScore = score1 + score2;
 
         // Toplam puanı başka bir metin alanına yazdırma
-        totalScoreText.text = totalScore.ToString();
+        totalScoreText1.text = totalScore.ToString();
     }
 
     public void CalculateTotalScore2()
@@ -69,7 +69,7 @@ public class zarArtiToplamCode : MonoBehaviour
         int totalScore = score1 + score2;
 
         // Toplam puanı başka bir metin alanına yazdırma
-        totalScoreText.text = totalScore.ToString();
+        totalScoreText2.text = totalScore.ToString();
     }
 
     public void CalculateTotalScore3()
@@ -84,7 +84,7 @@ public class zarArtiToplamCode : MonoBehaviour
         int totalScore = score1 + score2;
 
         // Toplam puanı başka bir metin alanına yazdırma
-        totalScoreText.text = totalScore.ToString();
+        totalScoreText3.text = totalScore.ToString();
     }
 
     public void CalculateTotalScore4()
@@ -99,7 +99,7 @@ public class zarArtiToplamCode : MonoBehaviour
         int totalScore = score1 + score2;
 
         // Toplam puanı başka bir metin alanına yazdırma
-        totalScoreText.text = totalScore.ToString();
+        totalScoreText4.text = totalScore.ToString();
     }
     public void CalculateTotalScore5()
     {
@@ -113,7 +113,7 @@ public class zarArtiToplamCode : MonoBehaviour
         int totalScore = score1 + score2;
 
         // Toplam puanı başka bir metin alanına yazdırma
-        totalScoreText.text = totalScore.ToString();
+        totalScoreText5.text = totalScore.ToString();
     }
     public void CalculateTotalScore6()
     {
@@ -127,7 +127,7 @@ public class zarArtiToplamCode : MonoBehaviour
         int totalScore = score1 + score2;
 
         // Toplam puanı başka bir metin alanına yazdırma
-        totalScoreText.text = totalScore.ToString();
+        totalScoreText6.text = totalScore.ToString();
     }
 
 

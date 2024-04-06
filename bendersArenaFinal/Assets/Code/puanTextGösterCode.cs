@@ -10,7 +10,7 @@ public class puanTextGösterCode : MonoBehaviour
 
     private string _name1;
 
-    private void Start()
+    public void Start()
     {
         // İlk sahnede veriyi kaydetmiş varsayalım
         // Bu verileri burada alıyoruz:
@@ -25,11 +25,28 @@ public class puanTextGösterCode : MonoBehaviour
     }
 
 
+    [SerializeField] private Text txtDisplayNumber2;
+
+    private string txtDisplay;
+
+    public void Start3()
+    {
+        // İlk sahnede veriyi kaydetmiş varsayalım
+        // Bu verileri burada alıyoruz:
+        txtDisplay = PlayerPrefs.GetString("");
+
+
+
+        // UI elemanlarını güncelle
+        txtDisplayNumber2.text = "" + txtDisplay;
+
+
+    }
 
     [SerializeField] private Text _kalanHakText;
     private int _kalanHak = 7;
 
-    private void Start1()
+    public void Start1()
     {
         // Başlangıçta kalan hakkı ekrana yazdır
         _kalanHakText.text = _kalanHak.ToString();
