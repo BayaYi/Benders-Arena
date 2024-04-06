@@ -19,8 +19,8 @@ public class DiceMechanics : MonoBehaviour
     {
         //allDices(DiceType, DiceAmount);
         //DiceToConsole();
-        int[] statDiceResults = diceRollsForStats();
-        DiceToConsole(statDiceResults);
+        //int[] statDiceResults = diceRollsForStats();
+        //DiceToConsole(statDiceResults);
 
     }
 
@@ -48,18 +48,30 @@ public class DiceMechanics : MonoBehaviour
             .ToArray()));
     }
 
-    public int[] diceRollsForStats()
+    public int WeightedAverage()
     {
-        int[] distirubutableDiceResults = new int[7];
-        for (int i = 0; i < 6; i++)
-        {
-            int[] dice = allDices(6, 4);
-            Array.Sort(dice);
-            int total = dice[1] + dice[2] + dice[3];
-            double average = total / 3.0;
-            int roundedDownAverage = (int)Math.Floor(average)+1;
-            distirubutableDiceResults[i] = roundedDownAverage;
-        }
-        return distirubutableDiceResults;
+        int result;
+        int[] dizi = allDices(6, 4);
+        Array.Sort(dizi);
+        Array.Reverse(dizi);
+        int total = dizi[0] + dizi[1] + dizi[2];
+        double ortalama = total / 3.0;
+        int asagiYuvarlama=(int) Math.Floor(ortalama);
+        return result = asagiYuvarlama;
     }
+
+    //public int[] diceRollsForStats()
+    //{
+    //    int[] distirubutableDiceResults = new int[7];
+    //    for (int i = 0; i < 6; i++)
+    //    {
+    //        int[] dice = allDices(6, 4);
+    //        Array.Sort(dice);
+    //        int total = dice[1] + dice[2] + dice[3];
+    //        double average = total / 3.0;
+    //        int roundedDownAverage = (int)Math.Floor(average)+1;
+    //        distirubutableDiceResults[i] = roundedDownAverage;
+    //    }
+    //    return distirubutableDiceResults;
+    //}
 }
