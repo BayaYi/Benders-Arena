@@ -10,6 +10,7 @@ public class PuanInputKaydetCode : MonoBehaviour
     [SerializeField] private InputField _name1Input;
     [SerializeField] private Text _kalanHakText;
 
+
     private string _name1;
     private string _kalanHak;
 
@@ -26,6 +27,7 @@ public class PuanInputKaydetCode : MonoBehaviour
 
         PlayerPrefs.Save();
     }
+
 
 
 public void DeleteAllData()
