@@ -8,14 +8,7 @@ public class puanTextGösterCode : MonoBehaviour
 {
     [SerializeField] private Text _name1Text;
 
-
-
-
-
     private string _name1;
-
-
-
 
     private void Start()
     {
@@ -53,6 +46,10 @@ public class puanTextGösterCode : MonoBehaviour
         // Yeni kalan hakkı ekrana yazdır
         _kalanHakText.text = _kalanHak.ToString();
     }
+
+
+
+
 }
 
 
