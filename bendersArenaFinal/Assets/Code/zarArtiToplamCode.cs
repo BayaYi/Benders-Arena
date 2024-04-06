@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class zarArtiToplamCode : MonoBehaviour
 {
-
     public Text txtDisplayNumber2;
     public Text txtDisplayNumber3;
     public Text txtDisplayNumber4;
@@ -28,109 +27,86 @@ public class zarArtiToplamCode : MonoBehaviour
     public Text totalScoreText5;
     public Text totalScoreText6;
 
+    void Start()
+    {
+        // Kaydedilmiş puanları yükleme
+        LoadScores();
+    }
+
     public void CalculateTotalScore()
     {
-        // İlk metin alanından puan değerini alıp int'e çevirme
-        int score1 = int.Parse(txtDisplayNumber2.text);
-
-        // İkinci metin alanından puan değerini alıp int'e çevirme
-        int score2 = int.Parse(diceResultText.text);
-
-        // Toplam puanı hesaplama
-        int totalScore = score1 + score2;
-
-        // Toplam puanı başka bir metin alanına yazdırma
+        int totalScore = CalculateIndividualTotalScore(txtDisplayNumber2, diceResultText);
         totalScoreText.text = totalScore.ToString();
+        SaveScore("totalScore", totalScore);
     }
+
     public void CalculateTotalScore1()
     {
-        // İlk metin alanından puan değerini alıp int'e çevirme
-        int score1 = int.Parse(txtDisplayNumber3.text);
-
-        // İkinci metin alanından puan değerini alıp int'e çevirme
-        int score2 = int.Parse(diceResultText1.text);
-
-        // Toplam puanı hesaplama
-        int totalScore = score1 + score2;
-
-        // Toplam puanı başka bir metin alanına yazdırma
+        int totalScore = CalculateIndividualTotalScore(txtDisplayNumber3, diceResultText1);
         totalScoreText1.text = totalScore.ToString();
+        SaveScore("totalScore1", totalScore);
     }
 
     public void CalculateTotalScore2()
     {
-        // İlk metin alanından puan değerini alıp int'e çevirme
-        int score1 = int.Parse(txtDisplayNumber4.text);
-
-        // İkinci metin alanından puan değerini alıp int'e çevirme
-        int score2 = int.Parse(diceResultText2.text);
-
-        // Toplam puanı hesaplama
-        int totalScore = score1 + score2;
-
-        // Toplam puanı başka bir metin alanına yazdırma
+        int totalScore = CalculateIndividualTotalScore(txtDisplayNumber4, diceResultText2);
         totalScoreText2.text = totalScore.ToString();
+        SaveScore("totalScore2", totalScore);
     }
 
     public void CalculateTotalScore3()
     {
-        // İlk metin alanından puan değerini alıp int'e çevirme
-        int score1 = int.Parse(txtDisplayNumber5.text);
-
-        // İkinci metin alanından puan değerini alıp int'e çevirme
-        int score2 = int.Parse(diceResultText3.text);
-
-        // Toplam puanı hesaplama
-        int totalScore = score1 + score2;
-
-        // Toplam puanı başka bir metin alanına yazdırma
+        int totalScore = CalculateIndividualTotalScore(txtDisplayNumber5, diceResultText3);
         totalScoreText3.text = totalScore.ToString();
+        SaveScore("totalScore3", totalScore);
     }
 
     public void CalculateTotalScore4()
     {
-        // İlk metin alanından puan değerini alıp int'e çevirme
-        int score1 = int.Parse(txtDisplayNumber6.text);
-
-        // İkinci metin alanından puan değerini alıp int'e çevirme
-        int score2 = int.Parse(diceResultText4.text);
-
-        // Toplam puanı hesaplama
-        int totalScore = score1 + score2;
-
-        // Toplam puanı başka bir metin alanına yazdırma
+        int totalScore = CalculateIndividualTotalScore(txtDisplayNumber6, diceResultText4);
         totalScoreText4.text = totalScore.ToString();
+        SaveScore("totalScore4", totalScore);
     }
+
     public void CalculateTotalScore5()
     {
-        // İlk metin alanından puan değerini alıp int'e çevirme
-        int score1 = int.Parse(txtDisplayNumber7.text);
-
-        // İkinci metin alanından puan değerini alıp int'e çevirme
-        int score2 = int.Parse(diceResultText5.text);
-
-        // Toplam puanı hesaplama
-        int totalScore = score1 + score2;
-
-        // Toplam puanı başka bir metin alanına yazdırma
+        int totalScore = CalculateIndividualTotalScore(txtDisplayNumber7, diceResultText5);
         totalScoreText5.text = totalScore.ToString();
+        SaveScore("totalScore5", totalScore);
     }
+
     public void CalculateTotalScore6()
     {
-        // İlk metin alanından puan değerini alıp int'e çevirme
-        int score1 = int.Parse(txtDisplayNumber8.text);
-
-        // İkinci metin alanından puan değerini alıp int'e çevirme
-        int score2 = int.Parse(diceResultText6.text);
-
-        // Toplam puanı hesaplama
-        int totalScore = score1 + score2;
-
-        // Toplam puanı başka bir metin alanına yazdırma
+        int totalScore = CalculateIndividualTotalScore(txtDisplayNumber8, diceResultText6);
         totalScoreText6.text = totalScore.ToString();
+        SaveScore("totalScore6", totalScore);
     }
 
+    int CalculateIndividualTotalScore(Text txtDisplayNumber, Text diceResultText)
+    {
+        int score1 = int.Parse(txtDisplayNumber.text);
+        int score2 = int.Parse(diceResultText.text);
+        return score1 + score2;
+    }
 
+    void SaveScore(string key, int score)
+    {
+        PlayerPrefs.SetInt(key, score);
+    }
+
+    void LoadScores()
+    {
+        totalScoreText.text = PlayerPrefs.GetInt("totalScore", 0).ToString();
+        totalScoreText1.text = PlayerPrefs.GetInt("totalScore1", 0).ToString();
+        totalScoreText2.text = PlayerPrefs.GetInt("totalScore2", 0).ToString();
+        totalScoreText3.text = PlayerPrefs.GetInt("totalScore3", 0).ToString();
+        totalScoreText4.text = PlayerPrefs.GetInt("totalScore4", 0).ToString();
+        totalScoreText5.text = PlayerPrefs.GetInt("totalScore5", 0).ToString();
+        totalScoreText6.text = PlayerPrefs.GetInt("totalScore6", 0).ToString();
+    }
+
+    public void DeleteSavedScore(string key)
+    {
+        PlayerPrefs.DeleteKey(key);
+    }
 }
-
-
