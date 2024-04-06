@@ -9,6 +9,9 @@ public class BaseStats : MonoBehaviour
 }
 public struct BaseStat 
 {
+    //Bükme Yeteneði
+    //0 diðer 1 ateþ 2 su 3 toprak 4 hava
+    public int bendingAbility { get; set; }
     //Temel Statlar
     public int strength { get; set; }
     public int dexterity { get; set; }
@@ -34,3 +37,5 @@ public struct BaseStat
     public int currentBendingDefence { get; set; }
     public int currentInitiative { get; set; }
 }
+
+
