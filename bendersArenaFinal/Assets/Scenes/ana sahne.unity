@@ -256,6 +256,7 @@ GameObject:
   - component: {fileID: 85094344}
   - component: {fileID: 85094343}
   - component: {fileID: 85094342}
+  - component: {fileID: 85094345}
   m_Layer: 5
   m_Name: Attack
   m_TagString: Untagged
@@ -377,6 +378,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85094340}
   m_CullTransparentMesh: 1
+--- !u!114 &85094345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85094340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9413ea4bc70acb748afdd59c65a0bd1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MyButton: {fileID: 85094342}
 --- !u!1 &179827527
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +565,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 209764856}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1196654868}
+        m_TargetAssemblyTypeName: EnemyBullet, Assembly-CSharp
+        m_MethodName: Konum
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &209764856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1161,6 +1187,52 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1196654867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1196654869}
+  - component: {fileID: 1196654868}
+  m_Layer: 0
+  m_Name: greenkonumb
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1196654868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196654867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef9b00721e707cf44b402c1d8c240be2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5225235148863657275, guid: 382cb622b268cf04dbf65113433240cd, type: 3}
+  bulletLocation: {x: 0, y: 0, z: 0}
+--- !u!4 &1196654869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196654867}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.11988499, y: -3.3534412, z: 15.508626}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1932,3 +2004,4 @@ SceneRoots:
   - {fileID: 1886708249}
   - {fileID: 1138051059}
   - {fileID: 1289543985}
+  - {fileID: 1196654869}
