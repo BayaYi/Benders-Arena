@@ -2237,6 +2237,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864668308}
   m_CullTransparentMesh: 1
+--- !u!1 &1909898649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1909898651}
+  - component: {fileID: 1909898650}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1909898650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909898649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d61934bbf54c15e4dbb907bea5114bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtDisplayNumber2: {fileID: 0}
+  txtDisplayNumber3: {fileID: 0}
+  txtDisplayNumber4: {fileID: 0}
+  txtDisplayNumber5: {fileID: 0}
+  txtDisplayNumber6: {fileID: 0}
+  txtDisplayNumber7: {fileID: 0}
+  txtDisplayNumber8: {fileID: 0}
+  diceResultText: {fileID: 0}
+  diceResultText1: {fileID: 0}
+  diceResultText2: {fileID: 0}
+  diceResultText3: {fileID: 0}
+  diceResultText4: {fileID: 0}
+  diceResultText5: {fileID: 0}
+  diceResultText6: {fileID: 0}
+  totalScoreText: {fileID: 1431362211}
+  totalScoreText1: {fileID: 156928737}
+  totalScoreText2: {fileID: 1744045459}
+  totalScoreText3: {fileID: 742368440}
+  totalScoreText4: {fileID: 1280873906}
+  totalScoreText5: {fileID: 529455946}
+  totalScoreText6: {fileID: 1321584157}
+--- !u!4 &1909898651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909898649}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 514.5407, y: 221.19566, z: -0.6088257}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1915628571
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,13 +2338,13 @@ MonoBehaviour:
   _physicalDefenceText: {fileID: 994123643}
   _bendingDefenceText: {fileID: 2034240209}
   _initiativeText: {fileID: 1725541334}
-  _strengthText: {fileID: 1431362211}
-  _dexterityText: {fileID: 156928737}
-  _constitutionText: {fileID: 1744045459}
-  _intelligenceText: {fileID: 742368440}
-  _physicalPowerText: {fileID: 1280873906}
-  _chiPowerText: {fileID: 529455946}
-  _charismaText: {fileID: 1321584157}
+  _strengthText: {fileID: 0}
+  _dexterityText: {fileID: 0}
+  _constitutionText: {fileID: 0}
+  _intelligenceText: {fileID: 0}
+  _physicalPowerText: {fileID: 0}
+  _chiPowerText: {fileID: 0}
+  _charismaText: {fileID: 0}
 --- !u!4 &1915628573
 Transform:
   m_ObjectHideFlags: 0
@@ -2457,3 +2522,4 @@ SceneRoots:
   - {fileID: 637574125}
   - {fileID: 745174915}
   - {fileID: 1915628573}
+  - {fileID: 1909898651}
