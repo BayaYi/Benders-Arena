@@ -7,51 +7,51 @@ public class ActionableTypes : MonoBehaviour
     public struct Bender 
 {
     public BaseStat stats;
-    public string name { get; set; }
-    public string bending { get; set; }
-    public bool isServerFounder { get; set; }
-    public int playerNumber { get; set; }
+    public string Name { get; set; }
+    public string Bending { get; set; }
+    public bool IsServerFounder { get; set; }
+    public int PlayerNumber { get; set; }
 }
     public struct Monster
 {
     public BaseStat stats;
-    public string name { get; set; }
-    public bool isMagical { get; set; }
-    public string armourType { get; set; }
+    public string Name { get; set; }
+    public bool IsMagical { get; set; }
+    public string ArmourType { get; set; }
 }
     public struct Weapon
     {
-        public bool isMelee { get; set; }
-        public string damageType { get; set; }
-        public int damageDice { get; set; }
-        public int diceNumber { get; set; }
+        public int Range { get; set; }
+        public int DamageType { get; set; }// 0 pierce, 1 slahsing, 2 bludgeoning
+        public int DamageDice { get; set; }
+        public int DiceNumber { get; set; }
     }
-    void shortBow(Weapon weapon)
+    public void ShortBow(Weapon weapon)
     {
-        weapon.isMelee = false;
-        weapon.damageType = "pierce";
-        weapon.damageDice = 6;
-        weapon.diceNumber = 2;
+        weapon.Range = 6;
+        weapon.DamageType = 0;
+        weapon.DamageDice = 6;
+        weapon.DiceNumber = 2;
     }
-    void longBow(Weapon weapon)
+    public void LongBow(Weapon weapon)
     {
-        weapon.isMelee=false;
-        weapon.damageType = "pierce";
-        weapon.damageDice = 4;
-        weapon.diceNumber = 2;
+        weapon.Range= 8;
+        weapon.DamageType = 0;
+        weapon.DamageDice = 4;
+        weapon.DiceNumber = 2;
     }
-    void shortSword(Weapon weapon)
+    public void ShortSword(Weapon weapon)
     {
-        weapon.isMelee = true;
-        weapon.damageType = "slashing";
-        weapon.damageDice = 8;
-        weapon.diceNumber = 2;
+        weapon.Range = 1;
+        weapon.DamageType = 1;
+        weapon.DamageDice = 8;
+        weapon.DiceNumber = 2;
     }
-    void longSword(Weapon weapon)
+    public void LongSword(Weapon weapon)
     {
-        weapon.isMelee = false;
-        weapon.damageType = "slashing";
-        weapon.damageDice = 10;
-        weapon.diceNumber = 2;
+        weapon.Range = 1;
+        weapon.DamageType = 1;
+        weapon.DamageDice = 10;
+        weapon.DiceNumber = 2;
     }
 }//yeni kod
