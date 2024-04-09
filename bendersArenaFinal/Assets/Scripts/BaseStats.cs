@@ -6,11 +6,20 @@ public class BaseStats : MonoBehaviour
 {
      
 }
-public struct BaseStat 
+public enum BendingAbility
+{
+    none,
+    fire,
+    water,
+    earth,
+    air
+}
+
+public struct BaseStat
 {
     //Bükme Yeteneği
     //0 diğer 1 ateş 2 su 3 toprak 4 hava
-    public int BendingAbility { get; set; }
+    public BendingAbility BendingAbility { get; set; }
     //Temel Statlar
     public int Strength { get; set; }
     public int Dexterity { get; set; }
@@ -36,5 +45,7 @@ public struct BaseStat
     public int CurrentBendingDefence { get; set; }
     public int CurrentInitiative { get; set; }
 }
+
+
 
 
