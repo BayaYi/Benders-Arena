@@ -24,6 +24,9 @@ public class ArttirmaCode : MonoBehaviour
     private int counter9 = 0;
     private const int MaxValue = 7; // Artırma ve azaltma sınırları
 
+    //Karakter yaratma temel
+
+
     void Start()
     {
         LoadCounters(); // Kaydedilen değerleri yükle
