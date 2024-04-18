@@ -46,6 +46,54 @@ public struct BaseStat
     public int CurrentInitiative { get; set; }
 }
 
+//public BaseStat GetBaseStatFromUI()
+//{
+//    // Kullanýcý arayüzü öðelerini tanýmlayýn
+//    TextBox bendingTextBox = new TextBox();
+//    TextBox strengthTextBox = new TextBox();
+//    TextBox dexterityTextBox = new TextBox();
+//    TextBox constitutionTextBox = new TextBox();
+//    TextBox intelligenceTextBox = new TextBox();
+//    TextBox physicalPowerTextBox = new TextBox();
+//    TextBox chiPowerTextBox = new TextBox();
+//    TextBox charismaTextBox = new TextBox();
+
+//    // Kullanýcýdan veri giriþini alýn
+//    bendingTextBox.Show();
+//    strengthTextBox.Show();
+//    dexterityTextBox.Show();
+//    constitutionTextBox.Show();
+//    intelligenceTextBox.Show();
+//    physicalPowerTextBox.Show();
+//    chiPowerTextBox.Show();
+//    charismaTextBox.Show();
+
+//    int bending = int.Parse(bendingTextBox.Text);
+//    int strength = int.Parse(strengthTextBox.Text);
+//    int dexterity = int.Parse(dexterityTextBox.Text);
+//    int constitution = int.Parse(constitutionTextBox.Text);
+//    int intelligence = int.Parse(intelligenceTextBox.Text);
+//    int physicalPower = int.Parse(physicalPowerTextBox.Text);
+//    int chiPower = int.Parse(chiPowerTextBox.Text);
+//    int charisma = int.Parse(charismaTextBox.Text);
+
+//    // Girilen deðerleri BaseStat yapýsýna atayýn
+//    BaseStat baseStat = new BaseStat
+//    {
+//        Bending = bending,
+//        Strength = strength,
+//        Dexterity = dexterity,
+//        Constitution = constitution,
+//        Intelligence = intelligence,
+//        PhysicalPower = physicalPower,
+//        ChiPower = chiPower,
+//        Charisma = charisma
+//    };
+
+//    return baseStat;
+//}
+
+
 
 
 
