@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ActionableTypes : MonoBehaviour
 {
+    //Bükücü temel kodu ve yaratma
     public struct Bender 
     {
         public BaseStat stats;
@@ -11,6 +12,21 @@ public class ActionableTypes : MonoBehaviour
         public bool IsServerFounder { get; set; }
         public int PlayerNumber { get; set; }
     }
+    //BaseStats'a veri çekme kodu
+    //public BaseStat DataExtraction(int bending, int strentgh, int dexterity, int constitution, int intelligence, int physicalPower, int chiPower, int charisma)
+    //{
+
+    //}
+
+    //yaratma kodu
+    //public Bender CreateBender(BendingAbility ability, int strentgh, int dexterity, int constitution, int intelligence, int physicalPower, int chiPower , int charýsma )
+    //{
+    //    Bender bender = new();
+
+    //}
+
+
+    //Canavar temel kodu ve yaratma
     public struct Monster
     {
         public BaseStat stats;
@@ -19,6 +35,9 @@ public class ActionableTypes : MonoBehaviour
         public string ArmourType { get; set; }
     }
 
+
+
+    //Silah temel kodu ve yaratma
     public enum DamageType
     {
         Pierce,
