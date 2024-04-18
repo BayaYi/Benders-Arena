@@ -13,21 +13,121 @@ public class ActionableTypes : MonoBehaviour
         public int PlayerNumber { get; set; }
     }
     
-    public Bender CreateEarthBender()
+    public Bender CreateCharacter(BendingAbility alinanBending, int alinanStrength, int alinanDexterity, int alinanConstitution, int alinanIntelligence, int alinanChiPower, int alinanPhysicalPower, int alinanCharisma)
     {
-
+        switch (alinanBending)
+        {
+            case BendingAbility.fire:
+                return CreateFireBender(alinanStrength, alinanDexterity, alinanConstitution, alinanIntelligence, alinanChiPower, alinanPhysicalPower, alinanCharisma);
+            case BendingAbility.water:
+                return CreateWaterBender(alinanStrength, alinanDexterity, alinanConstitution, alinanIntelligence, alinanChiPower, alinanPhysicalPower, alinanCharisma);
+            case BendingAbility.earth:
+                return CreateEarthBender(alinanStrength, alinanDexterity, alinanConstitution, alinanIntelligence, alinanChiPower, alinanPhysicalPower, alinanCharisma);
+            case BendingAbility.air:
+                return CreateAirBender(alinanStrength, alinanDexterity, alinanConstitution, alinanIntelligence, alinanChiPower, alinanPhysicalPower, alinanCharisma);
+            default:
+                return CreateNonBender(alinanStrength, alinanDexterity, alinanConstitution, alinanIntelligence, alinanChiPower, alinanPhysicalPower, alinanCharisma);
+        }
     }
-    public Bender CreateFireBender()
+    public Bender CreateEarthBender(int alinanStrength, int alinanDexterity, int alinanConstitution, int alinanIntelligence, int alinanChiPower, int alinanPhysicalPower, int alinanCharisma)
     {
+        Bender bender = new Bender();        
+        bender.stats.Strength = alinanStrength;
+        bender.stats.Dexterity = alinanDexterity;
+        bender.stats.Constitution = alinanConstitution;
+        bender.stats.Intelligence = alinanIntelligence;
+        bender.stats.ChiPower = alinanChiPower;
+        bender.stats.PhysicalPower = alinanPhysicalPower;
+        bender.stats.Charisma = alinanCharisma;
 
+        bender.stats.TotalHealth = 30 + (12*bender.stats.Constitution);
+        bender.stats.TotalPhysicalEnergy = (bender.stats.Constitution + bender.stats.PhysicalPower);
+        bender.stats.TotalChiEnergy = (bender.stats.ChiPower);
+        bender.stats.TotalSpeed = (bender.stats.Dexterity + 2);
+        bender.stats.TotalPhysicalDefence = (bender.stats.Dexterity + 10);
+        bender.stats.TotalBendingDefence = (bender.stats.TotalPhysicalDefence + bender.stats.ChiPower);
+        bender.stats.TotalInitiative = (bender.stats.Dexterity + bender.stats.Intelligence);
+        return bender;
     }
-    public Bender CreateWaterBender()
+    public Bender CreateFireBender(int alinanStrength, int alinanDexterity, int alinanConstitution, int alinanIntelligence, int alinanChiPower, int alinanPhysicalPower, int alinanCharisma)
     {
+        Bender bender = new Bender();
+        bender.stats.Strength = alinanStrength;
+        bender.stats.Dexterity = alinanDexterity;
+        bender.stats.Constitution = alinanConstitution;
+        bender.stats.Intelligence = alinanIntelligence;
+        bender.stats.ChiPower = alinanChiPower;
+        bender.stats.PhysicalPower = alinanPhysicalPower;
+        bender.stats.Charisma = alinanCharisma;
 
+        bender.stats.TotalHealth = 20 + (8 * bender.stats.Constitution);
+        bender.stats.TotalPhysicalEnergy = (bender.stats.Constitution + bender.stats.PhysicalPower);
+        bender.stats.TotalChiEnergy = (bender.stats.ChiPower);
+        bender.stats.TotalSpeed = (bender.stats.Dexterity + 2);
+        bender.stats.TotalPhysicalDefence = (bender.stats.Dexterity + 10);
+        bender.stats.TotalBendingDefence = (bender.stats.TotalPhysicalDefence + bender.stats.ChiPower);
+        bender.stats.TotalInitiative = (bender.stats.Dexterity + bender.stats.Intelligence);
+        return bender;
     }
-    public Bender CreateAirBender()
+    public Bender CreateWaterBender(int alinanStrength, int alinanDexterity, int alinanConstitution, int alinanIntelligence, int alinanChiPower, int alinanPhysicalPower, int alinanCharisma)
     {
+        Bender bender = new Bender();
+        bender.stats.Strength = alinanStrength;
+        bender.stats.Dexterity = alinanDexterity;
+        bender.stats.Constitution = alinanConstitution;
+        bender.stats.Intelligence = alinanIntelligence;
+        bender.stats.ChiPower = alinanChiPower;
+        bender.stats.PhysicalPower = alinanPhysicalPower;
+        bender.stats.Charisma = alinanCharisma;
 
+        bender.stats.TotalHealth = 20 + (8 * bender.stats.Constitution);
+        bender.stats.TotalPhysicalEnergy = (bender.stats.Constitution + bender.stats.PhysicalPower);
+        bender.stats.TotalChiEnergy = (bender.stats.ChiPower);
+        bender.stats.TotalSpeed = (bender.stats.Dexterity + 2);
+        bender.stats.TotalPhysicalDefence = (bender.stats.Dexterity + 10);
+        bender.stats.TotalBendingDefence = (bender.stats.TotalPhysicalDefence + bender.stats.ChiPower);
+        bender.stats.TotalInitiative = (bender.stats.Dexterity + bender.stats.Intelligence);
+        return bender;
+    }
+    public Bender CreateAirBender(int alinanStrength, int alinanDexterity, int alinanConstitution, int alinanIntelligence, int alinanChiPower, int alinanPhysicalPower, int alinanCharisma)
+    {
+        Bender bender = new Bender();
+        bender.stats.Strength = alinanStrength;
+        bender.stats.Dexterity = alinanDexterity;
+        bender.stats.Constitution = alinanConstitution;
+        bender.stats.Intelligence = alinanIntelligence;
+        bender.stats.ChiPower = alinanChiPower;
+        bender.stats.PhysicalPower = alinanPhysicalPower;
+        bender.stats.Charisma = alinanCharisma;
+
+        bender.stats.TotalHealth = 15 + (6 * bender.stats.Constitution);
+        bender.stats.TotalPhysicalEnergy = (bender.stats.Constitution + bender.stats.PhysicalPower);
+        bender.stats.TotalChiEnergy = (bender.stats.ChiPower);
+        bender.stats.TotalSpeed = (bender.stats.Dexterity + 2);
+        bender.stats.TotalPhysicalDefence = (bender.stats.Dexterity + 10);
+        bender.stats.TotalBendingDefence = (bender.stats.TotalPhysicalDefence + bender.stats.ChiPower);
+        bender.stats.TotalInitiative = (bender.stats.Dexterity + bender.stats.Intelligence);
+        return bender;
+    }
+    public Bender CreateNonBender(int alinanStrength, int alinanDexterity, int alinanConstitution, int alinanIntelligence, int alinanChiPower, int alinanPhysicalPower, int alinanCharisma)
+    {
+        Bender bender = new Bender();
+        bender.stats.Strength = alinanStrength;
+        bender.stats.Dexterity = alinanDexterity;
+        bender.stats.Constitution = alinanConstitution;
+        bender.stats.Intelligence = alinanIntelligence;
+        bender.stats.ChiPower = alinanChiPower;
+        bender.stats.PhysicalPower = alinanPhysicalPower;
+        bender.stats.Charisma = alinanCharisma;
+
+        bender.stats.TotalHealth = 20 + (4 * bender.stats.Constitution);
+        bender.stats.TotalPhysicalEnergy = (bender.stats.Constitution + bender.stats.PhysicalPower);
+        bender.stats.TotalChiEnergy = (bender.stats.ChiPower);
+        bender.stats.TotalSpeed = (bender.stats.Dexterity + 2);
+        bender.stats.TotalPhysicalDefence = (bender.stats.Dexterity + 10);
+        bender.stats.TotalBendingDefence = (bender.stats.TotalPhysicalDefence + bender.stats.ChiPower);
+        bender.stats.TotalInitiative = (bender.stats.Dexterity + bender.stats.Intelligence);
+        return bender;
     }
 
 
