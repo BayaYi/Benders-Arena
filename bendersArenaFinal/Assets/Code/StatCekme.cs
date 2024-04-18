@@ -13,7 +13,13 @@ public class StatCekme : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log("Strength" + alinanStrength);
     }
-
+    public int alinanStrength;
+    public int alinanDexterity;
+    public int alinanConstitution;
+    public int alinanIntelligence;
+    public int alinanChiPower;
+    public int alinanPhysicalPower;
+    public int alinanCharisma;
 }
