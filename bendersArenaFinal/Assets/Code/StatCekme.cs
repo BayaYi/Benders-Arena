@@ -15,11 +15,12 @@ public class StatCekme : MonoBehaviour
     {
         Debug.Log("Strength" + alinanStrength);
     }
-    public int alinanStrength;
-    public int alinanDexterity;
-    public int alinanConstitution;
-    public int alinanIntelligence;
-    public int alinanChiPower;
-    public int alinanPhysicalPower;
-    public int alinanCharisma;
+    public BendingAbility alinanBending = BendingAbility.fire;
+    public int alinanStrength=3;
+    public int alinanDexterity=3;
+    public int alinanConstitution = 3;
+    public int alinanIntelligence = 3;
+    public int alinanChiPower = 3;
+    public int alinanPhysicalPower = 3;
+    public int alinanCharisma = 3;
 }

@@ -12,18 +12,23 @@ public class ActionableTypes : MonoBehaviour
         public bool IsServerFounder { get; set; }
         public int PlayerNumber { get; set; }
     }
-    //BaseStats'a veri çekme kodu
-    //public BaseStat DataExtraction(int bending, int strentgh, int dexterity, int constitution, int intelligence, int physicalPower, int chiPower, int charisma)
-    //{
+    
+    public Bender CreateEarthBender()
+    {
 
-    //}
+    }
+    public Bender CreateFireBender()
+    {
 
-    //yaratma kodu
-    //public Bender CreateBender(BendingAbility ability, int strentgh, int dexterity, int constitution, int intelligence, int physicalPower, int chiPower , int charýsma )
-    //{
-    //    Bender bender = new();
+    }
+    public Bender CreateWaterBender()
+    {
 
-    //}
+    }
+    public Bender CreateAirBender()
+    {
+
+    }
 
 
     //Canavar temel kodu ve yaratma
