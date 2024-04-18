@@ -14,6 +14,13 @@ public class StatCekme : MonoBehaviour
     void Update()
     {
         Debug.Log("Strength" + alinanStrength);
+        Debug.Log("Dexterity" + alinanStrength);
+        Debug.Log("Strength" + alinanStrength);
+        Debug.Log("Strength" + alinanStrength);
+        Debug.Log("Strength" + alinanStrength);
+        Debug.Log("Strength" + alinanStrength);
+        Debug.Log("Strength" + alinanStrength);
+        Debug.Log("Strength" + alinanStrength);
     }
     public BendingAbility alinanBending = BendingAbility.fire;
     public int alinanStrength=3;
