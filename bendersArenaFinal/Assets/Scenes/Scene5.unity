@@ -746,6 +746,7 @@ GameObject:
   - component: {fileID: 648714011}
   - component: {fileID: 648714010}
   - component: {fileID: 648714009}
+  - component: {fileID: 648714012}
   m_Layer: 5
   m_Name: Create a NewLobby Button
   m_TagString: Untagged
@@ -867,6 +868,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648714007}
   m_CullTransparentMesh: 1
+--- !u!114 &648714012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648714007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &690238757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,6 +1034,7 @@ GameObject:
   - component: {fileID: 1724892710}
   - component: {fileID: 1724892709}
   - component: {fileID: 1724892708}
+  - component: {fileID: 1724892711}
   m_Layer: 5
   m_Name: Join a Lobby Button
   m_TagString: Untagged
@@ -1139,6 +1156,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1724892706}
   m_CullTransparentMesh: 1
+--- !u!114 &1724892711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724892706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1909868045
 GameObject:
   m_ObjectHideFlags: 0
