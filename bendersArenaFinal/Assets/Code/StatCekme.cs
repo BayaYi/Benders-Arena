@@ -22,6 +22,8 @@ public class StatCekme : MonoBehaviour
         Debug.Log("Strength" + alinanStrength);
         Debug.Log("Strength" + alinanStrength);
     }
+
+    //KARAKTER PUANLÞARI SAHNESÝNDE SAVE BUTONUNUA BASILINCA TEXTBOXLARDAKÝ TOPLAM DEÐERÝ AÞAÐIDAKÝ DEÐERLERE ATA
     public BendingAbility alinanBending = BendingAbility.fire;
     public int alinanStrength=3;
     public int alinanDexterity=3;
