@@ -401,6 +401,7 @@ GameObject:
   - component: {fileID: 370647294}
   - component: {fileID: 370647293}
   - component: {fileID: 370647292}
+  - component: {fileID: 370647295}
   m_Layer: 5
   m_Name: SaveButton
   m_TagString: Untagged
@@ -493,7 +494,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -510,6 +511,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370647290}
   m_CullTransparentMesh: 1
+--- !u!114 &370647295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370647290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &471987048
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,6 +900,7 @@ GameObject:
   - component: {fileID: 643774063}
   - component: {fileID: 643774062}
   - component: {fileID: 643774061}
+  - component: {fileID: 643774064}
   m_Layer: 5
   m_Name: AddObjectButton
   m_TagString: Untagged
@@ -993,6 +1010,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643774059}
   m_CullTransparentMesh: 1
+--- !u!114 &643774064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643774059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &670832634
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,6 +1500,7 @@ GameObject:
   - component: {fileID: 1521234716}
   - component: {fileID: 1521234715}
   - component: {fileID: 1521234714}
+  - component: {fileID: 1521234717}
   m_Layer: 5
   m_Name: UndoButton
   m_TagString: Untagged
@@ -1577,6 +1610,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521234712}
   m_CullTransparentMesh: 1
+--- !u!114 &1521234717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521234712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1727269607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,6 +1905,7 @@ GameObject:
   - component: {fileID: 1839919310}
   - component: {fileID: 1839919309}
   - component: {fileID: 1839919308}
+  - component: {fileID: 1839919311}
   m_Layer: 5
   m_Name: RedoButton
   m_TagString: Untagged
@@ -1966,6 +2015,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839919306}
   m_CullTransparentMesh: 1
+--- !u!114 &1839919311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839919306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1904471377
 GameObject:
   m_ObjectHideFlags: 0
@@ -2046,6 +2110,7 @@ GameObject:
   - component: {fileID: 1908112915}
   - component: {fileID: 1908112914}
   - component: {fileID: 1908112913}
+  - component: {fileID: 1908112916}
   m_Layer: 5
   m_Name: AddMobsButton
   m_TagString: Untagged
@@ -2155,6 +2220,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1908112911}
   m_CullTransparentMesh: 1
+--- !u!114 &1908112916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908112911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1942963653
 GameObject:
   m_ObjectHideFlags: 0
@@ -2391,6 +2471,7 @@ GameObject:
   - component: {fileID: 1989906158}
   - component: {fileID: 1989906157}
   - component: {fileID: 1989906156}
+  - component: {fileID: 1989906159}
   m_Layer: 5
   m_Name: MapSettingsButton
   m_TagString: Untagged
@@ -2500,6 +2581,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989906154}
   m_CullTransparentMesh: 1
+--- !u!114 &1989906159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989906154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

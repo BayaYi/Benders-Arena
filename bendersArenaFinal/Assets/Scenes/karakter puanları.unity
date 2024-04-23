@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89b562310f2c3c4468635facef3f9357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alinanBending: 1
   alinanStrength: 0
   alinanDexterity: 0
   alinanConstitution: 0
@@ -186,6 +187,7 @@ GameObject:
   - component: {fileID: 37672290}
   - component: {fileID: 37672289}
   - component: {fileID: 37672288}
+  - component: {fileID: 37672291}
   m_Layer: 5
   m_Name: Zar4Button
   m_TagString: Untagged
@@ -307,6 +309,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37672286}
   m_CullTransparentMesh: 1
+--- !u!114 &37672291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37672286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &60011171
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,6 +981,7 @@ GameObject:
   - component: {fileID: 172016984}
   - component: {fileID: 172016983}
   - component: {fileID: 172016982}
+  - component: {fileID: 172016985}
   m_Layer: 5
   m_Name: Zar3Button
   m_TagString: Untagged
@@ -1085,6 +1103,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 172016980}
   m_CullTransparentMesh: 1
+--- !u!114 &172016985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172016980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &179322846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1650,6 +1683,7 @@ GameObject:
   - component: {fileID: 291620412}
   - component: {fileID: 291620411}
   - component: {fileID: 291620410}
+  - component: {fileID: 291620413}
   m_Layer: 5
   m_Name: CohstArtiButton
   m_TagString: Untagged
@@ -1783,6 +1817,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291620408}
   m_CullTransparentMesh: 1
+--- !u!114 &291620413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291620408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &314926440
 GameObject:
   m_ObjectHideFlags: 0
@@ -2228,6 +2277,7 @@ GameObject:
   - component: {fileID: 359212058}
   - component: {fileID: 359212057}
   - component: {fileID: 359212056}
+  - component: {fileID: 359212059}
   m_Layer: 5
   m_Name: ToplamChaButton
   m_TagString: Untagged
@@ -2349,6 +2399,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359212054}
   m_CullTransparentMesh: 1
+--- !u!114 &359212059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359212054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &366902838
 GameObject:
   m_ObjectHideFlags: 0
@@ -2688,6 +2753,7 @@ GameObject:
   - component: {fileID: 397491168}
   - component: {fileID: 397491167}
   - component: {fileID: 397491166}
+  - component: {fileID: 397491169}
   m_Layer: 5
   m_Name: StrArtiButton
   m_TagString: Untagged
@@ -2821,6 +2887,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397491164}
   m_CullTransparentMesh: 1
+--- !u!114 &397491169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397491164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &414864852
 GameObject:
   m_ObjectHideFlags: 0
@@ -3150,6 +3231,7 @@ GameObject:
   - component: {fileID: 523686459}
   - component: {fileID: 523686458}
   - component: {fileID: 523686457}
+  - component: {fileID: 523686460}
   m_Layer: 5
   m_Name: ChiArtiButton
   m_TagString: Untagged
@@ -3283,6 +3365,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 523686455}
   m_CullTransparentMesh: 1
+--- !u!114 &523686460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523686455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &599938650
 GameObject:
   m_ObjectHideFlags: 0
@@ -3295,6 +3392,7 @@ GameObject:
   - component: {fileID: 599938654}
   - component: {fileID: 599938653}
   - component: {fileID: 599938652}
+  - component: {fileID: 599938655}
   m_Layer: 5
   m_Name: Zar1Button
   m_TagString: Untagged
@@ -3416,6 +3514,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599938650}
   m_CullTransparentMesh: 1
+--- !u!114 &599938655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599938650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &617538841
 GameObject:
   m_ObjectHideFlags: 0
@@ -3428,6 +3541,7 @@ GameObject:
   - component: {fileID: 617538845}
   - component: {fileID: 617538844}
   - component: {fileID: 617538843}
+  - component: {fileID: 617538846}
   m_Layer: 5
   m_Name: ToplamIntButton
   m_TagString: Untagged
@@ -3549,6 +3663,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617538841}
   m_CullTransparentMesh: 1
+--- !u!114 &617538846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617538841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &619588530
 GameObject:
   m_ObjectHideFlags: 0
@@ -4827,6 +4956,7 @@ GameObject:
   - component: {fileID: 973668345}
   - component: {fileID: 973668344}
   - component: {fileID: 973668343}
+  - component: {fileID: 973668346}
   m_Layer: 5
   m_Name: Zar5Button
   m_TagString: Untagged
@@ -4948,6 +5078,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973668341}
   m_CullTransparentMesh: 1
+--- !u!114 &973668346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973668341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &975965222
 GameObject:
   m_ObjectHideFlags: 0
@@ -5039,6 +5184,7 @@ GameObject:
   - component: {fileID: 990154750}
   - component: {fileID: 990154749}
   - component: {fileID: 990154748}
+  - component: {fileID: 990154751}
   m_Layer: 5
   m_Name: ToplamStrButton
   m_TagString: Untagged
@@ -5160,6 +5306,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 990154746}
   m_CullTransparentMesh: 1
+--- !u!114 &990154751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990154746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &994582588
 GameObject:
   m_ObjectHideFlags: 0
@@ -6143,7 +6304,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1673363704}
   m_HandleRect: {fileID: 1673363703}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -6278,6 +6439,7 @@ GameObject:
   - component: {fileID: 1177501047}
   - component: {fileID: 1177501046}
   - component: {fileID: 1177501045}
+  - component: {fileID: 1177501048}
   m_Layer: 5
   m_Name: Zar2Button
   m_TagString: Untagged
@@ -6399,6 +6561,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177501043}
   m_CullTransparentMesh: 1
+--- !u!114 &1177501048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177501043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1196019364
 GameObject:
   m_ObjectHideFlags: 0
@@ -6853,6 +7030,7 @@ GameObject:
   - component: {fileID: 1366468347}
   - component: {fileID: 1366468346}
   - component: {fileID: 1366468345}
+  - component: {fileID: 1366468348}
   m_Layer: 5
   m_Name: ChaArtiButton
   m_TagString: Untagged
@@ -6986,6 +7164,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366468343}
   m_CullTransparentMesh: 1
+--- !u!114 &1366468348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366468343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1367406392
 GameObject:
   m_ObjectHideFlags: 0
@@ -7077,6 +7270,7 @@ GameObject:
   - component: {fileID: 1459530881}
   - component: {fileID: 1459530880}
   - component: {fileID: 1459530879}
+  - component: {fileID: 1459530882}
   m_Layer: 5
   m_Name: ToplamCohstButton
   m_TagString: Untagged
@@ -7101,7 +7295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -71.6, y: 62.600006}
+  m_AnchoredPosition: {x: -70.8, y: 62.600006}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1459530879
@@ -7198,6 +7392,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459530877}
   m_CullTransparentMesh: 1
+--- !u!114 &1459530882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459530877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1500188403
 GameObject:
   m_ObjectHideFlags: 0
@@ -7503,6 +7712,7 @@ GameObject:
   - component: {fileID: 1597259892}
   - component: {fileID: 1597259891}
   - component: {fileID: 1597259890}
+  - component: {fileID: 1597259893}
   m_Layer: 5
   m_Name: ToplamDexButton
   m_TagString: Untagged
@@ -7624,6 +7834,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597259888}
   m_CullTransparentMesh: 1
+--- !u!114 &1597259893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597259888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1598290314
 GameObject:
   m_ObjectHideFlags: 0
@@ -7794,6 +8019,7 @@ GameObject:
   - component: {fileID: 1640562847}
   - component: {fileID: 1640562846}
   - component: {fileID: 1640562845}
+  - component: {fileID: 1640562848}
   m_Layer: 5
   m_Name: "ToplamCh\u0131Button"
   m_TagString: Untagged
@@ -7915,6 +8141,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640562843}
   m_CullTransparentMesh: 1
+--- !u!114 &1640562848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640562843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1659198904
 GameObject:
   m_ObjectHideFlags: 0
@@ -7927,6 +8168,7 @@ GameObject:
   - component: {fileID: 1659198908}
   - component: {fileID: 1659198907}
   - component: {fileID: 1659198906}
+  - component: {fileID: 1659198909}
   m_Layer: 5
   m_Name: Zar6Button
   m_TagString: Untagged
@@ -8048,6 +8290,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659198904}
   m_CullTransparentMesh: 1
+--- !u!114 &1659198909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659198904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1671801104
 GameObject:
   m_ObjectHideFlags: 0
@@ -8315,6 +8572,7 @@ GameObject:
   - component: {fileID: 1733015381}
   - component: {fileID: 1733015380}
   - component: {fileID: 1733015379}
+  - component: {fileID: 1733015382}
   m_Layer: 5
   m_Name: ToplamPhyPButton
   m_TagString: Untagged
@@ -8436,6 +8694,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733015377}
   m_CullTransparentMesh: 1
+--- !u!114 &1733015382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733015377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1779107501
 GameObject:
   m_ObjectHideFlags: 0
@@ -8484,6 +8757,7 @@ GameObject:
   - component: {fileID: 1783155213}
   - component: {fileID: 1783155212}
   - component: {fileID: 1783155211}
+  - component: {fileID: 1783155214}
   m_Layer: 5
   m_Name: Zar7Button
   m_TagString: Untagged
@@ -8605,6 +8879,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1783155209}
   m_CullTransparentMesh: 1
+--- !u!114 &1783155214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783155209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1787449723
 GameObject:
   m_ObjectHideFlags: 0
@@ -8617,6 +8906,7 @@ GameObject:
   - component: {fileID: 1787449727}
   - component: {fileID: 1787449726}
   - component: {fileID: 1787449725}
+  - component: {fileID: 1787449728}
   m_Layer: 5
   m_Name: DexArtiButton
   m_TagString: Untagged
@@ -8750,6 +9040,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787449723}
   m_CullTransparentMesh: 1
+--- !u!114 &1787449728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787449723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1803351275
 GameObject:
   m_ObjectHideFlags: 0
@@ -8762,6 +9067,7 @@ GameObject:
   - component: {fileID: 1803351279}
   - component: {fileID: 1803351278}
   - component: {fileID: 1803351277}
+  - component: {fileID: 1803351280}
   m_Layer: 5
   m_Name: PhypArtiButton
   m_TagString: Untagged
@@ -8895,6 +9201,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1803351275}
   m_CullTransparentMesh: 1
+--- !u!114 &1803351280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803351275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1807768613
 GameObject:
   m_ObjectHideFlags: 0
@@ -9299,7 +9620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2, y: -1}
+  m_AnchoredPosition: {x: -0.19999981, y: -0.10000038}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1858498772
@@ -9614,7 +9935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0000038146973}
+  m_AnchoredPosition: {x: 0, y: 0.000011444092}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &2009758479
@@ -9919,6 +10240,7 @@ GameObject:
   - component: {fileID: 2024875527}
   - component: {fileID: 2024875526}
   - component: {fileID: 2024875525}
+  - component: {fileID: 2024875528}
   m_Layer: 5
   m_Name: IntArtiButton
   m_TagString: Untagged
@@ -10052,6 +10374,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024875523}
   m_CullTransparentMesh: 1
+--- !u!114 &2024875528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024875523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2054165847
 GameObject:
   m_ObjectHideFlags: 0
