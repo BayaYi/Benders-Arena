@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 477485136890847890}
   - component: {fileID: 4765522178726742478}
   - component: {fileID: -8438229117159327363}
+  - component: {fileID: 3113917567442178287}
   m_Layer: 0
   m_Name: PlayerMermisi
   m_TagString: Bullet
@@ -147,3 +148,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4765522178726742478}
+--- !u!114 &3113917567442178287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4245399287655968283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1af4578d3059d4241804c09feaf3528c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

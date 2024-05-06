@@ -20,6 +20,7 @@ public class EnemyBulletMovement : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+
         // Çarpýþmanýn gerçekleþtiði nesneyi kontrol et
         if (collision.gameObject.CompareTag("Player"))
         {

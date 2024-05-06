@@ -58,5 +58,7 @@ public class EnemyBullet : MonoBehaviour
         //Mermi oluþturuldu.
         Instantiate(bullet, bulletLocation, Quaternion.identity);
 
+        
+
     }
 }
