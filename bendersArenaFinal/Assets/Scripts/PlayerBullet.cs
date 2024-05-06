@@ -57,6 +57,7 @@ public class PlayerBullet : MonoBehaviour
         }
         //Mermi oluþturuldu.
         Instantiate(bullet, bulletLocation, Quaternion.identity);
+        
 
     }
 }
