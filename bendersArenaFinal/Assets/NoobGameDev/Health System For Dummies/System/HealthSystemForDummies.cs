@@ -21,6 +21,9 @@ public class HealthSystemForDummies : MonoBehaviour
     public OnIsAliveChanged OnIsAliveChanged;
     public OnMaximumHealthChanged OnMaximumHealthChanged;
 
+    
+    
+
     public GameObject HealthBarPrefabToSpawn;
 
     public void AddToMaximumHealth(float value)
@@ -119,4 +122,5 @@ public class HealthSystemForDummies : MonoBehaviour
         OnIsAliveChanged.Invoke(IsAlive);
         OnCurrentHealthChanged.Invoke(new CurrentHealth(previousHealth, CurrentHealth, CurrentHealthPercentage));
     }
+    
 }
