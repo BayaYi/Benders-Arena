@@ -27,17 +27,33 @@ public class zarArtiToplamCode : MonoBehaviour
     public Text totalScoreText5;
     public Text totalScoreText6;
 
+        public Text totalHealthText;
+    public Text totalPhysicalEnergyText;
+    public Text totalChiEnergyText;
+    public Text totalSpeedText;
+    public Text totalPhysicalDefenceText;
+    public Text totalBendingDefenceText;
+    public Text totalInitiativeText;
+
     void Start()
     {
         // Kaydedilmiş puanları yükleme
         LoadScores();
     }
+/*public void CalculateTotalScore(Text txtDisplayNumber, Text diceResultText, Text totalScoreText)
+    {
+        int totalScore = CalculateIndividualTotalScore(txtDisplayNumber, diceResultText);
+        totalScoreText.text = totalScore.ToString();
+        SaveScore(totalScoreText.name, totalScore);
 
+        CalculateNewTotals();
+    }*/
     public void CalculateTotalScore()
     {
         int totalScore = CalculateIndividualTotalScore(txtDisplayNumber2, diceResultText);
         totalScoreText.text = totalScore.ToString();
         SaveScore("totalScore", totalScore);
+         CalculateNewTotals();
     }
 
     public void CalculateTotalScore1()
@@ -89,12 +105,12 @@ public class zarArtiToplamCode : MonoBehaviour
         return score1 + score2;
     }
 
-    void SaveScore(string key, int score)
+    public void SaveScore(string key, int score)
     {
         PlayerPrefs.SetInt(key, score);
     }
 
-    void LoadScores()
+    public void LoadScores()
     {
         totalScoreText.text = PlayerPrefs.GetInt("totalScore", 0).ToString();
         totalScoreText1.text = PlayerPrefs.GetInt("totalScore1", 0).ToString();
@@ -103,6 +119,18 @@ public class zarArtiToplamCode : MonoBehaviour
         totalScoreText4.text = PlayerPrefs.GetInt("totalScore4", 0).ToString();
         totalScoreText5.text = PlayerPrefs.GetInt("totalScore5", 0).ToString();
         totalScoreText6.text = PlayerPrefs.GetInt("totalScore6", 0).ToString();
+
+        CalculateNewTotals();
+    }
+     public void CalculateNewTotals()
+    {
+        totalHealthText.text = (30 + (12 * int.Parse(totalScoreText2.text))).ToString();
+        totalPhysicalEnergyText.text = (int.Parse(totalScoreText2.text) + int.Parse(totalScoreText4.text)).ToString();
+        totalChiEnergyText.text = totalScoreText5.text;
+        totalSpeedText.text = (int.Parse(totalScoreText1.text) + 2).ToString();
+        totalPhysicalDefenceText.text = (int.Parse(totalScoreText1.text) + 10).ToString();
+        totalBendingDefenceText.text = (int.Parse(totalPhysicalDefenceText.text) + int.Parse(totalScoreText5.text)).ToString();
+        totalInitiativeText.text = (int.Parse(totalScoreText1.text) + int.Parse(totalScoreText3.text)).ToString();
     }
 
     public void DeleteSavedScore(string key)
