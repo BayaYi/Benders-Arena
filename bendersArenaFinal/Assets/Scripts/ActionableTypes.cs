@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class ActionableTypes : MonoBehaviour
 {
-    //Bükücü temel kodu ve yaratma
-    public struct Bender 
+    //Bï¿½kï¿½cï¿½ temel kodu ve yaratma
+    public struct Bender
     {
         public BaseStat stats;
         public string Name { get; set; }
         public bool IsServerFounder { get; set; }
         public int PlayerNumber { get; set; }
     }
-    
+
     public Bender CreateCharacter(BendingAbility alinanBending, int alinanStrength, int alinanDexterity, int alinanConstitution, int alinanIntelligence, int alinanChiPower, int alinanPhysicalPower, int alinanCharisma)
     {
         switch (alinanBending)
@@ -31,7 +31,7 @@ public class ActionableTypes : MonoBehaviour
     }
     public Bender CreateEarthBender(int alinanStrength, int alinanDexterity, int alinanConstitution, int alinanIntelligence, int alinanChiPower, int alinanPhysicalPower, int alinanCharisma)
     {
-        Bender bender = new Bender();        
+        Bender bender = new Bender();
         bender.stats.Strength = alinanStrength;
         bender.stats.Dexterity = alinanDexterity;
         bender.stats.Constitution = alinanConstitution;
@@ -157,7 +157,7 @@ public class ActionableTypes : MonoBehaviour
         public int DamageDice { get; set; }
         public int DiceNumber { get; set; }
     }
-    //Eriþim olmadýðý için weaponName parametresini kaldýrýn uyarýsý geliyor kaldýrmayýn
+    //Eriï¿½im olmadï¿½ï¿½ï¿½ iï¿½in weaponName parametresini kaldï¿½rï¿½n uyarï¿½sï¿½ geliyor kaldï¿½rmayï¿½n
     public Weapon CreateWeapon(string weaponName, int range, DamageType damageType, int damageDice, int diceNumber)
     {
         Weapon weapon = new();
@@ -169,13 +169,13 @@ public class ActionableTypes : MonoBehaviour
         return weapon;
     }
 
-    //Eriþim örneði
+    //Eriï¿½im ï¿½rneï¿½i
     //public void AllWeapons()
     //{
-    //    Weapon shortBow = CreateWeapon("Kýsa Yay", 6, DamageType.Pierce, 6, 2);
+    //    Weapon shortBow = CreateWeapon("Kï¿½sa Yay", 6, DamageType.Pierce, 6, 2);
     //    Weapon longBow = CreateWeapon("Uzun Yay", 8, DamageType.Pierce, 4, 2);
-    //    Weapon shortSword = CreateWeapon("Kýlýç", 1, DamageType.Slashing, 8, 2);
-    //    Weapon longSword = CreateWeapon("Uzun Kýlýç", 1, DamageType.Slashing, 10, 2);
+    //    Weapon shortSword = CreateWeapon("Kï¿½lï¿½ï¿½", 1, DamageType.Slashing, 8, 2);
+    //    Weapon longSword = CreateWeapon("Uzun Kï¿½lï¿½ï¿½", 1, DamageType.Slashing, 10, 2);
     //}
 
 }//yeni kod

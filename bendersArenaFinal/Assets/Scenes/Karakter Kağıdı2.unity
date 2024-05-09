@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -660,6 +660,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529455944}
   m_CullTransparentMesh: 1
+--- !u!1 &569887003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 569887005}
+  - component: {fileID: 569887004}
+  m_Layer: 0
+  m_Name: GameObject (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &569887004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569887003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b898912bca6dd489febb80d90d1454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &569887005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569887003}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1017.11743, y: 479.1202, z: -5.2400208}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &574960274
 GameObject:
   m_ObjectHideFlags: 0
@@ -2266,7 +2310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61934bbf54c15e4dbb907bea5114bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txtDisplayNumber2: {fileID: 0}
+  txtDisplayNumber2: {fileID: 331568868}
   txtDisplayNumber3: {fileID: 0}
   txtDisplayNumber4: {fileID: 0}
   txtDisplayNumber5: {fileID: 0}
@@ -2287,6 +2331,13 @@ MonoBehaviour:
   totalScoreText4: {fileID: 1280873906}
   totalScoreText5: {fileID: 529455946}
   totalScoreText6: {fileID: 1321584157}
+  totalHealthText: {fileID: 331568868}
+  totalPhysicalEnergyText: {fileID: 1701733266}
+  totalChiEnergyText: {fileID: 990849425}
+  totalSpeedText: {fileID: 1864668310}
+  totalPhysicalDefenceText: {fileID: 994123643}
+  totalBendingDefenceText: {fileID: 2034240209}
+  totalInitiativeText: {fileID: 1725541334}
 --- !u!4 &1909898651
 Transform:
   m_ObjectHideFlags: 0
@@ -2294,64 +2345,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909898649}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 514.5407, y: 221.19566, z: -0.6088257}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1915628571
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1915628573}
-  - component: {fileID: 1915628572}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1915628572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915628571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a97e1bb7377cee5468eeca73d737e908, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthText: {fileID: 331568868}
-  _physicalEnergyText: {fileID: 1701733266}
-  _chiEnergyText: {fileID: 990849425}
-  _speedText: {fileID: 1864668310}
-  _physicalDefenceText: {fileID: 994123643}
-  _bendingDefenceText: {fileID: 2034240209}
-  _initiativeText: {fileID: 1725541334}
-  _strengthText: {fileID: 0}
-  _dexterityText: {fileID: 0}
-  _constitutionText: {fileID: 0}
-  _intelligenceText: {fileID: 0}
-  _physicalPowerText: {fileID: 0}
-  _chiPowerText: {fileID: 0}
-  _charismaText: {fileID: 0}
---- !u!4 &1915628573
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915628571}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 514.5407, y: 221.19566, z: -0.6088257}
@@ -2521,5 +2514,5 @@ SceneRoots:
   - {fileID: 866655431}
   - {fileID: 637574125}
   - {fileID: 745174915}
-  - {fileID: 1915628573}
   - {fileID: 1909898651}
+  - {fileID: 569887005}
