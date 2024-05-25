@@ -53,4 +53,13 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/KarakterKa\u011F\u0131d\u0131Air.unity"
     guid: 7c9d244374adeb64fbba447db9de00c1
+  - enabled: 0
+    path: Assets/Scenes/GameScene.unity
+    guid: 13e14550d65d1f24d92ae4f3ea58884c
+  - enabled: 0
+    path: Assets/Scenes/UUU.unity
+    guid: 27d6a249176dc944a82350447449d5d8
+  - enabled: 1
+    path: Assets/Scenes/TumCanvaslar.unity
+    guid: 2e930df293487974197e18ac33b6fb2b
   m_configObjects: {}
