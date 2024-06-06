@@ -62,4 +62,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TumCanvaslar.unity
     guid: 2e930df293487974197e18ac33b6fb2b
+  - enabled: 1
+    path: Assets/Scenes/karakterToprakScene.unity
+    guid: 3df7ae7cc7170824bb048374838693fc
   m_configObjects: {}
