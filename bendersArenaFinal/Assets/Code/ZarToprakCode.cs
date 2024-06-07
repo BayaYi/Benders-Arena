@@ -129,7 +129,7 @@ public class ZarToprakCode : MonoBehaviour
     }
      public void CalculateNewTotals2()
     {
-        totalHealthText.text = (20 + (8 * int.Parse(totalScoreText2.text))).ToString();
+        totalHealthText.text = (30+ (12 * int.Parse(totalScoreText2.text))).ToString();
         totalPhysicalEnergyText.text = (int.Parse(totalScoreText2.text) + int.Parse(totalScoreText4.text)).ToString();
         totalChiEnergyText.text = totalScoreText5.text;
         totalSpeedText.text = (int.Parse(totalScoreText1.text) + 2).ToString();
