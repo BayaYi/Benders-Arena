@@ -12,7 +12,7 @@ public class ZarCode : MonoBehaviour
     public Text diceResultText4;
     public Text diceResultText5;
     public Text diceResultText6;
-    private int[] lastRolledValues = new int[6]; // Diziyi 6 elemanlı yapmalısınız
+    private int[] lastRolledValues = new int[7]; // Diziyi 6 elemanlı yapmalısınız
 
     void Start()
     {

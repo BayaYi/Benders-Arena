@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class zarArtiToplamCode : MonoBehaviour
+public class ZarToprakCode : MonoBehaviour
+
+
+
+
+
 {
     public Text txtDisplayNumber2;
     public Text txtDisplayNumber3;
@@ -27,13 +32,13 @@ public class zarArtiToplamCode : MonoBehaviour
     public Text totalScoreText5;
     public Text totalScoreText6;
 
-        //public Text totalHealthText;
-    //public Text totalPhysicalEnergyText;
-    //public Text totalChiEnergyText;
-    //public Text totalSpeedText;
-    //public Text totalPhysicalDefenceText;
-    //public Text totalBendingDefenceText;
-    //public Text totalInitiativeText;
+        public Text totalHealthText;
+    public Text totalPhysicalEnergyText;
+    public Text totalChiEnergyText;
+    public Text totalSpeedText;
+    public Text totalPhysicalDefenceText;
+    public Text totalBendingDefenceText;
+    public Text totalInitiativeText;
 
     void Start()
     {
@@ -53,7 +58,7 @@ public class zarArtiToplamCode : MonoBehaviour
         int totalScore = CalculateIndividualTotalScore(txtDisplayNumber2, diceResultText);
         totalScoreText.text = totalScore.ToString();
         SaveScore("totalScore", totalScore);
-         //CalculateNewTotals();
+         CalculateNewTotals2();
     }
 
     public void CalculateTotalScore1()
@@ -120,12 +125,11 @@ public class zarArtiToplamCode : MonoBehaviour
         totalScoreText5.text = PlayerPrefs.GetInt("totalScore5", 0).ToString();
         totalScoreText6.text = PlayerPrefs.GetInt("totalScore6", 0).ToString();
 
-        //CalculateNewTotals();
+        CalculateNewTotals2();
     }
-     /*
-     public void CalculateNewTotals()
+     public void CalculateNewTotals2()
     {
-        totalHealthText.text = (30 + (12 * int.Parse(totalScoreText2.text))).ToString();
+        totalHealthText.text = (20 + (8 * int.Parse(totalScoreText2.text))).ToString();
         totalPhysicalEnergyText.text = (int.Parse(totalScoreText2.text) + int.Parse(totalScoreText4.text)).ToString();
         totalChiEnergyText.text = totalScoreText5.text;
         totalSpeedText.text = (int.Parse(totalScoreText1.text) + 2).ToString();
@@ -133,10 +137,12 @@ public class zarArtiToplamCode : MonoBehaviour
         totalBendingDefenceText.text = (int.Parse(totalPhysicalDefenceText.text) + int.Parse(totalScoreText5.text)).ToString();
         totalInitiativeText.text = (int.Parse(totalScoreText1.text) + int.Parse(totalScoreText3.text)).ToString();
     }
-    */
 
     public void DeleteSavedScore(string key)
     {
         PlayerPrefs.DeleteKey(key);
     }
 }
+
+
+

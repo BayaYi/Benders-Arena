@@ -9,7 +9,7 @@ public class ToprakGeçişCode : MonoBehaviour
      public void ToprakGeçişCodeButton()
     {
         // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
-        SceneManager.LoadScene(11);
+        SceneManager.LoadScene(17);
     }
 
       public void AteşGeçişCodeButton()
