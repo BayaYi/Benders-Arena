@@ -19,6 +19,10 @@ public class TumCanvasCode : MonoBehaviour
 
     public Canvas Canvas8;
     public Canvas Canvas9;
+    public Canvas Canvas10;
+    public Canvas Canvas11;
+    public Canvas Canvas12;
+    public Canvas Canvas13;
 
     // Start is called before the first frame update
     public void loadMainMenu()
@@ -40,6 +44,10 @@ public class TumCanvasCode : MonoBehaviour
 
         Canvas8.enabled = false;
         Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
     }
 
      public void loadCanvas2()
@@ -55,6 +63,10 @@ public class TumCanvasCode : MonoBehaviour
 
         Canvas8.enabled = false;
         Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
     }
 
       public void loadCanvas3()
@@ -70,6 +82,10 @@ public class TumCanvasCode : MonoBehaviour
 
         Canvas8.enabled = false;
         Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
     }
 
       public void loadCanvas4()
@@ -85,6 +101,10 @@ public class TumCanvasCode : MonoBehaviour
 
         Canvas8.enabled = false;
         Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
     }
 
       public void loadCanvas5()
@@ -100,6 +120,10 @@ public class TumCanvasCode : MonoBehaviour
 
         Canvas8.enabled = false;
         Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
     }
 
     public void loadCanvas6()
@@ -115,6 +139,10 @@ public class TumCanvasCode : MonoBehaviour
 
         Canvas8.enabled = false;
         Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
 
     }
 
@@ -133,6 +161,10 @@ public class TumCanvasCode : MonoBehaviour
 
         Canvas8.enabled = true;
         Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
 
     }
 
@@ -146,11 +178,95 @@ public class TumCanvasCode : MonoBehaviour
         Canvas4.enabled = false;
         Canvas5.enabled = false;
         Canvas6.enabled = false;
-       
+
         Canvas8.enabled = false;
         Canvas9.enabled = true;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
 
     }
+
+            public void loadCanvas10()
+    {
+
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas6.enabled = false;
+
+        Canvas8.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = true;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
+
+    }
+
+        public void loadCanvas11()
+    {
+
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas6.enabled = false;
+
+        Canvas8.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = true;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
+
+    }
+            public void loadCanvas12()
+    {
+
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas6.enabled = false;
+
+        Canvas8.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = true;
+        Canvas13.enabled = false;
+
+    }
+
+            public void loadCanvas13()
+    {
+
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas6.enabled = false;
+
+        Canvas8.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = true;
+
+    }
+
 
 
     public void loadCanvasBack1()
@@ -191,6 +307,17 @@ public class TumCanvasCode : MonoBehaviour
         Canvas3.enabled = false;
         Canvas4.enabled = false;
         Canvas5.enabled = false;
+    }
+
+         public void loadCanvasBack5()
+    {
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas9.enabled = true;
     }
 
 
