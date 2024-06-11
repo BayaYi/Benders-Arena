@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a955f5302f6ea4349abb103033abf111, type: 3}
+  m_Name: Enemy 1
+  m_EditorClassIdentifier: 
+  Faction: 1
+  UnitPrefab: {fileID: 1002379583811184574, guid: 45bbd06af97d4cf49b67a60e7bff726e, type: 3}
