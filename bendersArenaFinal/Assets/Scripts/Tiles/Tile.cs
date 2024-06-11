@@ -37,15 +37,20 @@ public class Tile : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (GameManager.Instance.GameState != GameState.PlayerTurn) return;
+        //if (GameManager.Instance.GameState != GameState.PlayerTurn) return;
 
         if (OccupiedUnit != null)
         {
-            if (OccupiedUnit.Faction == Faction.Player) UnitManager.Instance.SetSelectedPlayer((BasePlayer)OccupiedUnit);
+            if (OccupiedUnit.Faction == Faction.Player)
+            {
+                UnitManager.Instance.SetSelectedPlayer((BasePlayer)OccupiedUnit);
+                
+            }
             else
             {
-                if(UnitManager.Instance.SelectedPlayer != null)
+                if (UnitManager.Instance.SelectedPlayer != null)
                 {
+                    
                     var enemy = (BaseEnemy)OccupiedUnit;
                     Destroy(enemy.gameObject);//Hasar mekaniði eklenecek...
                     UnitManager.Instance.SetSelectedPlayer(null);

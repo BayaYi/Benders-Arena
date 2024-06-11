@@ -5,7 +5,7 @@ using UnityEngine;
 
 static class Constants
 {
-    public const int HEROES = 1;
+    public const int HEROES = 2;
     public const int ENEMY = 3;
 }
 public class UnitManager : MonoBehaviour
