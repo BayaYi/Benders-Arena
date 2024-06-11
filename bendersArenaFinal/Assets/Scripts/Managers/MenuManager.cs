@@ -37,7 +37,7 @@ public class MenuManager : MonoBehaviour
 
     public void ShowSelectedPlayer(BasePlayer player)
     {
-        if (player == null)
+       if (player == null)
         {
             _selectedPlayerObject.SetActive(false);
             return ;
