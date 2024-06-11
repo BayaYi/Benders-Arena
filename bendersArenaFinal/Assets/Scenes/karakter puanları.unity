@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -196,14 +196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89b562310f2c3c4468635facef3f9357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alinanBending: 1
-  alinanStrength: 0
-  alinanDexterity: 0
-  alinanConstitution: 0
-  alinanIntelligence: 0
-  alinanChiPower: 0
-  alinanPhysicalPower: 0
-  alinanCharisma: 0
 --- !u!4 &37365197
 Transform:
   m_ObjectHideFlags: 0
@@ -7277,7 +7269,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1585988802}
-  - component: {fileID: 1585988801}
   m_Layer: 0
   m_Name: DropdownGameObject (1)
   m_TagString: Untagged
@@ -7285,19 +7276,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1585988801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1585988800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e41d559a479aa1b4abd571c713a77841, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _elementDropdown: {fileID: 0}
 --- !u!4 &1585988802
 Transform:
   m_ObjectHideFlags: 0
@@ -8003,13 +7981,6 @@ MonoBehaviour:
   totalScoreText4: {fileID: 848391905}
   totalScoreText5: {fileID: 1338337655}
   totalScoreText6: {fileID: 339146869}
-  totalHealthText: {fileID: 0}
-  totalPhysicalEnergyText: {fileID: 0}
-  totalChiEnergyText: {fileID: 0}
-  totalSpeedText: {fileID: 0}
-  totalPhysicalDefenceText: {fileID: 0}
-  totalBendingDefenceText: {fileID: 0}
-  totalInitiativeText: {fileID: 0}
 --- !u!1 &1680210451
 GameObject:
   m_ObjectHideFlags: 0
@@ -10279,8 +10250,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Scene1Code, Assembly-CSharp
-        m_MethodName: GeriGit
+        m_TargetAssemblyTypeName: TumCanvasCode, Assembly-CSharp
+        m_MethodName: loadCanvasBack5
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
