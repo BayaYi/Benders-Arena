@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ArttirmaCode : MonoBehaviour
 {
-
     [SerializeField] private Text txtDisplayNumber2;
     [SerializeField] private Text txtDisplayNumber3;
     [SerializeField] private Text txtDisplayNumber4;
@@ -14,7 +13,6 @@ public class ArttirmaCode : MonoBehaviour
     [SerializeField] private Text txtDisplayNumber7;
     [SerializeField] private Text txtDisplayNumber8;
 
-
     private int counter3 = 0;
     private int counter4 = 0;
     private int counter5 = 0;
@@ -22,10 +20,7 @@ public class ArttirmaCode : MonoBehaviour
     private int counter7 = 0;
     private int counter8 = 0;
     private int counter9 = 0;
-    private const int MaxValue = 7; // Artırma ve azaltma sınırları
-
-    //Karakter yaratma temel
-
+    private int MaxValue = 7; // Artırma ve azaltma sınırları
 
     void Start()
     {
@@ -35,9 +30,10 @@ public class ArttirmaCode : MonoBehaviour
 
     public void IncreaseAndDisplay2()
     {
-        if (counter3 < MaxValue)
+        if (MaxValue > 0)
         {
-            IncreaseTheValueBy2(ref counter3);
+            IncreaseTheValueBy1(ref counter3);
+            MaxValue--;
             DisplayTheNumbers();
             SaveCounters(); // Değişiklikleri kaydet
         }
@@ -45,37 +41,43 @@ public class ArttirmaCode : MonoBehaviour
 
     public void IncreaseAndDisplay3()
     {
-        if (counter4 < MaxValue)
+        if (MaxValue > 0)
         {
-            IncreaseTheValueBy2(ref counter4);
-            DisplayTheNumbers();
-            SaveCounters(); // Değişiklikleri kaydet
-        }
-    }
-public void IncreaseAndDisplay4()
-    {
-        if (counter5< MaxValue)
-        {
-            IncreaseTheValueBy2 (ref counter5);
-            DisplayTheNumbers();
-            SaveCounters(); // Değişiklikleri kaydet
-        }
-    }
-public void IncreaseAndDisplay5()
-    {
-        if (counter6 < MaxValue)
-        {
-            IncreaseTheValueBy2(ref counter6);
+            IncreaseTheValueBy1(ref counter4);
+            MaxValue--;
             DisplayTheNumbers();
             SaveCounters(); // Değişiklikleri kaydet
         }
     }
 
-public void IncreaseAndDisplay6()
+    public void IncreaseAndDisplay4()
     {
-        if (counter7 < MaxValue)
+        if (MaxValue > 0)
         {
-            IncreaseTheValueBy2(ref counter7);
+            IncreaseTheValueBy1(ref counter5);
+            MaxValue--;
+            DisplayTheNumbers();
+            SaveCounters(); // Değişiklikleri kaydet
+        }
+    }
+
+    public void IncreaseAndDisplay5()
+    {
+        if (MaxValue > 0)
+        {
+            IncreaseTheValueBy1(ref counter6);
+            MaxValue--;
+            DisplayTheNumbers();
+            SaveCounters(); // Değişiklikleri kaydet
+        }
+    }
+
+    public void IncreaseAndDisplay6()
+    {
+        if (MaxValue > 0)
+        {
+            IncreaseTheValueBy1(ref counter7);
+            MaxValue--;
             DisplayTheNumbers();
             SaveCounters(); // Değişiklikleri kaydet
         }
@@ -83,9 +85,10 @@ public void IncreaseAndDisplay6()
 
     public void IncreaseAndDisplay7()
     {
-        if (counter8 < MaxValue)
+        if (MaxValue > 0)
         {
-            IncreaseTheValueBy2(ref counter8);
+            IncreaseTheValueBy1(ref counter8);
+            MaxValue--;
             DisplayTheNumbers();
             SaveCounters(); // Değişiklikleri kaydet
         }
@@ -93,18 +96,19 @@ public void IncreaseAndDisplay6()
 
     public void IncreaseAndDisplay8()
     {
-        if (counter9 < MaxValue)
+        if (MaxValue > 0)
         {
-            IncreaseTheValueBy2(ref counter9);
+            IncreaseTheValueBy1(ref counter9);
+            MaxValue--;
             DisplayTheNumbers();
             SaveCounters(); // Değişiklikleri kaydet
         }
     }
-    private void IncreaseTheValueBy2(ref int value)
+
+    private void IncreaseTheValueBy1(ref int value)
     {
         value++;
     }
-
 
     private void DisplayTheNumbers()
     {
@@ -126,6 +130,7 @@ public void IncreaseAndDisplay6()
         PlayerPrefs.SetInt("Counter7", counter7);
         PlayerPrefs.SetInt("Counter8", counter8);
         PlayerPrefs.SetInt("Counter9", counter9);
+        PlayerPrefs.SetInt("MaxValue", MaxValue);
         PlayerPrefs.Save();
     }
 
@@ -138,6 +143,7 @@ public void IncreaseAndDisplay6()
         counter7 = PlayerPrefs.GetInt("Counter7", 0);
         counter8 = PlayerPrefs.GetInt("Counter8", 0);
         counter9 = PlayerPrefs.GetInt("Counter9", 0);
+        MaxValue = PlayerPrefs.GetInt("MaxValue", 7);
     }
 
     public void DeleteAllData()
@@ -150,7 +156,7 @@ public void IncreaseAndDisplay6()
         counter7 = 0;
         counter8 = 0;
         counter9 = 0;
+        MaxValue = 7;
         DisplayTheNumbers();
     }
 }
-
