@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: _isWalkable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2356689218071912215, guid: 4277a94abd5ea7a45b2be18170d78770, type: 3}
+      propertyPath: _enemyHighlight
+      value: 
+      objectReference: {fileID: 8716021936676741172}
+    - target: {fileID: 2872793501118379688, guid: 4277a94abd5ea7a45b2be18170d78770, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4399197525825943976, guid: 4277a94abd5ea7a45b2be18170d78770, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -61,3 +69,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4277a94abd5ea7a45b2be18170d78770, type: 3}
+--- !u!1 &8716021936676741172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2872793501118379688, guid: 4277a94abd5ea7a45b2be18170d78770, type: 3}
+  m_PrefabInstance: {fileID: 6857770237494236828}
+  m_PrefabAsset: {fileID: 0}

@@ -7,11 +7,15 @@ public class MenuManager : MonoBehaviour
 {
     public static MenuManager Instance;
 
+   
+
     [SerializeField] private GameObject _selectedPlayerObject,_tileObject,_tileUnitObject;
     private void Awake()
     {
         Instance = this;
     }
+
+   
 
     public void ShowTileInfo(Tile tile)
     {
@@ -46,4 +50,8 @@ public class MenuManager : MonoBehaviour
         _selectedPlayerObject.GetComponentInChildren<Text>().text = player.UnitName;
         _selectedPlayerObject.SetActive(true);
     }
+
+
+    
+
 }

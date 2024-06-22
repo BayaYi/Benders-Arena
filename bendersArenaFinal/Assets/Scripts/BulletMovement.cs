@@ -4,19 +4,28 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
+    BaseUnit _targetUnit;
+    Tile _tile;
+    
     public Rigidbody rb;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        _tile = new Tile();
+    }
     void Start()
     {
+        
         rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        GameObject enemyNesnesi = GameObject.FindGameObjectWithTag("Enemy");
-        rb.velocity = (enemyNesnesi.transform.position - transform.position) * 2f;
-    }
+        
+        rb.velocity = (_tile.OccupiedUnit.transform.position - transform.position) * 2f;
+    } 
     private void OnCollisionEnter(Collision collision)
     {
         // Çarpýþmanýn gerçekleþtiði nesneyi kontrol et
