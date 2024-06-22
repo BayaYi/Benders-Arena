@@ -24,6 +24,22 @@ public class TumCanvasCode : MonoBehaviour
     public Canvas Canvas12;
     public Canvas Canvas13;
 
+    public Canvas Canvas01;
+
+    public Canvas Canvas02;
+
+    public Canvas Canvas03;
+
+    public Canvas Canvas04;
+    public Canvas Canvas05;
+    public Canvas Canvas06;
+    public Canvas Canvas07;
+    public Canvas Canvas08;
+    public Canvas Canvas09;
+    public Canvas Canvas010;
+    public Canvas Canvas011;
+    public Canvas Canvas012;
+
     // Start is called before the first frame update
     public void loadMainMenu()
     {
@@ -48,6 +64,19 @@ public class TumCanvasCode : MonoBehaviour
         Canvas11.enabled = false;
         Canvas12.enabled = false;
         Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
     }
 
      public void loadCanvas2()
@@ -67,6 +96,18 @@ public class TumCanvasCode : MonoBehaviour
         Canvas11.enabled = false;
         Canvas12.enabled = false;
         Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
     }
 
       public void loadCanvas3()
@@ -86,6 +127,18 @@ public class TumCanvasCode : MonoBehaviour
         Canvas11.enabled = false;
         Canvas12.enabled = false;
         Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
     }
 
       public void loadCanvas4()
@@ -105,6 +158,19 @@ public class TumCanvasCode : MonoBehaviour
         Canvas11.enabled = false;
         Canvas12.enabled = false;
         Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
     }
 
       public void loadCanvas5()
@@ -124,6 +190,19 @@ public class TumCanvasCode : MonoBehaviour
         Canvas11.enabled = false;
         Canvas12.enabled = false;
         Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
     }
 
     public void loadCanvas6()
@@ -143,6 +222,19 @@ public class TumCanvasCode : MonoBehaviour
         Canvas11.enabled = false;
         Canvas12.enabled = false;
         Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
 
     }
 
@@ -165,6 +257,18 @@ public class TumCanvasCode : MonoBehaviour
         Canvas11.enabled = false;
         Canvas12.enabled = false;
         Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
 
     }
 
@@ -185,6 +289,19 @@ public class TumCanvasCode : MonoBehaviour
         Canvas11.enabled = false;
         Canvas12.enabled = false;
         Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
 
     }
 
@@ -205,6 +322,19 @@ public class TumCanvasCode : MonoBehaviour
         Canvas11.enabled = false;
         Canvas12.enabled = false;
         Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
 
     }
 
@@ -225,6 +355,19 @@ public class TumCanvasCode : MonoBehaviour
         Canvas11.enabled = true;
         Canvas12.enabled = false;
         Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
 
     }
             public void loadCanvas12()
@@ -244,6 +387,19 @@ public class TumCanvasCode : MonoBehaviour
         Canvas11.enabled = false;
         Canvas12.enabled = true;
         Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
 
     }
 
@@ -264,6 +420,410 @@ public class TumCanvasCode : MonoBehaviour
         Canvas11.enabled = false;
         Canvas12.enabled = false;
         Canvas13.enabled = true;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+        public void loadCanvas01 ()
+    {
+
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas6.enabled = false;
+
+        Canvas8.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
+        Canvas01.enabled = true;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+            public void loadCanvas02 ()
+    {
+
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas6.enabled = false;
+
+        Canvas8.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = true;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+                public void loadCanvas03 ()
+    {
+
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas6.enabled = false;
+
+        Canvas8.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = true;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+                    public void loadCanvas04 ()
+    {
+
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas6.enabled = false;
+
+        Canvas8.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = true;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+                    public void loadCanvas05 ()
+    {
+
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas6.enabled = false;
+
+        Canvas8.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = true;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+                        public void loadCanvas06 ()
+    {
+
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas6.enabled = false;
+
+        Canvas8.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = true;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+                            public void loadCanvas07 ()
+    {
+
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas6.enabled = false;
+
+        Canvas8.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = true;
+        Canvas08.enabled = false;
+
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+
+    }
+
+                                public void loadCanvas08 ()
+    {
+
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas6.enabled = false;
+
+        Canvas8.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = true;
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+                                    public void loadCanvas09 ()
+    {
+
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas6.enabled = false;
+
+        Canvas8.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+        Canvas09.enabled = true;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+                                    public void loadCanvas010 ()
+    {
+
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas6.enabled = false;
+
+        Canvas8.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+        Canvas09.enabled = false;
+        Canvas010.enabled = true;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+                                    public void loadCanvas011 ()
+    {
+
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas6.enabled = false;
+
+        Canvas8.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = true;
+        Canvas012.enabled = false;
+
+    }
+
+
+                                        public void loadCanvas012 ()
+    {
+
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas6.enabled = false;
+
+        Canvas8.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+        Canvas13.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = true;
 
     }
 
@@ -318,6 +878,365 @@ public class TumCanvasCode : MonoBehaviour
         Canvas4.enabled = false;
         Canvas5.enabled = false;
         Canvas9.enabled = true;
+
+    }
+
+             public void loadCanvasBack66()
+    {
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas9.enabled = true;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+
+
+
+    }
+             public void loadCanvasBack77()
+    {
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = true;
+        Canvas11.enabled = false;
+        Canvas12.enabled = false;
+
+    }
+
+             public void loadCanvasBack88()
+    {
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = true;
+        Canvas12.enabled = false;
+
+    }
+
+             public void loadCanvasBack99()
+    {
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas9.enabled = false;
+        Canvas10.enabled = false;
+        Canvas11.enabled = false;
+        Canvas12.enabled = true;
+
+    }
+
+             public void loadCanvasBack01()
+    {
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas9.enabled = false;
+        Canvas01.enabled = true;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+                 public void loadCanvasBack02()
+    {
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas9.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = true;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+                     public void loadCanvasBack03()
+    {
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas9.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = true;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+                         public void loadCanvasBack04()
+    {
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas9.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = true;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+                             public void loadCanvasBack05()
+    {
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas9.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = true;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+                                 public void loadCanvasBack06()
+    {
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas9.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = true;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+                                     public void loadCanvasBack07()
+    {
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas9.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = true;
+        Canvas08.enabled = false;
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+
+                                         public void loadCanvasBack08()
+    {
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas9.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = true;
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+                                         public void loadCanvasBack09()
+    {
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas9.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = false;
+        Canvas08.enabled = false;
+        Canvas09.enabled = true;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+                                         public void loadCanvasBack010()
+    {
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas9.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = true;
+
+        Canvas08.enabled = false;
+        Canvas09.enabled = false;
+        Canvas010.enabled = true;
+        Canvas011.enabled = false;
+        Canvas012.enabled = false;
+
+    }
+
+
+                                             public void loadCanvasBack011()
+    {
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas9.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = true;
+
+        Canvas08.enabled = false;
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = true;
+        Canvas012.enabled = false;
+
+
+    }
+
+                                                 public void loadCanvasBack012()
+    {
+        Canvas.enabled = false;
+        Canvas1.enabled = false;
+        Canvas2.enabled = false;
+        Canvas3.enabled = false;
+        Canvas4.enabled = false;
+        Canvas5.enabled = false;
+        Canvas9.enabled = false;
+        Canvas01.enabled = false;
+        Canvas02.enabled = false;
+        Canvas03.enabled = false;
+        Canvas04.enabled = false;
+        Canvas05.enabled = false;
+        Canvas06.enabled = false;
+        Canvas07.enabled = true;
+
+        Canvas08.enabled = false;
+        Canvas09.enabled = false;
+        Canvas010.enabled = false;
+        Canvas011.enabled = false;
+        Canvas012.enabled = true;
+
+
+
     }
 
 
