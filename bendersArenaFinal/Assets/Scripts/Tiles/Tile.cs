@@ -9,6 +9,7 @@ public class Tile : MonoBehaviour
     public int G, H;
     public int F { get {  return G + H; } }
 
+    public static Tile Instance;
     public Tile _previous,_tile;
     private Pathfinder _pathFinder;
     private RangeFinder _rangeFinder;
@@ -29,6 +30,7 @@ public class Tile : MonoBehaviour
 
     private void Start()
     {
+        Instance = this;
         _pathFinder = new Pathfinder();
         _rangeFinder = new RangeFinder();
         _bullet = new PlayerBullet();
@@ -127,6 +129,11 @@ public class Tile : MonoBehaviour
         {
             GetInRangeTiles();
         }
+
+        if (UnitManager.Instance.SelectedPlayer == null)
+        {
+            AttackRange();
+        }
     }
 
     private void GetInRangeTiles()
@@ -178,6 +185,7 @@ public class Tile : MonoBehaviour
         if (_atkRange.activeSelf && _enemyHighlight.activeSelf)
         {
             Vector3 bulletLocation = _bullet.Konum(player, enemy);
+            enemy.tag = "Target";
             UnitManager.Instance.BulletCreate(bulletLocation);
             //Destroy(enemy.gameObject);
             //_bullet.Konum(player, enemy);

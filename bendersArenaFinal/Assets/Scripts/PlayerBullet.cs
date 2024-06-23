@@ -26,33 +26,33 @@ public class PlayerBullet
         {
             if (playerKonumu.x > enemyKonumu.x)
             {
-                bulletLocation = Vector3.left + playerKonumu;
+                bulletLocation = (Vector3.left * 5) + playerKonumu;
             }
             else
             {
-                bulletLocation = Vector3.right + playerKonumu;
+                bulletLocation = (Vector3.right * 5) + playerKonumu;
             }
         }
         else if (yfark > xfark && yfark > zfark)
         {
             if (playerKonumu.y > enemyKonumu.y)
             {
-                bulletLocation = Vector3.down + playerKonumu;
+                bulletLocation = (Vector3.down * 5) + playerKonumu;
             }
             else
             {
-                bulletLocation = Vector3.up + playerKonumu;
+                bulletLocation = (Vector3.up * 5) + playerKonumu;
             }
         }
         else
         {
             if (playerKonumu.z > enemyKonumu.z)
             {
-                bulletLocation = Vector3.back + playerKonumu;
+                bulletLocation = (Vector3.back * 5) + playerKonumu;
             }
             else
             {
-                bulletLocation = Vector3.forward + playerKonumu;
+                bulletLocation = (Vector3.forward * 5) + playerKonumu;
             }
         }
         //Mermi oluþturuldu.
