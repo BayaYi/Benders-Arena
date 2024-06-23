@@ -8,7 +8,7 @@ public class FollowCameraRotation : MonoBehaviour
     {
         if (target == null)
         {
-            target = Camera.main.transform;
+            //target = Camera.main.transform;
         }
     }
 
