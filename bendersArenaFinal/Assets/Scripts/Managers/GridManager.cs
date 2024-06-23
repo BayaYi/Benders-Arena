@@ -11,12 +11,15 @@ public class GridManager : MonoBehaviour
     [SerializeField] private int _width, _height;
     [SerializeField] private Tile _tilePrefab;
 
-    private Dictionary<Vector3, Tile> _tiles;
+    public Dictionary<Vector3, Tile> _tiles;
+    public Dictionary<Vector3Int, Tile> _tilesInt;
 
     private void Awake()
     {
         Instance = this;
         _tiles = new Dictionary<Vector3, Tile>();
+        _tilesInt = new Dictionary<Vector3Int, Tile>();
+        
     }
 
     
@@ -28,8 +31,9 @@ public class GridManager : MonoBehaviour
             {
                 var spawnedTile = Instantiate(_tilePrefab,new Vector3(x+105,0,y+105),Quaternion.identity);
                 spawnedTile.name = $"Tile {x/10} {y/10}";
-
-                _tiles.Add(spawnedTile.transform.position, spawnedTile);   
+                spawnedTile._tileLocation = Vector3Int.FloorToInt(spawnedTile.transform.position);
+                _tiles.Add(spawnedTile.transform.position, spawnedTile);
+                _tilesInt.Add(Vector3Int.FloorToInt(spawnedTile.transform.position), spawnedTile);
             }
         }
         
@@ -45,5 +49,73 @@ public class GridManager : MonoBehaviour
     public Tile GetEnemySpawnTile()
     {
         return _tiles.Where(t => t.Key.x > (_width * 4 / 5) + 105 && t.Value.Walkable).OrderBy(t => Random.value).First().Value;
+    }
+
+    public List<Tile> GetNeighbourTiles(Tile currentTile, List<Tile> searchableTiles)
+    {
+        var map = GridManager.Instance._tiles;
+        Dictionary<Vector3Int, Tile> tilesToSearch = new Dictionary<Vector3Int, Tile>();
+
+        if(searchableTiles.Count > 0)
+        {
+            foreach(var item in searchableTiles)
+            {
+                tilesToSearch.Add(item._tileLocation, item);
+            }
+        }else
+        {
+            tilesToSearch = _tilesInt;
+        }
+
+
+
+        
+
+        List<Tile> _neighbours = new List<Tile>();
+
+        //Top
+        Vector3Int locationToCheck = new Vector3Int(currentTile._tileLocation.x,
+            currentTile._tileLocation.y,
+            currentTile._tileLocation.z + 10
+            );
+
+        if (map.ContainsKey(locationToCheck))
+        {
+            _neighbours.Add(tilesToSearch[locationToCheck]);
+        }
+        //Bottom
+        locationToCheck = new Vector3Int(currentTile._tileLocation.x,
+            currentTile._tileLocation.y,
+            currentTile._tileLocation.z - 10
+            );
+
+        if (map.ContainsKey(locationToCheck))
+        {
+            _neighbours.Add(tilesToSearch[locationToCheck]);
+        }
+
+        //Right
+        locationToCheck = new Vector3Int(currentTile._tileLocation.x + 10,
+            currentTile._tileLocation.y,
+            currentTile._tileLocation.z
+            );
+
+        if (map.ContainsKey(locationToCheck))
+        {
+            _neighbours.Add(tilesToSearch[locationToCheck]);
+        }
+
+        //Left
+        locationToCheck = new Vector3Int(currentTile._tileLocation.x - 10,
+            currentTile._tileLocation.y,
+            currentTile._tileLocation.z
+            );
+
+        if (map.ContainsKey(locationToCheck))
+        {
+            _neighbours.Add(tilesToSearch[locationToCheck]);
+        }
+
+        return _neighbours;
     }
 }

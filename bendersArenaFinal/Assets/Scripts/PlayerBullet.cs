@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBullet : MonoBehaviour
+public class PlayerBullet 
 {
     public GameObject bullet;
     public Vector3 bulletLocation = Vector3.zero;
 
-    public void Konum()
+    public Vector3 Konum(BasePlayer player, BaseEnemy enemy)
     {
         //Belirtilen etikete sahip nesneyi bulan ve yeni bir obje olarak atandý
-        GameObject playerNesnesi = GameObject.FindGameObjectWithTag("Player");
-        GameObject enemyNesnesi = GameObject.FindGameObjectWithTag("Enemy");
+        BaseUnit playerNesnesi = player;
+        BaseUnit enemyNesnesi = enemy;
 
         //Objelerin Konumlarý bulundu.
         Vector3 playerKonumu = playerNesnesi.transform.position;
@@ -56,8 +56,8 @@ public class PlayerBullet : MonoBehaviour
             }
         }
         //Mermi oluþturuldu.
-        Instantiate(bullet, bulletLocation, Quaternion.identity);
-        
+        //Instantiate(bullet, bulletLocation, Quaternion.identity);
+        return bulletLocation;
 
     }
 }

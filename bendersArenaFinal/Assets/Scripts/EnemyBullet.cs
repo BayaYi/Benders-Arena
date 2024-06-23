@@ -7,11 +7,10 @@ public class EnemyBullet : MonoBehaviour
     public GameObject bullet;
     public Vector3 bulletLocation = Vector3.zero;
 
-    public void Konum()
+    public void Konum(BaseUnit playerNesnesi, BaseUnit enemyNesnesi)
     {
         //Belirtilen etikete sahip nesneyi bulan ve yeni bir obje olarak atandý
-        GameObject playerNesnesi = GameObject.FindGameObjectWithTag("Enemy");
-        GameObject enemyNesnesi = GameObject.FindGameObjectWithTag("Player");
+
 
         //Objelerin Konumlarý bulundu.
         Vector3 playerKonumu = playerNesnesi.transform.position;

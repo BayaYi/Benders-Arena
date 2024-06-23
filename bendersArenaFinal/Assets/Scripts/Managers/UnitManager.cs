@@ -10,6 +10,12 @@ static class Constants
 }
 public class UnitManager : MonoBehaviour
 {
+    public float speed;
+    public int atkRange;
+    public int moveRange;
+
+    public GameObject Bullet;
+
     public static UnitManager Instance;
 
     private List<ScriptableUnit> _units;
@@ -49,6 +55,7 @@ public class UnitManager : MonoBehaviour
             var randomSpawnTile = GridManager.Instance.GetEnemySpawnTile();
 
             randomSpawnTile.SetUnit(spawnedEnemy);
+            spawnedEnemy.OccupiedTile._enemyHighlight.SetActive(true);
         }
 
 
@@ -57,13 +64,20 @@ public class UnitManager : MonoBehaviour
 
     private T GetRandomUnit<T>(Faction faction) where T : BaseUnit
     {
-        return (T)_units.Where(u=>u.Faction == faction).OrderBy(o=>Random.value).First().UnitPrefab;
-    }
+        return (T)_units.Where(u => u.Faction == faction).OrderBy(o => Random.value).First().UnitPrefab;
+    }   
 
 
     public void SetSelectedPlayer(BasePlayer player)
     {
         SelectedPlayer = player;
         MenuManager.Instance.ShowSelectedPlayer(player);
+    }
+
+
+
+    public void BulletCreate(Vector3 Location)
+    {
+        Instantiate(Bullet, Location, Quaternion.identity);
     }
 }

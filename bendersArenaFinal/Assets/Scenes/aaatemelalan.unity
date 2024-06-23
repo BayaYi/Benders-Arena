@@ -5816,6 +5816,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a86efaecd9a6b4f858ca4f3f63c51f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 40
+  atkRange: 5
+  moveRange: 3
+  Bullet: {fileID: 4245399287655968283, guid: ccd16212483e9244c9737243bfb5e6ab, type: 3}
   SelectedPlayer: {fileID: 0}
 --- !u!4 &838672353
 Transform:
