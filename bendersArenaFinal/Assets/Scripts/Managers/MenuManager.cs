@@ -29,12 +29,12 @@ public class MenuManager : MonoBehaviour
         
         
         _tileObject.GetComponentInChildren<Text>().text = tile.TileName;
-        _tileObject.SetActive(true);
+        //_tileObject.SetActive(true);
         
         if (tile.OccupiedUnit)
         {
             _tileUnitObject.GetComponentInChildren<Text>().text = tile.OccupiedUnit.UnitName;
-            _tileUnitObject.SetActive(true);
+            //_tileUnitObject.SetActive(true);
         }
        
     }
@@ -47,7 +47,7 @@ public class MenuManager : MonoBehaviour
             return ;
         }
 
-        _selectedPlayerObject.GetComponentInChildren<Text>().text = player.UnitName;
+        _selectedPlayerObject.GetComponentInChildren<Text>().text = "Tur Sýrasý \n" + player.UnitName ;
         _selectedPlayerObject.SetActive(true);
     }
 
