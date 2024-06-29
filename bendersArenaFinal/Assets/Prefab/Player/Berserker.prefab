@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec922c199b6854428a83fd21a9bd58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitName: Player
+  UnitName: "Ate\u015F"
   OccupiedTile: {fileID: 0}
   Faction: 0
 --- !u!54 &3943432365450186096
@@ -229,8 +229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsAlive: 1
-  CurrentHealth: 1000
-  MaximumHealth: 1000
+  CurrentHealth: 60
+  MaximumHealth: 60
   HasAnimationWhenHealthChanges: 1
   AnimationDuration: 0.1
   OnCurrentHealthChanged:

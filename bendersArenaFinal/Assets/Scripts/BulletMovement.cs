@@ -20,7 +20,7 @@ public class BulletMovement : MonoBehaviour
     void Update()
     {
         GameObject _targetUnit = GameObject.FindGameObjectWithTag("Target");
-        rb.velocity = (_targetUnit.transform.position - transform.position) * 20f;
+        rb.velocity = (_targetUnit.transform.position - transform.position) * 2f;
     } 
     private void OnCollisionEnter(Collision collision)
     {
