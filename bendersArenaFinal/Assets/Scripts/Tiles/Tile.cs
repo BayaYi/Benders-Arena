@@ -74,9 +74,9 @@ public class Tile : MonoBehaviour
             {
                 if (UnitManager.Instance.SelectedPlayer != null)
                 {
-                    
+
                     var enemy = (BaseEnemy)OccupiedUnit;
-                    //Destroy(enemy.gameObject);  //Hasar mekaniði eklenecek...
+                    //Destroy(enemy.gameObject);  //Hasar mekaniï¿½i eklenecek...
                     Attack(UnitManager.Instance.SelectedPlayer, (BaseEnemy)OccupiedUnit);
                     UnitManager.Instance.SetSelectedPlayer(null);
                 }
@@ -88,13 +88,13 @@ public class Tile : MonoBehaviour
             {
                 _tile = this;
                 //SetUnit(UnitManager.Instance.SelectedPlayer);
-                
+
                 Move(UnitManager.Instance.SelectedPlayer, _tile);
                 //UnitManager.Instance.SetSelectedPlayer(null);
 
             }
         }
-        
+
     }
 
     public void LateUpdate()
@@ -112,15 +112,15 @@ public class Tile : MonoBehaviour
                 PositionCharacterOnTile(UnitManager.Instance.SelectedPlayer, _path[0]);
                 _path.RemoveAt(0);
             }
-            
+
 
 
             if (_tile.transform.position.x == UnitManager.Instance.SelectedPlayer.transform.position.x && _tile.transform.position.z == UnitManager.Instance.SelectedPlayer.transform.position.z) {
                 UnitManager.Instance.SelectedPlayer.OccupiedTile.OccupiedUnit = null;
                 UnitManager.Instance.SelectedPlayer.OccupiedTile = _tile;
                 _tile.OccupiedUnit = UnitManager.Instance.SelectedPlayer;
-                
-                UnitManager.Instance.SetSelectedPlayer(null); 
+
+                UnitManager.Instance.SetSelectedPlayer(null);
 
             }
         };
@@ -201,16 +201,16 @@ public class Tile : MonoBehaviour
         {
             _path = _pathFinder.FindPath(player.OccupiedTile, endTile, new List<Tile>());
         }
-        
 
-        
-    
+
+
+
     }
 
     private void PositionCharacterOnTile(BasePlayer player,Tile tile)
     {
         player.transform.position = new Vector3(tile.transform.position.x, tile.transform.position.y + 0.0001f, tile.transform.position.z);
-        
+
     }
 
     public void RangedAttack(BasePlayer player)
@@ -219,7 +219,7 @@ public class Tile : MonoBehaviour
         {
             if (OccupiedUnit.Faction == Faction.Player)
             {
-                
+
 
             }
             else
@@ -228,7 +228,7 @@ public class Tile : MonoBehaviour
                 {
 
                     var enemy = (BaseEnemy)OccupiedUnit;
-                    Destroy(enemy.gameObject);//Hasar mekaniði eklenecek...
+                    Destroy(enemy.gameObject);//Hasar mekaniï¿½i eklenecek...
                     UnitManager.Instance.SetSelectedPlayer(null);
                 }
             }
