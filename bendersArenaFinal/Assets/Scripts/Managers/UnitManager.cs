@@ -14,13 +14,19 @@ public class UnitManager : MonoBehaviour
     public int atkRange;
     public int moveRange;
 
+    public int enemyAtkRange;
+    public int enemyMoveRange;
+
     public GameObject Bullet;
+    public GameObject EnemyBullet;
 
     public static UnitManager Instance;
 
     private List<ScriptableUnit> _units;
 
+    public BaseUnit SelectedUnit;
     public BasePlayer SelectedPlayer;
+    public BaseEnemy SelectedEnemy;
     private void Awake()
     {
         Instance = this;
@@ -74,10 +80,25 @@ public class UnitManager : MonoBehaviour
         MenuManager.Instance.ShowSelectedPlayer(player);
     }
 
+    public void SetSelectedEnemy(BaseEnemy enemy)
+    {
+        SelectedEnemy = enemy;
+        //MenuManager.Instance.ShowSelectedPlayer(enemy);
+    }
+    
+    public void SetSelectedUnit(BaseUnit unit)
+    {
+        SelectedUnit = unit;
+    }
 
 
     public void BulletCreate(Vector3 Location)
     {
         Instantiate(Bullet, Location, Quaternion.identity);
+    }
+
+    public void EnemyBulletCreate(Vector3 Location)
+    {
+        Instantiate(EnemyBullet, Location, Quaternion.identity);
     }
 }

@@ -21,7 +21,7 @@ public class Tile : MonoBehaviour
     [SerializeField] public GameObject _highlight,_atkRange,_moveRange,_enemyHighlight;
     [SerializeField] public bool _isWalkable;
     public string TileName;
-
+    
     public Vector3Int _tileLocation;
 
 
@@ -63,36 +63,87 @@ public class Tile : MonoBehaviour
 
         if (OccupiedUnit != null)
         {
-            if (OccupiedUnit.Faction == Faction.Player)
+            if (OccupiedUnit.Faction == Faction.Player && UnitManager.Instance.SelectedUnit == null)
             {
                 UnitManager.Instance.SetSelectedPlayer((BasePlayer)OccupiedUnit);
+                UnitManager.Instance.SetSelectedUnit((BaseUnit)OccupiedUnit);
                 GetInRangeTiles();
                 AttackRange();
 
             }
-            else
+            else if(OccupiedUnit.Faction == Faction.Enemy && UnitManager.Instance.SelectedUnit == null)
             {
-                if (UnitManager.Instance.SelectedPlayer != null)
+                UnitManager.Instance.SetSelectedEnemy((BaseEnemy)OccupiedUnit);
+                UnitManager.Instance.SetSelectedUnit((BaseUnit)OccupiedUnit);
+                GetInRangeTiles();
+                AttackRange();
+
+            }
+            else {
+                if (UnitManager.Instance.SelectedUnit.Faction == Faction.Player)
                 {
                     
                     var enemy = (BaseEnemy)OccupiedUnit;
                     //Destroy(enemy.gameObject);  //Hasar mekaniði eklenecek...
                     Attack(UnitManager.Instance.SelectedPlayer, (BaseEnemy)OccupiedUnit);
                     UnitManager.Instance.SetSelectedPlayer(null);
+                    UnitManager.Instance.SetSelectedUnit(null); 
                 }
+                
+                else if(UnitManager.Instance.SelectedUnit.Faction == Faction.Enemy)
+                {
+                    {
+                        var player = (BasePlayer)OccupiedUnit;
+                        MonsterAttack(UnitManager.Instance.SelectedEnemy, (BasePlayer)OccupiedUnit);
+                        UnitManager.Instance.SetSelectedEnemy(null);
+                        UnitManager.Instance.SetSelectedUnit(null);
+
+                    }
+                }
+               
             }
+            /*if (OccupiedUnit.Faction == Faction.Enemy)
+            {
+                UnitManager.Instance.SetSelectedEnemy((BaseEnemy)OccupiedUnit);
+                UnitManager.Instance.SetSelectedUnit((BaseUnit)OccupiedUnit);
+                GetInRangeTiles();
+                AttackRange();
+
+            }
+            else
+            {
+                if (UnitManager.Instance.SelectedUnit.Faction == Faction.Enemy)
+                {
+                    var player = (BaseEnemy)OccupiedUnit;
+                    //Destroy(enemy.gameObject);  //Hasar mekaniði eklenecek...
+                    Attack(UnitManager.Instance.SelectedPlayer, (BaseEnemy)OccupiedUnit);
+                    UnitManager.Instance.SetSelectedPlayer(null);
+                }
+            }*/
         }
         else
         {
-            if(UnitManager.Instance.SelectedPlayer!= null)
+            if(UnitManager.Instance.SelectedUnit!= null)
             {
                 _tile = this;
                 //SetUnit(UnitManager.Instance.SelectedPlayer);
-                
-                Move(UnitManager.Instance.SelectedPlayer, _tile);
+                if (UnitManager.Instance.SelectedUnit.Faction == Faction.Enemy)
+                {
+                    UnitManager.Instance.SelectedUnit.OccupiedTile._enemyHighlight.SetActive(false);
+                }
+                Move(UnitManager.Instance.SelectedUnit, _tile);
                 //UnitManager.Instance.SetSelectedPlayer(null);
+                
 
             }
+            /*if (UnitManager.Instance.SelectedEnemy != null)
+            {
+                _tile = this;
+                //SetUnit(UnitManager.Instance.SelectedPlayer);
+                EnemyMove(UnitManager.Instance.SelectedEnemy, _tile);
+                //UnitManager.Instance.SetSelectedPlayer(null);
+
+            }*/
         }
         
     }
@@ -102,25 +153,31 @@ public class Tile : MonoBehaviour
         if (_path.Count > 0)
         {
             var step = UnitManager.Instance.speed * Time.deltaTime;
-
+            
             var yIndex = _path[0].transform.position.y;
-            UnitManager.Instance.SelectedPlayer.transform.position = Vector3.MoveTowards(UnitManager.Instance.SelectedPlayer.transform.position, _path[0].transform.position, step);
-            UnitManager.Instance.SelectedPlayer.transform.position = new Vector3(UnitManager.Instance.SelectedPlayer.transform.position.x, yIndex, UnitManager.Instance.SelectedPlayer.transform.position.z);
+            UnitManager.Instance.SelectedUnit.transform.position = Vector3.MoveTowards(UnitManager.Instance.SelectedUnit.transform.position, _path[0].transform.position, step);
+            UnitManager.Instance.SelectedUnit.transform.position = new Vector3(UnitManager.Instance.SelectedUnit.transform.position.x, yIndex, UnitManager.Instance.SelectedUnit.transform.position.z);
 
-            if (Vector3.Distance(UnitManager.Instance.SelectedPlayer.transform.position, _path[0].transform.position) < 0.0001f)
+            if (Vector3.Distance(UnitManager.Instance.SelectedUnit.transform.position, _path[0].transform.position) < 0.0001f)
             {
-                PositionCharacterOnTile(UnitManager.Instance.SelectedPlayer, _path[0]);
+                PositionCharacterOnTile(UnitManager.Instance.SelectedUnit, _path[0]);
                 _path.RemoveAt(0);
             }
             
 
 
-            if (_tile.transform.position.x == UnitManager.Instance.SelectedPlayer.transform.position.x && _tile.transform.position.z == UnitManager.Instance.SelectedPlayer.transform.position.z) {
-                UnitManager.Instance.SelectedPlayer.OccupiedTile.OccupiedUnit = null;
-                UnitManager.Instance.SelectedPlayer.OccupiedTile = _tile;
-                _tile.OccupiedUnit = UnitManager.Instance.SelectedPlayer;
-                
+            if (_tile.transform.position.x == UnitManager.Instance.SelectedUnit.transform.position.x && _tile.transform.position.z == UnitManager.Instance.SelectedUnit.transform.position.z) {
+                UnitManager.Instance.SelectedUnit.OccupiedTile.OccupiedUnit = null;
+                UnitManager.Instance.SelectedUnit.OccupiedTile = _tile;
+                _tile.OccupiedUnit = UnitManager.Instance.SelectedUnit;
+                if (UnitManager.Instance.SelectedUnit.Faction == Faction.Enemy)
+                {
+                    _tile._enemyHighlight.SetActive(true);
+                }
+
                 UnitManager.Instance.SetSelectedPlayer(null); 
+                UnitManager.Instance.SetSelectedEnemy(null);
+                UnitManager.Instance.SetSelectedUnit(null);
 
             }
         };
@@ -143,18 +200,21 @@ public class Tile : MonoBehaviour
             _moveRange.SetActive(false);
         }
 
-        if (UnitManager.Instance.SelectedPlayer != null)
+        if (UnitManager.Instance.SelectedUnit != null)
         {
-            if (UnitManager.Instance.SelectedPlayer.Faction == Faction.Player)
+            if (UnitManager.Instance.SelectedUnit.Faction == Faction.Player || UnitManager.Instance.SelectedUnit.Faction == Faction.Enemy)
             {
-                _inRangeTiles = _rangeFinder.GetTilesInRange(UnitManager.Instance.SelectedPlayer.OccupiedTile, UnitManager.Instance.moveRange);
+                _inRangeTiles = _rangeFinder.GetTilesInRange(UnitManager.Instance.SelectedUnit.OccupiedTile, UnitManager.Instance.moveRange);
             }
+
+
 
             foreach (var item in _inRangeTiles)
             {
                 item._moveRange.SetActive(true);
             }
         }
+       
 
 
     }
@@ -166,11 +226,11 @@ public class Tile : MonoBehaviour
             _atkRange.SetActive(false);
         }
 
-        if (UnitManager.Instance.SelectedPlayer != null)
+        if (UnitManager.Instance.SelectedUnit != null)
         {
-            if (UnitManager.Instance.SelectedPlayer.Faction == Faction.Player)
+            if (UnitManager.Instance.SelectedUnit.Faction == Faction.Player || UnitManager.Instance.SelectedUnit.Faction == Faction.Enemy)
             {
-                _inRangeTiles = _rangeFinder.GetTilesInRange(UnitManager.Instance.SelectedPlayer.OccupiedTile, UnitManager.Instance.atkRange);
+                _inRangeTiles = _rangeFinder.GetTilesInRange(UnitManager.Instance.SelectedUnit.OccupiedTile, UnitManager.Instance.atkRange);
             }
 
             foreach (var item in _inRangeTiles)
@@ -180,12 +240,13 @@ public class Tile : MonoBehaviour
         }
     }
 
-    public void Attack(BasePlayer player, BaseEnemy enemy)
+    public void Attack(BaseUnit unit1, BaseUnit unit2)
     {
         if (_atkRange.activeSelf && _enemyHighlight.activeSelf)
         {
-            Vector3 bulletLocation = _bullet.Konum(player, enemy);
-            enemy.tag = "Target";
+            Vector3 bulletLocation = _bullet.Konum(unit1, unit2);
+            
+            unit2.tag = "Target";
             UnitManager.Instance.BulletCreate(bulletLocation);
             //Destroy(enemy.gameObject);
             //_bullet.Konum(player, enemy);
@@ -193,13 +254,13 @@ public class Tile : MonoBehaviour
     }
 
 
-    public void Move(BasePlayer player, Tile endTile)
+    public void Move(BaseUnit unit, Tile endTile)
     {
 
 
         if (_moveRange.activeSelf)
         {
-            _path = _pathFinder.FindPath(player.OccupiedTile, endTile, new List<Tile>());
+            _path = _pathFinder.FindPath(unit.OccupiedTile, endTile, new List<Tile>());
         }
         
 
@@ -207,41 +268,32 @@ public class Tile : MonoBehaviour
     
     }
 
-    private void PositionCharacterOnTile(BasePlayer player,Tile tile)
+    public void EnemyMove(BaseEnemy enemy, Tile endTile)
     {
-        player.transform.position = new Vector3(tile.transform.position.x, tile.transform.position.y + 0.0001f, tile.transform.position.z);
+
+
+        if (_moveRange.activeSelf)
+        {
+            _path = _pathFinder.FindPath(enemy.OccupiedTile, endTile, new List<Tile>());
+        }
+
+
+
+
+    }
+
+    private void PositionCharacterOnTile(BaseUnit unit,Tile tile)
+    {
+        unit.transform.position = new Vector3(tile.transform.position.x, tile.transform.position.y + 0.0001f, tile.transform.position.z);
         
     }
 
-    public void RangedAttack(BasePlayer player)
+    public void MonsterAttack(BaseUnit unit1, BaseUnit unit2)
     {
-        if (OccupiedUnit != null)
-        {
-            if (OccupiedUnit.Faction == Faction.Player)
-            {
-                
+        Vector3 bulletLocation = _bullet.Konum(unit1, unit2);
 
-            }
-            else
-            {
-                if (UnitManager.Instance.SelectedPlayer != null)
-                {
-
-                    var enemy = (BaseEnemy)OccupiedUnit;
-                    Destroy(enemy.gameObject);//Hasar mekaniði eklenecek...
-                    UnitManager.Instance.SetSelectedPlayer(null);
-                }
-            }
-        }
-        else
-        {
-            if (UnitManager.Instance.SelectedPlayer != null)
-            {
-                SetUnit(UnitManager.Instance.SelectedPlayer);
-                UnitManager.Instance.SetSelectedPlayer(null);
-
-            }
-        }
+        unit2.tag = "Target";
+        UnitManager.Instance.EnemyBulletCreate(bulletLocation);
 
 
 
