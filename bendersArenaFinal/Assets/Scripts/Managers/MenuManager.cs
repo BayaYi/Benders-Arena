@@ -67,7 +67,7 @@ public class MenuManager : MonoBehaviour
         return;
     }
 
-    _selectedPlayerObject.GetComponentInChildren<Text>().text = "Tur Sırası \n" + player.UnitName;
+    _selectedPlayerObject.GetComponentInChildren<Text>().text = "Tur Sirasi \n" + player.UnitName;
     _selectedPlayerObject.SetActive(true);
 
     // Burada UnitManager'dan seçili oyuncunun karo üzerine hareketini sağlayabiliriz
@@ -77,6 +77,17 @@ public class MenuManager : MonoBehaviour
         UnitManager.Instance.SelectedPlayer.OccupiedTile.Move(UnitManager.Instance.SelectedPlayer, UnitManager.Instance.SelectedPlayer.OccupiedTile );
         // UnitManager.Instance.SetSelectedPlayer(null); // Bu satırı gerekiyorsa burada veya başka bir yerde kullanabilirsiniz
     }
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
