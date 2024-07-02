@@ -7,7 +7,7 @@ public class PlayerBullet
     public GameObject bullet;
     public Vector3 bulletLocation = Vector3.zero;
 
-    public Vector3 Konum(BasePlayer player, BaseEnemy enemy)
+    public Vector3 Konum(BaseUnit player, BaseUnit enemy)
     {
         //Belirtilen etikete sahip nesneyi bulan ve yeni bir obje olarak atandý
         BaseUnit playerNesnesi = player;

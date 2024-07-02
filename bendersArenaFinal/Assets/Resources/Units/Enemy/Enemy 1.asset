@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Faction: 1
   UnitPrefab: {fileID: 1002379583811184574, guid: 45bbd06af97d4cf49b67a60e7bff726e, type: 3}
+  BaseFaction: 1
