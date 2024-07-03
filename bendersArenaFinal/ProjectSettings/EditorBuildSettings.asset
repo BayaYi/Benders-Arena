@@ -5,52 +5,52 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Sample Scene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/scene2.unity
     guid: 18c7bc67ae17fe442ba78ed7f5de1888
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Settings Scene.unity
     guid: ba355574c094c8b4ba516aa6ed8bebb0
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Scene5.unity
     guid: 5a64e19b3495a814a8f2fd2fbe249bb7
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Scene3.unity
     guid: 5b32b79340287e74d898fcf73f1c9687
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Scene4.unity
     guid: 398f501628ed5184c9a29ceb46ff5ba1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Scene6.unity
     guid: 2f4444c197f8293449289407a8940eb6
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Scene7.unity
     guid: 710e18b37456f60478aab071258d86ca
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Scene8.unity
     guid: 77da14e64619d9c458b6396d26e516a3
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Scene9.unity
     guid: d54ec653ec520b8499be5b673ef494ae
-  - enabled: 0
+  - enabled: 1
     path: "Assets/Scenes/Karakter Ka\u011F\u0131d\u0131.unity"
     guid: 9981490c6a2055240b9fa7aeb167dc14
-  - enabled: 0
+  - enabled: 1
     path: "Assets/Scenes/Karakter Ka\u011F\u0131d\u01312.unity"
     guid: 6d91faea56baf644896ac484e3ec1345
-  - enabled: 0
+  - enabled: 1
     path: "Assets/Scenes/karakter puanlar\u0131.unity"
     guid: dc384a6fae67bcf4d9a0b68a90bb3dcb
-  - enabled: 0
+  - enabled: 1
     path: "Assets/Scenes/karakterKa\u011F\u0131d\u0131Fire.unity"
     guid: a132e4b859bb96840bad15150360f3e2
-  - enabled: 0
+  - enabled: 1
     path: "Assets/Scenes/KarakterKa\u011F\u0131d\u0131Water.unity"
     guid: 97522f422c141854a90415e2d241d92d
-  - enabled: 0
+  - enabled: 1
     path: "Assets/Scenes/KarakterKa\u011F\u0131d\u0131Air.unity"
     guid: 7c9d244374adeb64fbba447db9de00c1
   - enabled: 0
@@ -59,13 +59,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/UUU.unity
     guid: 27d6a249176dc944a82350447449d5d8
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TumCanvaslar.unity
     guid: 2e930df293487974197e18ac33b6fb2b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/karakterToprakScene.unity
     guid: 3df7ae7cc7170824bb048374838693fc
-  - enabled: 0
+  - enabled: 1
     path: "Assets/Scenes/oyuncu say\u0131s\u0131.unity"
     guid: 72861eab5100d4841bd70d701f2c987b
   m_configObjects: {}
