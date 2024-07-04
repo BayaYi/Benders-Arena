@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -152,6 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8247fed1d4e54d047962b05a79514e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name1Input: {fileID: 1122496876}
+  _tempData: {fileID: 2086604935}
 --- !u!4 &2963425
 Transform:
   m_ObjectHideFlags: 0
@@ -10605,6 +10607,15 @@ MonoBehaviour:
   KarizmaZar: 0
   KarizmaBaseArtiZar: 0
   Bukme: 
+  MaxValue: 0
+  Isim: 
+  _isRolledKuvvet: 0
+  _isRolledCeviklik: 0
+  _isRolledDayaniklilik: 0
+  _isRolledZeka: 0
+  _isRolledFiziksel: 0
+  _isRolledCi: 0
+  _isRolledKarizma: 0
 --- !u!4 &2086604936
 Transform:
   m_ObjectHideFlags: 0

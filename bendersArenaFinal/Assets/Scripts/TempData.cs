@@ -31,6 +31,15 @@ public class TempData : MonoBehaviour
     public int KarizmaZar;
     public int KarizmaBaseArtiZar;
     public string Bukme;
+    public int MaxValue;
+    public string Isim;
+    public bool _isRolledKuvvet;
+    public bool _isRolledCeviklik;
+    public bool _isRolledDayaniklilik;
+    public bool _isRolledZeka;
+    public bool _isRolledFiziksel;
+    public bool _isRolledCi;
+    public bool _isRolledKarizma;
     public void Awake()
     {
         // E�er ba�ka bir instance varsa bu instance'� yok et

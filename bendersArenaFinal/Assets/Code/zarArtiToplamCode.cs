@@ -41,62 +41,74 @@ public class zarArtiToplamCode : MonoBehaviour
         // Kaydedilmiş puanları yükleme
         LoadScores();
     }
-/*public void CalculateTotalScore(Text txtDisplayNumber, Text diceResultText, Text totalScoreText)
-    {
-        int totalScore = CalculateIndividualTotalScore(txtDisplayNumber, diceResultText);
-        totalScoreText.text = totalScore.ToString();
-        SaveScore(totalScoreText.name, totalScore);
 
-        CalculateNewTotals();
-    }*/
+
+    private void LateUpdate()
+    {
+        LoadScores();
+    }
+    /*public void CalculateTotalScore(Text txtDisplayNumber, Text diceResultText, Text totalScoreText)
+        {
+            int totalScore = CalculateIndividualTotalScore(txtDisplayNumber, diceResultText);
+            totalScoreText.text = totalScore.ToString();
+            SaveScore(totalScoreText.name, totalScore);
+
+            CalculateNewTotals();
+        }*/
     public void CalculateTotalScore()
     {
-        int totalScore = CalculateIndividualTotalScore(txtDisplayNumber2, diceResultText);
-        totalScoreText.text = totalScore.ToString();
-        SaveScore("totalScore", totalScore);
+        tempData.KuvvetBaseArtiZar = tempData.KuvvetBase + tempData.KuvvetZar; //CalculateIndividualTotalScore(txtDisplayNumber2, diceResultText);
+        totalScoreText.text = tempData.KuvvetBaseArtiZar.ToString();
+        //SaveScore("totalScore", totalScore);
          //CalculateNewTotals();
     }
 
     public void CalculateTotalScore1()
     {
-        int totalScore = CalculateIndividualTotalScore(txtDisplayNumber3, diceResultText1);
-        totalScoreText1.text = totalScore.ToString();
-        SaveScore("totalScore1", totalScore);
+        //int totalScore = CalculateIndividualTotalScore(txtDisplayNumber3, diceResultText1);
+        tempData.CevikeArtiZar = tempData.CeviklikBase + tempData.CeviklikZar;
+        totalScoreText1.text = tempData.CevikeArtiZar.ToString();
+        //SaveScore("totalScore1", totalScore);
     }
 
     public void CalculateTotalScore2()
     {
-        int totalScore = CalculateIndividualTotalScore(txtDisplayNumber4, diceResultText2);
-        totalScoreText2.text = totalScore.ToString();
-        SaveScore("totalScore2", totalScore);
+        //int totalScore = CalculateIndividualTotalScore(txtDisplayNumber4, diceResultText2);
+        tempData.DayaniklilikBaseArtiZar = tempData.DayaniklilikBase + tempData.DayaniklilikZar;
+        totalScoreText2.text = tempData.DayaniklilikBaseArtiZar.ToString();
+        //SaveScore("totalScore2", totalScore);
     }
 
     public void CalculateTotalScore3()
     {
-        int totalScore = CalculateIndividualTotalScore(txtDisplayNumber5, diceResultText3);
-        totalScoreText3.text = totalScore.ToString();
-        SaveScore("totalScore3", totalScore);
+        //int totalScore = CalculateIndividualTotalScore(txtDisplayNumber5, diceResultText3);
+        tempData.ZekaBaseArtiZar = tempData.ZekaBase + tempData.ZekaZar;
+        totalScoreText3.text = tempData.ZekaBaseArtiZar.ToString();
+        //SaveScore("totalScore3", totalScore);
     }
 
     public void CalculateTotalScore4()
     {
-        int totalScore = CalculateIndividualTotalScore(txtDisplayNumber6, diceResultText4);
-        totalScoreText4.text = totalScore.ToString();
-        SaveScore("totalScore4", totalScore);
+        //int totalScore = CalculateIndividualTotalScore(txtDisplayNumber6, diceResultText4);
+        tempData.FizikselBaseArtiZar = tempData.FizikselBase + tempData.FizikselZar;
+        totalScoreText4.text = tempData.FizikselBaseArtiZar.ToString();
+        //SaveScore("totalScore4", totalScore);
     }
 
     public void CalculateTotalScore5()
     {
-        int totalScore = CalculateIndividualTotalScore(txtDisplayNumber7, diceResultText5);
-        totalScoreText5.text = totalScore.ToString();
-        SaveScore("totalScore5", totalScore);
+        //int totalScore = CalculateIndividualTotalScore(txtDisplayNumber7, diceResultText5);
+        tempData.CiBaseArtiZar = tempData.CiBase + tempData.CiZar;
+        totalScoreText5.text = tempData.CiBaseArtiZar.ToString();
+        //SaveScore("totalScore5", totalScore);
     }
 
     public void CalculateTotalScore6()
     {
-        int totalScore = CalculateIndividualTotalScore(txtDisplayNumber8, diceResultText6);
-        totalScoreText6.text = totalScore.ToString();
-        SaveScore("totalScore6", totalScore);
+        //int totalScore = CalculateIndividualTotalScore(txtDisplayNumber8, diceResultText6);
+        tempData.KarizmaBaseArtiZar = tempData.KarizmaBase + tempData.KarizmaZar;
+        totalScoreText6.text = tempData.KarizmaBaseArtiZar.ToString();
+        //SaveScore("totalScore6", totalScore);
     }
 
     int CalculateIndividualTotalScore(Text txtDisplayNumber, Text diceResultText)
@@ -113,21 +125,21 @@ public class zarArtiToplamCode : MonoBehaviour
 
     public void LoadScores()
     {
-        totalScoreText.text = PlayerPrefs.GetInt("totalScore", 0).ToString();
-        totalScoreText1.text = PlayerPrefs.GetInt("totalScore1", 0).ToString();
-        totalScoreText2.text = PlayerPrefs.GetInt("totalScore2", 0).ToString();
-        totalScoreText3.text = PlayerPrefs.GetInt("totalScore3", 0).ToString();
-        totalScoreText4.text = PlayerPrefs.GetInt("totalScore4", 0).ToString();
-        totalScoreText5.text = PlayerPrefs.GetInt("totalScore5", 0).ToString();
-        totalScoreText6.text = PlayerPrefs.GetInt("totalScore6", 0).ToString();
+        totalScoreText.text = tempData.KuvvetBaseArtiZar.ToString();// PlayerPrefs.GetInt("totalScore", 0).ToString();
+        totalScoreText1.text = tempData.CevikeArtiZar.ToString();// PlayerPrefs.GetInt("totalScore1", 0).ToString();
+        totalScoreText2.text = tempData.DayaniklilikBaseArtiZar.ToString(); //PlayerPrefs.GetInt("totalScore2", 0).ToString();
+        totalScoreText3.text = tempData.ZekaBaseArtiZar.ToString();//PlayerPrefs.GetInt("totalScore3", 0).ToString();
+        totalScoreText4.text = tempData.FizikselBaseArtiZar.ToString();//PlayerPrefs.GetInt("totalScore4", 0).ToString();
+        totalScoreText5.text = tempData.CiBaseArtiZar.ToString();//PlayerPrefs.GetInt("totalScore5", 0).ToString();
+        totalScoreText6.text = tempData.KarizmaBaseArtiZar.ToString();//PlayerPrefs.GetInt("totalScore6", 0).ToString();
 
-        tempData.KuvvetBaseArtiZar = PlayerPrefs.GetInt("totalScore", 0);
+        /*tempData.KuvvetBaseArtiZar = PlayerPrefs.GetInt("totalScore", 0);
         tempData.CevikeArtiZar = PlayerPrefs.GetInt("totalScore1", 0);
         tempData.DayaniklilikBaseArtiZar = PlayerPrefs.GetInt("totalScore2", 0);
         tempData.ZekaBaseArtiZar = PlayerPrefs.GetInt("totalScore3", 0);
         tempData.FizikselBaseArtiZar = PlayerPrefs.GetInt("totalScore4", 0);
         tempData.CiBaseArtiZar = PlayerPrefs.GetInt("totalScore5", 0);
-        tempData.KarizmaBaseArtiZar = PlayerPrefs.GetInt("totalScore6", 0);
+        tempData.KarizmaBaseArtiZar = PlayerPrefs.GetInt("totalScore6", 0);*/
 
         //CalculateNewTotals();
     }

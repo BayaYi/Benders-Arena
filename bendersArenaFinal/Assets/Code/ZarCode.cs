@@ -19,11 +19,31 @@ public class ZarCode : MonoBehaviour
 
     private int[] lastRolledValues = new int[7]; // Zar değerlerini saklayan dizi
     private bool[] hasRolled = new bool[7]; // Zarların daha önce atılıp atılmadığını kontrol eden dizi
-
+    
     void Start()
     {
         LoadData(); // Oyun başladığında kayıtlı zar sonuçlarını yükle
         DisplayLoadedData(); // Yüklenen zar sonuçlarını ekranda göster
+    }
+
+    private void LateUpdate()
+    {
+        
+        tempData._isRolledFiziksel = hasRolled[0];
+        tempData._isRolledCeviklik = hasRolled[1];
+        tempData._isRolledDayaniklilik = hasRolled[2];
+        tempData._isRolledZeka = hasRolled[3];
+        tempData._isRolledFiziksel = hasRolled[4];
+        tempData._isRolledCi = hasRolled[5];
+        tempData._isRolledKarizma = hasRolled[6];
+        tempData.KuvvetZar = lastRolledValues[0]; //PlayerPrefs.GetInt("diceResultText", 0);
+        tempData.CeviklikZar = lastRolledValues[1]; //PlayerPrefs.GetInt("diceResultText1", 0);
+        tempData.DayaniklilikZar = lastRolledValues[2]; //PlayerPrefs.GetInt("diceResultText2", 0);
+        tempData.ZekaZar = lastRolledValues[3]; //PlayerPrefs.GetInt("diceResultText3", 0);
+        tempData.FizikselZar = lastRolledValues[4];//PlayerPrefs.GetInt("diceResultText4", 0);
+        tempData.CiZar = lastRolledValues[5];// PlayerPrefs.GetInt("diceResultText5", 0);
+        tempData.KarizmaZar = lastRolledValues[6];
+        DisplayLoadedData();
     }
 
     // Zar atma fonksiyonları
@@ -35,7 +55,7 @@ public class ZarCode : MonoBehaviour
             diceResultText.text = rolledValue.ToString();
             lastRolledValues[index] = rolledValue; // Zar sonucunu sakla
             hasRolled[index] = true; // Zarın atıldığını işaretle
-            SaveData(); // Zar sonucunu kaydet
+            //SaveData(); // Zar sonucunu kaydet
         }
     }
 
@@ -80,10 +100,22 @@ public class ZarCode : MonoBehaviour
     {
         for (int i = 0; i < lastRolledValues.Length; i++)
         {
-            PlayerPrefs.SetInt("LastRolledValue" + i, lastRolledValues[i]);
-            PlayerPrefs.SetInt("HasRolled" + i, hasRolled[i] ? 1 : 0);
+            //PlayerPrefs.SetInt("LastRolledValue" + i, lastRolledValues[i]);
+            //PlayerPrefs.SetInt("HasRolled" + i, hasRolled[i] ? 1 : 0);
+            //tempData._isRolled[i] = hasRolled[i];
         }
-        PlayerPrefs.Save();
+
+
+
+        //PlayerPrefs.Save();
+
+        /*tempData.KuvvetZar = lastRolledValues[0]; //PlayerPrefs.GetInt("diceResultText", 0);
+        tempData.CeviklikZar = lastRolledValues[1]; //PlayerPrefs.GetInt("diceResultText1", 0);
+        tempData.DayaniklilikZar = lastRolledValues[2]; //PlayerPrefs.GetInt("diceResultText2", 0);
+        tempData.ZekaZar = lastRolledValues[3]; //PlayerPrefs.GetInt("diceResultText3", 0);
+        tempData.FizikselZar = lastRolledValues[4];//PlayerPrefs.GetInt("diceResultText4", 0);
+        tempData.CiZar = lastRolledValues[5];// PlayerPrefs.GetInt("diceResultText5", 0);
+        tempData.KarizmaZar = lastRolledValues[6];// PlayerPrefs.GetInt("diceResultText6", 0);*/
     }
 
     // Kayıtlı verileri yüklemek için kullanılacak fonksiyon
@@ -98,13 +130,7 @@ public class ZarCode : MonoBehaviour
             }
         }
 
-        tempData.KuvvetZar = PlayerPrefs.GetInt("diceResultText", 0);
-        tempData.CeviklikZar = PlayerPrefs.GetInt("diceResultText1", 0);
-        tempData.DayaniklilikZar = PlayerPrefs.GetInt("diceResultText2", 0);
-        tempData.ZekaZar = PlayerPrefs.GetInt("diceResultText3", 0);
-        tempData.FizikselZar = PlayerPrefs.GetInt("diceResultText4", 0);
-        tempData.CiZar = PlayerPrefs.GetInt("diceResultText5", 0);
-        tempData.KarizmaZar = PlayerPrefs.GetInt("diceResultText6", 0);
+
     }
 
     // Yüklenen verileri ekranda gösterme fonksiyonu
