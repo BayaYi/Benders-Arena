@@ -86,4 +86,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/7Scene.unity
     guid: 68393786da80f1f42969588b008202ee
+  - enabled: 1
+    path: "Assets/Scenes/1Na\u0131lOynan\u0131r.unity"
+    guid: 0104bf66c0550104dbc2afefaba83c36
+  - enabled: 1
+    path: "Assets/Scenes/2Nas\u0131lOynan\u0131r.unity"
+    guid: a2ea7013a284d70499fddced81dc0430
+  - enabled: 1
+    path: "Assets/Scenes/10Nas\u0131lOynan\u0131r.unity"
+    guid: 9a17ff2bc52f05f45b870af13b3e77b8
+  - enabled: 1
+    path: "Assets/Scenes/3Nas\u0131lOynan\u0131r.unity"
+    guid: 83a88928e989560438fc9546bc088744
+  - enabled: 1
+    path: "Assets/Scenes/9Nas\u0131lOynan\u0131r.unity"
+    guid: 7b56aabed5be74f4ea83331d77d210b2
+  - enabled: 1
+    path: "Assets/Scenes/4Nas\u0131lOynan\u0131r.unity"
+    guid: da19cbe2a6525d244984730dcb1a8594
+  - enabled: 1
+    path: "Assets/Scenes/5Nas\u0131lOynan\u0131r.unity"
+    guid: cf25038a0d10c044ba078c14cf939193
+  - enabled: 1
+    path: "Assets/Scenes/6Nas\u0131lOynan\u0131r.unity"
+    guid: 39c3d07f5410ac44a8d523fc0c534208
+  - enabled: 1
+    path: "Assets/Scenes/7Nas\u0131lOynan\u0131r.unity"
+    guid: 76fb8062d94dd69429b863f03e462319
+  - enabled: 1
+    path: "Assets/Scenes/8Nas\u0131lOynan\u0131r.unity"
+    guid: e994f944ba2deff4b8ebc1875dff9950
   m_configObjects: {}

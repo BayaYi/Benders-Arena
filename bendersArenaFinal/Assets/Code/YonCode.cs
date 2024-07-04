@@ -65,4 +65,69 @@ public class YonCode : MonoBehaviour
         SceneManager.LoadScene(24);
     }
 
+     public void ileriNasil1()
+    {
+        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+        SceneManager.LoadScene(25);
+    }
+
+    public void ileriNasil2()
+    {
+        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+        SceneManager.LoadScene(26);
+    }
+
+    public void ileriNasil3()
+    {
+        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+        SceneManager.LoadScene(27);
+    }
+
+    public void ileriNasil4()
+    {
+        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+        SceneManager.LoadScene(28);
+    }
+
+    public void ileriNasil5()
+    {
+        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+        SceneManager.LoadScene(29);
+    }
+
+    public void ileriNasil6()
+    {
+        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+        SceneManager.LoadScene(30);
+    }
+
+     public void ileriNasil7()
+    {
+        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+        SceneManager.LoadScene(31);
+    }
+
+     public void ileriNasil8()
+    {
+        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+        SceneManager.LoadScene(32);
+    }
+
+    public void ileriNasil9()
+    {
+        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+        SceneManager.LoadScene(33);
+    }
+    public void ileriNasil10()
+    {
+        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+        SceneManager.LoadScene(34);
+    }
+
+    
+
+
+
+
+
 }
