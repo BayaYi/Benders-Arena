@@ -21,7 +21,7 @@ public class ArttirmaCode : MonoBehaviour
     private int counter7 = 0;
     private int counter8 = 0;
     private int counter9 = 0;
-    private int MaxValue = 7; // Artırma ve azaltma sınırları
+    private int MaxValue = 0; // Artırma ve azaltma sınırları
 
     void Start()
     {
@@ -29,80 +29,93 @@ public class ArttirmaCode : MonoBehaviour
         DisplayTheNumbers();
     }
 
+    private void LateUpdate()
+    {
+        tempData.KuvvetBase = counter3;// PlayerPrefs.GetInt("Counter3", 0);
+        tempData.CeviklikBase = counter4;// PlayerPrefs.GetInt("Counter4", 0);
+        tempData.DayaniklilikBase = counter5;// PlayerPrefs.GetInt("Counter5", 0);
+        tempData.ZekaBase = counter6;// PlayerPrefs.GetInt("Counter6", 0);
+        tempData.FizikselBase = counter7;// PlayerPrefs.GetInt("Counter7", 0);
+        tempData.CiBase = counter8;// PlayerPrefs.GetInt("Counter8", 0);
+        tempData.KarizmaBase = counter9;// PlayerPrefs.GetInt("Counter9", 0);
+        DisplayTheNumbers();
+    }
+
     public void IncreaseAndDisplay2()
     {
-        if (MaxValue > 0)
+        if (MaxValue < 7)
         {
             IncreaseTheValueBy1(ref counter3);
-            MaxValue--;
-            DisplayTheNumbers();
-            SaveCounters(); // Değişiklikleri kaydet
+            MaxValue++;
+            //SaveCounters();
+            
+             // Değişiklikleri kaydet
         }
     }
 
     public void IncreaseAndDisplay3()
     {
-        if (MaxValue > 0)
+        if (MaxValue < 7)
         {
             IncreaseTheValueBy1(ref counter4);
-            MaxValue--;
-            DisplayTheNumbers();
-            SaveCounters(); // Değişiklikleri kaydet
+            MaxValue++;
+            //DisplayTheNumbers();
+            //SaveCounters(); // Değişiklikleri kaydet
         }
     }
 
     public void IncreaseAndDisplay4()
     {
-        if (MaxValue > 0)
+        if (MaxValue < 7)
         {
             IncreaseTheValueBy1(ref counter5);
-            MaxValue--;
-            DisplayTheNumbers();
-            SaveCounters(); // Değişiklikleri kaydet
+            MaxValue++;
+            //DisplayTheNumbers();
+            //SaveCounters(); // Değişiklikleri kaydet
         }
     }
 
     public void IncreaseAndDisplay5()
     {
-        if (MaxValue > 0)
+        if (MaxValue < 7)
         {
             IncreaseTheValueBy1(ref counter6);
-            MaxValue--;
-            DisplayTheNumbers();
-            SaveCounters(); // Değişiklikleri kaydet
+            MaxValue++;
+            //DisplayTheNumbers();
+            //SaveCounters(); // Değişiklikleri kaydet
         }
     }
 
     public void IncreaseAndDisplay6()
     {
-        if (MaxValue > 0)
+        if (MaxValue < 7)
         {
             IncreaseTheValueBy1(ref counter7);
-            MaxValue--;
-            DisplayTheNumbers();
-            SaveCounters(); // Değişiklikleri kaydet
+            MaxValue++;
+            //DisplayTheNumbers();
+            //SaveCounters(); // Değişiklikleri kaydet
         }
     }
 
     public void IncreaseAndDisplay7()
     {
-        if (MaxValue > 0)
+        if (MaxValue < 7)
         {
             IncreaseTheValueBy1(ref counter8);
-            MaxValue--;
-            DisplayTheNumbers();
-            SaveCounters(); // Değişiklikleri kaydet
+            MaxValue++;
+            //DisplayTheNumbers();
+            //SaveCounters(); // Değişiklikleri kaydet
         }
     }
 
     public void IncreaseAndDisplay8()
     {
-        if (MaxValue > 0)
+        if (MaxValue < 7)
         {
             IncreaseTheValueBy1(ref counter9);
-            MaxValue--;
-            DisplayTheNumbers();
-            SaveCounters(); // Değişiklikleri kaydet
+            MaxValue++;
+            //DisplayTheNumbers();
+            //SaveCounters(); // Değişiklikleri kaydet
         }
     }
 
@@ -113,17 +126,18 @@ public class ArttirmaCode : MonoBehaviour
 
     private void DisplayTheNumbers()
     {
-        txtDisplayNumber2.text = counter3.ToString();
-        txtDisplayNumber3.text = counter4.ToString();
-        txtDisplayNumber4.text = counter5.ToString();
-        txtDisplayNumber5.text = counter6.ToString();
-        txtDisplayNumber6.text = counter7.ToString();
-        txtDisplayNumber7.text = counter8.ToString();
-        txtDisplayNumber8.text = counter9.ToString();
+        txtDisplayNumber2.text = tempData.KuvvetBase.ToString();
+        txtDisplayNumber3.text = tempData.CeviklikBase.ToString();
+        txtDisplayNumber4.text = tempData.DayaniklilikBase.ToString();
+        txtDisplayNumber5.text = tempData.ZekaBase.ToString();
+        txtDisplayNumber6.text = tempData.FizikselBase.ToString();
+        txtDisplayNumber7.text = tempData.CiBase.ToString();
+        txtDisplayNumber8.text = tempData.KarizmaBase.ToString();
     }
 
     private void SaveCounters()
     {
+
         PlayerPrefs.SetInt("Counter3", counter3);
         PlayerPrefs.SetInt("Counter4", counter4);
         PlayerPrefs.SetInt("Counter5", counter5);
@@ -133,11 +147,28 @@ public class ArttirmaCode : MonoBehaviour
         PlayerPrefs.SetInt("Counter9", counter9);
         PlayerPrefs.SetInt("MaxValue", MaxValue);
         PlayerPrefs.Save();
+        
     }
 
     private void LoadCounters()
     {
-        counter3 = PlayerPrefs.GetInt("Counter3", 0);
+        /*tempData.KuvvetBase = counter3;// PlayerPrefs.GetInt("Counter3", 0);
+        tempData.CeviklikBase = counter4;// PlayerPrefs.GetInt("Counter4", 0);
+        tempData.DayaniklilikBase = counter5;// PlayerPrefs.GetInt("Counter5", 0);
+        tempData.ZekaBase = counter6;// PlayerPrefs.GetInt("Counter6", 0);
+        tempData.FizikselBase = counter7;// PlayerPrefs.GetInt("Counter7", 0);
+        tempData.CiBase = counter8;// PlayerPrefs.GetInt("Counter8", 0);
+        tempData.KarizmaBase = counter9;*/// PlayerPrefs.GetInt("Counter9", 0);
+        MaxValue = tempData.MaxValue;
+        counter3 = tempData.KuvvetBase;
+        counter4 = tempData.CeviklikBase;
+        counter5 = tempData.DayaniklilikBase;
+        counter6 = tempData.ZekaBase;
+        counter7 = tempData.FizikselBase;
+        counter8 = tempData.CiBase;
+        counter9 = tempData.KarizmaBase;
+        //MaxValue = PlayerPrefs.GetInt("MaxValue", 7);
+        /*counter3 = PlayerPrefs.GetInt("Counter3", 0);
         counter4 = PlayerPrefs.GetInt("Counter4", 0);
         counter5 = PlayerPrefs.GetInt("Counter5", 0);
         counter6 = PlayerPrefs.GetInt("Counter6", 0);
@@ -146,14 +177,14 @@ public class ArttirmaCode : MonoBehaviour
         counter9 = PlayerPrefs.GetInt("Counter9", 0);
         MaxValue = PlayerPrefs.GetInt("MaxValue", 7);
 
-        tempData.KuvvetBase = PlayerPrefs.GetInt("Counter3", 0);
+        /*tempData.KuvvetBase = PlayerPrefs.GetInt("Counter3", 0);
         tempData.CeviklikBase = PlayerPrefs.GetInt("Counter4", 0);
         tempData.DayaniklilikBase = PlayerPrefs.GetInt("Counter5", 0);
         tempData.ZekaBase = PlayerPrefs.GetInt("Counter6", 0);
         tempData.FizikselBase = PlayerPrefs.GetInt("Counter7", 0);
         tempData.CiBase = PlayerPrefs.GetInt("Counter8", 0);
         tempData.KarizmaBase = PlayerPrefs.GetInt("Counter9", 0);
-
+        */
 
     }
 
