@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
@@ -16,7 +17,7 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField] private GameObject _selectedPlayerObject,_tileObject,_tileUnitObject;
 
-    [SerializeField] private GameObject _attackButton, _moveButton, _endTurnButton;
+    [SerializeField] private GameObject _attackButton, _moveButton, _endTurnButton, _backButton;
     private void Awake()
     {
         Instance = this;
@@ -58,8 +59,73 @@ public class MenuManager : MonoBehaviour
         _selectedPlayerObject.SetActive(true);
     }
 
+    public void TurnStart(BaseUnit unit)
+    {
+        if (unit == null)
+        {
+            _attackButton.SetActive(false);
+            _moveButton.SetActive(false);
+            _endTurnButton.SetActive(false);
+            _backButton.SetActive(false);
+        }
 
-    public void MovePlayer(BasePlayer player)
+        else
+        {
+            _attackButton.SetActive(true);
+            _moveButton.SetActive(true);
+            _endTurnButton.SetActive(true);
+            _backButton.SetActive(false);
+        }
+    }
+    
+    
+    
+    public void AttackButton()
+    {
+        GameManager.Instance.ChangeState(GameState.AttackState);
+        Tile.Instance.AttackRange();
+        _attackButton.SetActive(false);
+        _moveButton.SetActive(false);
+        _endTurnButton.SetActive(false);
+        _backButton.SetActive(true);
+    }
+
+    public void MoveButton()
+    {
+        GameManager.Instance.ChangeState(GameState.MoveState);
+        Tile.Instance.GetInRangeTiles();
+        _attackButton.SetActive(false);
+        _moveButton.SetActive(false);
+        _endTurnButton.SetActive(false);
+        _backButton.SetActive(true);
+    }
+    public void BackButton()
+    {
+        GameManager.Instance.ChangeState(GameState.WaitState);
+        _backButton.SetActive(false);
+        _attackButton.SetActive(true);
+        _moveButton.SetActive(true);
+        _endTurnButton.SetActive(true);
+    }
+
+    public void EndTurnButton()
+    {
+        _attackButton.SetActive(false);
+        _moveButton.SetActive(false);
+        _endTurnButton.SetActive(false);
+        _backButton.SetActive(false);
+        UnitManager.Instance.SelectedUnit.OccupiedTile._turnHighlight.SetActive(false);
+        GameManager.Instance.ChangeState(GameState.ChangeTurnOrder);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    /*public void MovePlayer(BasePlayer player)
 {
     if (player == null)
     {
@@ -76,24 +142,7 @@ public class MenuManager : MonoBehaviour
 
         UnitManager.Instance.SelectedPlayer.OccupiedTile.Move(UnitManager.Instance.SelectedPlayer, UnitManager.Instance.SelectedPlayer.OccupiedTile );
         // UnitManager.Instance.SetSelectedPlayer(null); // Bu satırı gerekiyorsa burada veya başka bir yerde kullanabilirsiniz
-    }
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-
-
-
+    }*/
 
 
 
@@ -105,3 +154,19 @@ public class MenuManager : MonoBehaviour
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

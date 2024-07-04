@@ -814,6 +814,7 @@ MonoBehaviour:
   UnitName: Toprak
   OccupiedTile: {fileID: 0}
   Faction: 0
+  Speed: 3
 --- !u!54 &6830262651287721603
 Rigidbody:
   m_ObjectHideFlags: 0

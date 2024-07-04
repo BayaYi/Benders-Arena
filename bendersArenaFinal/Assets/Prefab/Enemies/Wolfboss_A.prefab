@@ -238,6 +238,7 @@ MonoBehaviour:
   UnitName: Wolf Boss
   OccupiedTile: {fileID: 0}
   Faction: 1
+  Speed: 3
 --- !u!114 &1056486230444498766
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1127,6 +1127,7 @@ MonoBehaviour:
   UnitName: Hava
   OccupiedTile: {fileID: 0}
   Faction: 0
+  Speed: 4
 --- !u!114 &2660647281491999349
 MonoBehaviour:
   m_ObjectHideFlags: 0

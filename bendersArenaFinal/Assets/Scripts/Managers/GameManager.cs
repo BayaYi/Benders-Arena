@@ -31,9 +31,20 @@ public class GameManager : MonoBehaviour
             case GameState.SpawnEnemies:
                 UnitManager.Instance.SpawnEnemies();
                 break;
-            case GameState.PlayerTurn:
+            case GameState.CalculateTurnOrder:
+                UnitManager.Instance.CalculateTurnOrder();
                 break;
-            case GameState.EnemiesTurn:
+            case GameState.TurnOrder:
+                UnitManager.Instance.TurnOrder();
+                break;
+            case GameState.ChangeTurnOrder:
+                UnitManager.Instance.ChangeTurnOrder();
+                break;
+            case GameState.AttackState:
+                break;
+            case GameState.MoveState:
+                break;
+            case GameState.WaitState:
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState),newState,null);
@@ -46,6 +57,10 @@ public enum GameState
     GenerateGrid = 0,
     SpawnPlayer = 1,
     SpawnEnemies = 2,
-    PlayerTurn = 3,
-    EnemiesTurn = 4
+    CalculateTurnOrder = 3,
+    TurnOrder = 4,
+    ChangeTurnOrder = 5,
+    AttackState = 6,
+    MoveState = 7,
+    WaitState = 8
 }
