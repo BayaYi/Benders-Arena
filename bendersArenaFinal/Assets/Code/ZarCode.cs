@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class ZarCode : MonoBehaviour
 {
+    public TempData tempData;
+
+
+
     public Text diceResultText;
     public Text diceResultText1;
     public Text diceResultText2;
@@ -93,6 +97,14 @@ public class ZarCode : MonoBehaviour
                 hasRolled[i] = PlayerPrefs.GetInt("HasRolled" + i) == 1;
             }
         }
+
+        tempData.KuvvetZar = PlayerPrefs.GetInt("diceResultText", 0);
+        tempData.CeviklikZar = PlayerPrefs.GetInt("diceResultText1", 0);
+        tempData.DayaniklilikZar = PlayerPrefs.GetInt("diceResultText2", 0);
+        tempData.ZekaZar = PlayerPrefs.GetInt("diceResultText3", 0);
+        tempData.FizikselZar = PlayerPrefs.GetInt("diceResultText4", 0);
+        tempData.CiZar = PlayerPrefs.GetInt("diceResultText5", 0);
+        tempData.KarizmaZar = PlayerPrefs.GetInt("diceResultText6", 0);
     }
 
     // Yüklenen verileri ekranda gösterme fonksiyonu

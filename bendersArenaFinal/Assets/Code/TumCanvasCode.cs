@@ -44,6 +44,7 @@ public class TumCanvasCode : MonoBehaviour
     public void loadMainMenu()
     {
         SceneManager.LoadScene(16);
+        
     }
 
 
@@ -1247,6 +1248,8 @@ public class TumCanvasCode : MonoBehaviour
 
 
     }
+
+
 
 
 

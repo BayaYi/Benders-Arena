@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ArttirmaCode : MonoBehaviour
 {
+    public TempData tempData;
     [SerializeField] private Text txtDisplayNumber2;
     [SerializeField] private Text txtDisplayNumber3;
     [SerializeField] private Text txtDisplayNumber4;
@@ -144,7 +145,19 @@ public class ArttirmaCode : MonoBehaviour
         counter8 = PlayerPrefs.GetInt("Counter8", 0);
         counter9 = PlayerPrefs.GetInt("Counter9", 0);
         MaxValue = PlayerPrefs.GetInt("MaxValue", 7);
+
+        tempData.KuvvetBase = PlayerPrefs.GetInt("Counter3", 0);
+        tempData.CeviklikBase = PlayerPrefs.GetInt("Counter4", 0);
+        tempData.DayaniklilikBase = PlayerPrefs.GetInt("Counter5", 0);
+        tempData.ZekaBase = PlayerPrefs.GetInt("Counter6", 0);
+        tempData.FizikselBase = PlayerPrefs.GetInt("Counter7", 0);
+        tempData.CiBase = PlayerPrefs.GetInt("Counter8", 0);
+        tempData.KarizmaBase = PlayerPrefs.GetInt("Counter9", 0);
+
+
     }
+
+
 
     public void DeleteAllData()
     {
