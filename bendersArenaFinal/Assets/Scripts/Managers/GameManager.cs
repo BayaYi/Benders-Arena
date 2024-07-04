@@ -7,44 +7,53 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public GameState GameState;
-
+    int i = 0;
     private void Awake()
     {
-        Instance = this;
+        
+            Instance = this;
+      
     }
 
     private void Start()
     {
-        ChangeState(GameState.GenerateGrid);
+        if (i == 0)
+        {
+            ChangeState(GameState.GenerateGrid);i++;
+        }
     }
 
     public void ChangeState(GameState newState)
     {
+        
         switch (newState)
         {
             case GameState.GenerateGrid:
-                GridManager.Instance.GenerateGrid();
+                GridManager.Instance.GenerateGrid(); GameState = GameState.GenerateGrid;
                 break;
             case GameState.SpawnPlayer: 
-                UnitManager.Instance.SpawnPlayers();
+                UnitManager.Instance.SpawnPlayers(); GameState = GameState.SpawnPlayer;
                 break;
             case GameState.SpawnEnemies:
-                UnitManager.Instance.SpawnEnemies();
+                UnitManager.Instance.SpawnEnemies(); GameState = GameState.SpawnEnemies;
                 break;
             case GameState.CalculateTurnOrder:
-                UnitManager.Instance.CalculateTurnOrder();
+                UnitManager.Instance.CalculateTurnOrder(); GameState = GameState.CalculateTurnOrder;
                 break;
             case GameState.TurnOrder:
-                UnitManager.Instance.TurnOrder();
+                UnitManager.Instance.TurnOrder(); GameState = GameState.TurnOrder;
                 break;
             case GameState.ChangeTurnOrder:
-                UnitManager.Instance.ChangeTurnOrder();
+                UnitManager.Instance.ChangeTurnOrder(); GameState = GameState.ChangeTurnOrder;
                 break;
             case GameState.AttackState:
+                GameState = GameState.AttackState; 
                 break;
             case GameState.MoveState:
+                GameState = GameState.MoveState;
                 break;
             case GameState.WaitState:
+                GameState = GameState.WaitState;
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState),newState,null);

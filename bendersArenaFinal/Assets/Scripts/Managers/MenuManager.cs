@@ -61,6 +61,7 @@ public class MenuManager : MonoBehaviour
 
     public void TurnStart(BaseUnit unit)
     {
+        
         if (unit == null)
         {
             _attackButton.SetActive(false);
@@ -82,6 +83,11 @@ public class MenuManager : MonoBehaviour
     
     public void AttackButton()
     {
+        BaseUnit unit = UnitManager.Instance.SelectedUnit;
+        UnitManager.Instance.SelectedUnit = null;
+        Tile.Instance.GetInRangeTiles();
+        Tile.Instance.AttackRange();
+        UnitManager.Instance.SelectedUnit = unit;
         GameManager.Instance.ChangeState(GameState.AttackState);
         Tile.Instance.AttackRange();
         _attackButton.SetActive(false);
@@ -92,6 +98,11 @@ public class MenuManager : MonoBehaviour
 
     public void MoveButton()
     {
+        BaseUnit unit = UnitManager.Instance.SelectedUnit;
+        UnitManager.Instance.SelectedUnit = null;
+        Tile.Instance.GetInRangeTiles();
+        Tile.Instance.AttackRange();
+        UnitManager.Instance.SelectedUnit = unit;
         GameManager.Instance.ChangeState(GameState.MoveState);
         Tile.Instance.GetInRangeTiles();
         _attackButton.SetActive(false);
@@ -101,6 +112,11 @@ public class MenuManager : MonoBehaviour
     }
     public void BackButton()
     {
+        BaseUnit unit = UnitManager.Instance.SelectedUnit;
+        UnitManager.Instance.SelectedUnit = null;
+        Tile.Instance.GetInRangeTiles();
+        Tile.Instance.AttackRange();
+        UnitManager.Instance.SelectedUnit = unit;
         GameManager.Instance.ChangeState(GameState.WaitState);
         _backButton.SetActive(false);
         _attackButton.SetActive(true);
