@@ -68,4 +68,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/oyuncu say\u0131s\u0131.unity"
     guid: 72861eab5100d4841bd70d701f2c987b
+  - enabled: 1
+    path: Assets/Scenes/aaatemelalan.unity
+    guid: ce1b61b0278d2954496ae9eff3598521
   m_configObjects: {}
