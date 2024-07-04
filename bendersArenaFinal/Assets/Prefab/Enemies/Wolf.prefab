@@ -527,6 +527,7 @@ MonoBehaviour:
   UnitName: Base Wolf
   OccupiedTile: {fileID: 0}
   Faction: 1
+  Speed: 2
 --- !u!54 &1992908063696574318
 Rigidbody:
   m_ObjectHideFlags: 0

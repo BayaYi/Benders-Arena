@@ -18,7 +18,7 @@ public class Tile : MonoBehaviour
     private List<Tile> _inRangeTiles = new List<Tile>();
     [SerializeField] private Color _baseColor;
     [SerializeField] private SpriteRenderer _renderer;
-    [SerializeField] public GameObject _highlight,_atkRange,_moveRange,_enemyHighlight;
+    [SerializeField] public GameObject _highlight,_atkRange,_moveRange,_enemyHighlight,_turnHighlight;
     [SerializeField] public bool _isWalkable;
     public string TileName;
     
@@ -63,45 +63,46 @@ public class Tile : MonoBehaviour
 
         if (OccupiedUnit != null)
         {
-            if (OccupiedUnit.Faction == Faction.Player && UnitManager.Instance.SelectedUnit == null)
+            /*if (OccupiedUnit.Faction == Faction.Player && UnitManager.Instance.SelectedUnit == null)
             {
                 UnitManager.Instance.SetSelectedPlayer((BasePlayer)OccupiedUnit);
                 UnitManager.Instance.SetSelectedUnit((BaseUnit)OccupiedUnit);
-                GetInRangeTiles();
-                AttackRange();
+                //GetInRangeTiles();
+                //AttackRange();
 
             }
             else if(OccupiedUnit.Faction == Faction.Enemy && UnitManager.Instance.SelectedUnit == null)
             {
                 UnitManager.Instance.SetSelectedEnemy((BaseEnemy)OccupiedUnit);
                 UnitManager.Instance.SetSelectedUnit((BaseUnit)OccupiedUnit);
-                GetInRangeTiles();
-                AttackRange();
+                //GetInRangeTiles();
+                //AttackRange();
 
             }
-            else {
-                if (UnitManager.Instance.SelectedUnit.Faction == Faction.Player)
+            else {*/
+                if (UnitManager.Instance.SelectedUnit.Faction == Faction.Player && OccupiedUnit.Faction == Faction.Enemy && GameManager.Instance.GameState == GameState.AttackState)
                 {
                     
                     var enemy = (BaseEnemy)OccupiedUnit;
                     //Destroy(enemy.gameObject);  //Hasar mekaniði eklenecek...
                     Attack(UnitManager.Instance.SelectedPlayer, (BaseEnemy)OccupiedUnit);
                     UnitManager.Instance.SetSelectedPlayer(null);
-                    UnitManager.Instance.SetSelectedUnit(null); 
+                    UnitManager.Instance.SetSelectedUnit(null);
+                    GameManager.Instance.ChangeState(GameState.ChangeTurnOrder);
                 }
                 
-                else if(UnitManager.Instance.SelectedUnit.Faction == Faction.Enemy)
+                else if(UnitManager.Instance.SelectedUnit.Faction == Faction.Enemy && OccupiedUnit.Faction == Faction.Player && GameManager.Instance.GameState == GameState.AttackState)
                 {
                     {
                         var player = (BasePlayer)OccupiedUnit;
                         MonsterAttack(UnitManager.Instance.SelectedEnemy, (BasePlayer)OccupiedUnit);
                         UnitManager.Instance.SetSelectedEnemy(null);
                         UnitManager.Instance.SetSelectedUnit(null);
-
+                        GameManager.Instance.ChangeState(GameState.ChangeTurnOrder);
                     }
                 }
                
-            }
+            //}
             /*if (OccupiedUnit.Faction == Faction.Enemy)
             {
                 UnitManager.Instance.SetSelectedEnemy((BaseEnemy)OccupiedUnit);
@@ -178,26 +179,28 @@ public class Tile : MonoBehaviour
                 UnitManager.Instance.SetSelectedPlayer(null); 
                 UnitManager.Instance.SetSelectedEnemy(null);
                 UnitManager.Instance.SetSelectedUnit(null);
+                GameManager.Instance.ChangeState(GameState.ChangeTurnOrder);
+                
 
             }
-        };
+        }
 
-        if (_path.Count == 0)
+        if (UnitManager.Instance.SelectedUnit == null)
         {
             GetInRangeTiles();
         }
 
-        if (UnitManager.Instance.SelectedPlayer == null)
+        if (UnitManager.Instance.SelectedUnit == null)
         {
             AttackRange();
         }
     }
 
-    private void GetInRangeTiles()
+    public void GetInRangeTiles()
     {
         foreach (var item in _inRangeTiles)
         {
-            _moveRange.SetActive(false);
+            item._moveRange.SetActive(false);
         }
 
         if (UnitManager.Instance.SelectedUnit != null)
@@ -219,11 +222,11 @@ public class Tile : MonoBehaviour
 
     }
 
-    private void AttackRange()
+    public void AttackRange()
     {
         foreach (var item in _inRangeTiles)
         {
-            _atkRange.SetActive(false);
+            item._atkRange.SetActive(false);
         }
 
         if (UnitManager.Instance.SelectedUnit != null)

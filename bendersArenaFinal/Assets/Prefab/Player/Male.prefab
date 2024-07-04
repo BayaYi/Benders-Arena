@@ -1164,6 +1164,7 @@ MonoBehaviour:
   UnitName: Su
   OccupiedTile: {fileID: 0}
   Faction: 0
+  Speed: 1
 --- !u!54 &48120622057832257
 Rigidbody:
   m_ObjectHideFlags: 0

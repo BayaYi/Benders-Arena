@@ -166,6 +166,7 @@ MonoBehaviour:
   UnitName: "Ate\u015F"
   OccupiedTile: {fileID: 0}
   Faction: 0
+  Speed: 2
 --- !u!54 &3943432365450186096
 Rigidbody:
   m_ObjectHideFlags: 0
