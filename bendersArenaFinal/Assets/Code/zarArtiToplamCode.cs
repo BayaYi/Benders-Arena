@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class zarArtiToplamCode : MonoBehaviour
 {
+    public TempData tempData;
     public Text txtDisplayNumber2;
     public Text txtDisplayNumber3;
     public Text txtDisplayNumber4;
@@ -119,6 +120,14 @@ public class zarArtiToplamCode : MonoBehaviour
         totalScoreText4.text = PlayerPrefs.GetInt("totalScore4", 0).ToString();
         totalScoreText5.text = PlayerPrefs.GetInt("totalScore5", 0).ToString();
         totalScoreText6.text = PlayerPrefs.GetInt("totalScore6", 0).ToString();
+
+        tempData.KuvvetBaseArtiZar = PlayerPrefs.GetInt("totalScore", 0);
+        tempData.CevikeArtiZar = PlayerPrefs.GetInt("totalScore1", 0);
+        tempData.DayaniklilikBaseArtiZar = PlayerPrefs.GetInt("totalScore2", 0);
+        tempData.ZekaBaseArtiZar = PlayerPrefs.GetInt("totalScore3", 0);
+        tempData.FizikselBaseArtiZar = PlayerPrefs.GetInt("totalScore4", 0);
+        tempData.CiBaseArtiZar = PlayerPrefs.GetInt("totalScore5", 0);
+        tempData.KarizmaBaseArtiZar = PlayerPrefs.GetInt("totalScore6", 0);
 
         //CalculateNewTotals();
     }

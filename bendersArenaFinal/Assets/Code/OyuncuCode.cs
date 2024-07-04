@@ -17,6 +17,7 @@ public class OyuncuCode : MonoBehaviour
     {
         // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
         SceneManager.LoadScene(16);
+
     }
 
     public void AnaSahne()

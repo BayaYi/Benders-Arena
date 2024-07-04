@@ -3361,6 +3361,50 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!1 &628576577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 628576579}
+  - component: {fileID: 628576578}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &628576578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628576577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf011db86149db24abc7bfd0bfff265a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &628576579
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628576577}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 384.20984, y: 176.33319, z: -156.45453}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &646380875
 GameObject:
   m_ObjectHideFlags: 0
@@ -6548,6 +6592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 488831298348cf14a8f6be703a6216e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tempData: {fileID: 2086604935}
   txtDisplayNumber2: {fileID: 179322848}
   txtDisplayNumber3: {fileID: 1819922290}
   txtDisplayNumber4: {fileID: 1907976181}
@@ -7516,6 +7561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3decb914fde6d42aa9012fa40061ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Oyuncu: {fileID: 0}
 --- !u!4 &1551553855
 Transform:
   m_ObjectHideFlags: 0
@@ -8197,6 +8243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9e1d661b7782454da5aaecf112a5d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tempData: {fileID: 2086604935}
   diceResultText: {fileID: 1367406394}
   diceResultText1: {fileID: 960864515}
   diceResultText2: {fileID: 1003713895}
@@ -8231,6 +8278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61934bbf54c15e4dbb907bea5114bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tempData: {fileID: 2086604935}
   txtDisplayNumber2: {fileID: 179322848}
   txtDisplayNumber3: {fileID: 1819922290}
   txtDisplayNumber4: {fileID: 1907976181}
@@ -10506,6 +10554,72 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!1 &2086604934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2086604936}
+  - component: {fileID: 2086604935}
+  m_Layer: 0
+  m_Name: TempData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2086604935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086604934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66deb853f110bb49abff916a74dac17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KuvvetBase: 0
+  KuvvetZar: 0
+  KuvvetBaseArtiZar: 0
+  CeviklikBase: 0
+  CeviklikZar: 0
+  CevikeArtiZar: 0
+  DayaniklilikBase: 0
+  DayaniklilikZar: 0
+  DayaniklilikBaseArtiZar: 0
+  ZekaBase: 0
+  ZekaZar: 0
+  ZekaBaseArtiZar: 0
+  FizikselBase: 0
+  FizikselZar: 0
+  FizikselBaseArtiZar: 0
+  CiBase: 0
+  CiZar: 0
+  CiBaseArtiZar: 0
+  KarizmaBase: 0
+  KarizmaZar: 0
+  KarizmaBaseArtiZar: 0
+  Bukme: 
+--- !u!4 &2086604936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086604934}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 384.20984, y: 176.33319, z: -156.45453}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2119521914
 GameObject:
   m_ObjectHideFlags: 0
@@ -10656,9 +10770,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1551553854}
-        m_TargetAssemblyTypeName: OyuncuCode, Assembly-CSharp
-        m_MethodName: "KarakterKa\u011Fidigeri"
+      - m_Target: {fileID: 628576578}
+        m_TargetAssemblyTypeName: YonCode, Assembly-CSharp
+        m_MethodName: geri4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10721,3 +10835,5 @@ SceneRoots:
   - {fileID: 1671801106}
   - {fileID: 2963425}
   - {fileID: 1551553855}
+  - {fileID: 628576579}
+  - {fileID: 2086604936}
