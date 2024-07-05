@@ -188,7 +188,7 @@ public class UnitManager : MonoBehaviour
 
     public void GetStatsFromUnit(BaseUnit unit)
     {
-        healthSystem = gameObject.GetComponent<HealthSystemForDummies>();
+        healthSystem = unit.gameObject.GetComponent<HealthSystemForDummies>();
         healthSystem.MaximumHealth = unit.Health;
 
 
