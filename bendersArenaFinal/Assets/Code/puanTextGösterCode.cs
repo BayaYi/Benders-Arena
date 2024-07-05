@@ -14,12 +14,12 @@ public class puanTextGösterCode : MonoBehaviour
     {
         // İlk sahnede veriyi kaydetmiş varsayalım
         // Bu verileri burada alıyoruz:
-        _name1 = PlayerPrefs.GetString("Name");
+        //_name1 = PlayerPrefs.GetString("Name");
 
 
 
         // UI elemanlarını güncelle
-        _name1Text.text = "Ad: " + _name1;
+        //_name1Text.text = "Ad: " + _name1;
 
 
     }
