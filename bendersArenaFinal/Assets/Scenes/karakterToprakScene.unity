@@ -1987,7 +1987,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2029113930}
         m_TargetAssemblyTypeName: YonCode, Assembly-CSharp
-        m_MethodName: geri4
+        m_MethodName: ileriNasil12
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

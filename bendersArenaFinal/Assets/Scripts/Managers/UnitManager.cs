@@ -49,12 +49,12 @@ public class UnitManager : MonoBehaviour
 
         for (int i = 0; i < heroCount; i++)
         {
-            //tempData = GameObject.Find($"PlayerData{i}");
-            //tempUnit = tempData.GetComponent<BaseUnit>();
+           tempData = GameObject.Find($"PlayerData{i}");
+            tempUnit = tempData.GetComponent<BaseUnit>();
 
             var randomPrefab = GetRandomUnit<BasePlayer>(Faction.Player, i+2);
-            //CopyUnit(randomPrefab, tempUnit);
-            
+            CopyUnit(randomPrefab, tempUnit);
+            GetStatsFromUnit(randomPrefab);
             var spawnedPlayer = Instantiate(randomPrefab);
             var randomSpawnTile = GridManager.Instance.GetPlayerSpawnTile();
             _unitList.Add(spawnedPlayer);
