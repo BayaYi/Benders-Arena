@@ -79,7 +79,7 @@ public class TempUnit : BaseUnit
         if (zarToprakCode != null)
         {
 
-
+            UnitName = tempData.Isim;
             Health = tempData._maxHealth;
             Stamina = tempData._physicalEnergy;
             Chi = tempData._chiEnergy;
@@ -102,7 +102,7 @@ public class TempUnit : BaseUnit
         if (zarFireCode != null)
         {
 
-
+            UnitName = tempData.Isim;
             Health = tempData._maxHealth;
             Stamina = tempData._physicalEnergy;
             Chi = tempData._chiEnergy;
@@ -126,7 +126,7 @@ public class TempUnit : BaseUnit
         if (zarAirCode != null)
         {
 
-
+            UnitName = tempData.Isim;
             Health = tempData._maxHealth;
             Stamina = tempData._physicalEnergy;
             Chi = tempData._chiEnergy;
@@ -149,7 +149,7 @@ public class TempUnit : BaseUnit
         if (zarWaterCode != null)
         {
 
-
+            UnitName = tempData.Isim;
             Health = tempData._maxHealth;
             Stamina = tempData._physicalEnergy;
             Chi = tempData._chiEnergy;
