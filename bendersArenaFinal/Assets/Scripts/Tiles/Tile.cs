@@ -81,7 +81,7 @@ public class Tile : MonoBehaviour
 
             }
             else {*/
-                if (UnitManager.Instance.SelectedUnit.Faction == Faction.Player && OccupiedUnit.Faction == Faction.Enemy && GameManager.Instance.GameState == GameState.AttackState)
+                if (UnitManager.Instance.SelectedUnit.Faction == Faction.Player && OccupiedUnit.Faction == Faction.Enemy && GameManager.Instance.GameState == GameState.AttackState && OccupiedUnit.OccupiedTile._atkRange)
                 {
                     
                     var enemy = (BaseEnemy)OccupiedUnit;
@@ -93,7 +93,7 @@ public class Tile : MonoBehaviour
                     GameManager.Instance.ChangeState(GameState.ChangeTurnOrder);
                 }
                 
-                else if(UnitManager.Instance.SelectedUnit.Faction == Faction.Enemy && OccupiedUnit.Faction == Faction.Player && GameManager.Instance.GameState == GameState.AttackState)
+                else if(UnitManager.Instance.SelectedUnit.Faction == Faction.Enemy && OccupiedUnit.Faction == Faction.Player && GameManager.Instance.GameState == GameState.AttackState && OccupiedUnit.OccupiedTile._atkRange)
                 {
                     
                         var player = (BasePlayer)OccupiedUnit;
