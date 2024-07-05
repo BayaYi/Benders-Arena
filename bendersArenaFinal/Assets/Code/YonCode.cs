@@ -29,7 +29,7 @@ public class YonCode : MonoBehaviour
     public void geri2()
     {
         // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
-        SceneManager.LoadScene(23);
+        SceneManager.LoadScene(0);
     }
      public void ileri3()
     {
