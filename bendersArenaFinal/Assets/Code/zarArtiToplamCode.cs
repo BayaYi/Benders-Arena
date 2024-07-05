@@ -28,19 +28,27 @@ public class zarArtiToplamCode : MonoBehaviour
     public Text totalScoreText5;
     public Text totalScoreText6;
 
-        //public Text totalHealthText;
+    //public Text totalHealthText;
     //public Text totalPhysicalEnergyText;
     //public Text totalChiEnergyText;
     //public Text totalSpeedText;
     //public Text totalPhysicalDefenceText;
     //public Text totalBendingDefenceText;
     //public Text totalInitiativeText;
+    public GameObject _gameObject, _playerControl;
+    public PlayerControl _control;
+
 
     void Start()
     {
-        // Kaydedilmiş puanları yükleme
+        _playerControl = GameObject.Find("PlayerControl");
+        _control = _playerControl.GetComponent<PlayerControl>();
+        _gameObject = GameObject.Find($"TempData{_control._playerNumber}");
+        tempData = _gameObject.GetComponent<TempData>();
+
         LoadScores();
     }
+
 
 
     private void LateUpdate()
@@ -158,6 +166,12 @@ public class zarArtiToplamCode : MonoBehaviour
 
     public void DeleteSavedScore(string key)
     {
-        PlayerPrefs.DeleteKey(key);
+        tempData.KuvvetBaseArtiZar = 0;
+        tempData.CevikeArtiZar = 0;
+        tempData.DayaniklilikBaseArtiZar = 0;
+        tempData.ZekaBaseArtiZar = 0;
+        tempData.FizikselBaseArtiZar = 0;
+        tempData.CiBaseArtiZar = 0;
+        tempData.KarizmaBaseArtiZar = 0;
     }
 }

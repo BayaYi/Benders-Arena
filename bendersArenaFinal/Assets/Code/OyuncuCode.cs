@@ -6,10 +6,37 @@ using UnityEngine.SceneManagement;
 
 public class OyuncuCode : MonoBehaviour
 {
-    public GameObject Oyuncu;
+    GameObject _playerControl;
+    PlayerControl _control;
+
+    public void Awake()
+    {
+        _playerControl = GameObject.Find("PlayerControl");
+        _control = _playerControl.GetComponent<PlayerControl>();
+    }
 
     public void KarakterKağidi()
     {
+        _control._playerNumber = 0;
+        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+        SceneManager.LoadScene(12);
+    }
+
+    public void KarakterKağidi2()
+    {
+        _control._playerNumber = 1;
+        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+        SceneManager.LoadScene(12);
+    }
+    public void KarakterKağidi3()
+    {
+        _control._playerNumber = 2; 
+        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+        SceneManager.LoadScene(12);
+    }
+    public void KarakterKağidi4()
+    {
+        _control._playerNumber = 3;
         // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
         SceneManager.LoadScene(12);
     }

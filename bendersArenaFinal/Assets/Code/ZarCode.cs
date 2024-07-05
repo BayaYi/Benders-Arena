@@ -19,9 +19,17 @@ public class ZarCode : MonoBehaviour
 
     private int[] lastRolledValues = new int[7]; // Zar değerlerini saklayan dizi
     private bool[] hasRolled = new bool[7]; // Zarların daha önce atılıp atılmadığını kontrol eden dizi
-    
+
+    public GameObject _gameObject, _playerControl;
+    PlayerControl _control;
     void Start()
     {
+        _playerControl = GameObject.Find("PlayerControl");
+        _control = _playerControl.GetComponent<PlayerControl>();
+        _gameObject = GameObject.Find($"TempData{_control._playerNumber}");
+        tempData = _gameObject.GetComponent<TempData>();
+
+
         LoadData(); // Oyun başladığında kayıtlı zar sonuçlarını yükle
         DisplayLoadedData(); // Yüklenen zar sonuçlarını ekranda göster
     }
@@ -29,19 +37,19 @@ public class ZarCode : MonoBehaviour
     private void LateUpdate()
     {
         
-        tempData._isRolledFiziksel = hasRolled[0];
+        tempData._isRolledKuvvet = hasRolled[0];
         tempData._isRolledCeviklik = hasRolled[1];
         tempData._isRolledDayaniklilik = hasRolled[2];
         tempData._isRolledZeka = hasRolled[3];
         tempData._isRolledFiziksel = hasRolled[4];
         tempData._isRolledCi = hasRolled[5];
         tempData._isRolledKarizma = hasRolled[6];
-        tempData.KuvvetZar = lastRolledValues[0]; //PlayerPrefs.GetInt("diceResultText", 0);
-        tempData.CeviklikZar = lastRolledValues[1]; //PlayerPrefs.GetInt("diceResultText1", 0);
-        tempData.DayaniklilikZar = lastRolledValues[2]; //PlayerPrefs.GetInt("diceResultText2", 0);
-        tempData.ZekaZar = lastRolledValues[3]; //PlayerPrefs.GetInt("diceResultText3", 0);
-        tempData.FizikselZar = lastRolledValues[4];//PlayerPrefs.GetInt("diceResultText4", 0);
-        tempData.CiZar = lastRolledValues[5];// PlayerPrefs.GetInt("diceResultText5", 0);
+        tempData.KuvvetZar = lastRolledValues[0]; 
+        tempData.CeviklikZar = lastRolledValues[1]; 
+        tempData.DayaniklilikZar = lastRolledValues[2]; 
+        tempData.ZekaZar = lastRolledValues[3];
+        tempData.FizikselZar = lastRolledValues[4];
+        tempData.CiZar = lastRolledValues[5];
         tempData.KarizmaZar = lastRolledValues[6];
         DisplayLoadedData();
     }
@@ -121,14 +129,30 @@ public class ZarCode : MonoBehaviour
     // Kayıtlı verileri yüklemek için kullanılacak fonksiyon
     public void LoadData()
     {
-        for (int i = 0; i < lastRolledValues.Length; i++)
+        hasRolled[0] = tempData._isRolledKuvvet;
+        hasRolled[1] = tempData._isRolledCeviklik;
+        hasRolled[2] = tempData._isRolledDayaniklilik;
+        hasRolled[3] = tempData._isRolledZeka;
+        hasRolled[4] = tempData._isRolledFiziksel;
+        hasRolled[5] = tempData._isRolledCi;
+        hasRolled[6] = tempData._isRolledKarizma;
+
+        
+        lastRolledValues[0] = tempData.KuvvetZar;
+        lastRolledValues[1] = tempData.CeviklikZar;
+        lastRolledValues[2] = tempData.DayaniklilikZar;
+        lastRolledValues[3] = tempData.ZekaZar;
+        lastRolledValues[4] = tempData.FizikselZar;
+        lastRolledValues[5] = tempData.CiZar;
+        lastRolledValues[6] = tempData.KarizmaZar;
+        /*for (int i = 0; i < lastRolledValues.Length; i++)
         {
             if (PlayerPrefs.HasKey("LastRolledValue" + i))
             {
                 lastRolledValues[i] = PlayerPrefs.GetInt("LastRolledValue" + i);
                 hasRolled[i] = PlayerPrefs.GetInt("HasRolled" + i) == 1;
             }
-        }
+        }*/
 
 
     }
@@ -168,12 +192,20 @@ public class ZarCode : MonoBehaviour
     // Kayıtlı verileri silmek için kullanılacak fonksiyon
     public void DeleteData()
     {
-        for (int i = 0; i < lastRolledValues.Length; i++)
-        {
-            PlayerPrefs.DeleteKey("LastRolledValue" + i);
-            PlayerPrefs.DeleteKey("HasRolled" + i);
-        }
-        PlayerPrefs.Save();
+        tempData._isRolledKuvvet = false;
+        tempData._isRolledCeviklik = false;
+        tempData._isRolledDayaniklilik = false;
+        tempData._isRolledZeka = false;
+        tempData._isRolledFiziksel = false;
+        tempData._isRolledCi = false;
+        tempData._isRolledKarizma = false;
+        tempData.KuvvetZar = 0;
+        tempData.CeviklikZar = 0;
+        tempData.DayaniklilikZar = 0;
+        tempData.ZekaZar = 0;
+        tempData.FizikselZar = 0;
+        tempData.CiZar = 0;
+        tempData.KarizmaZar = 0;
         ResetValues(); // Verileri sıfırla
     }
 

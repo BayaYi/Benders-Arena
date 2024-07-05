@@ -153,7 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name1Input: {fileID: 1122496876}
-  _tempData: {fileID: 2086604935}
+  _tempData: {fileID: 0}
+  _gameObject: {fileID: 0}
+  _playerControl: {fileID: 0}
+  _control: {fileID: 0}
 --- !u!4 &2963425
 Transform:
   m_ObjectHideFlags: 0
@@ -2420,21 +2423,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 816391623}
-        m_TargetAssemblyTypeName: PuanInputKaydetCode, Assembly-CSharp
+      - m_Target: {fileID: 1351687275}
+        m_TargetAssemblyTypeName: ArttirmaCode, Assembly-CSharp
         m_MethodName: DeleteAllData
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 816391623}
-        m_TargetAssemblyTypeName: PuanInputKaydetCode, Assembly-CSharp
-        m_MethodName: DeleteAllData1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2446,7 +2437,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1671801105}
         m_TargetAssemblyTypeName: ZarCode, Assembly-CSharp
-        m_MethodName: DeleteLastRolledValue1
+        m_MethodName: DeleteData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2459,7 +2450,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1671801107}
         m_TargetAssemblyTypeName: zarArtiToplamCode, Assembly-CSharp
         m_MethodName: DeleteSavedScore
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6486,6 +6477,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258182948}
   m_CullTransparentMesh: 1
+--- !u!1 &1275942495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1275942497}
+  - component: {fileID: 1275942496}
+  m_Layer: 0
+  m_Name: GetUnitFromData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1275942496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275942495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d7982c3d7bf5ad43bddbbc4f7a134d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameObject1: {fileID: 0}
+  GameObject2: {fileID: 0}
+  GameObject3: {fileID: 0}
+  playerControl: {fileID: 0}
+  tempUnit: {fileID: 0}
+  tempData: {fileID: 0}
+--- !u!4 &1275942497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275942495}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 384.20984, y: 176.33319, z: -156.45453}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1338337652
 GameObject:
   m_ObjectHideFlags: 0
@@ -6594,7 +6635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 488831298348cf14a8f6be703a6216e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempData: {fileID: 2086604935}
+  tempData: {fileID: 0}
   txtDisplayNumber2: {fileID: 179322848}
   txtDisplayNumber3: {fileID: 1819922290}
   txtDisplayNumber4: {fileID: 1907976181}
@@ -6602,6 +6643,8 @@ MonoBehaviour:
   txtDisplayNumber6: {fileID: 1598290316}
   txtDisplayNumber7: {fileID: 366902840}
   txtDisplayNumber8: {fileID: 2017104923}
+  _gameObject: {fileID: 0}
+  _playerControl: {fileID: 0}
 --- !u!4 &1351687276
 Transform:
   m_ObjectHideFlags: 0
@@ -7563,7 +7606,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3decb914fde6d42aa9012fa40061ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Oyuncu: {fileID: 0}
 --- !u!4 &1551553855
 Transform:
   m_ObjectHideFlags: 0
@@ -8245,7 +8287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9e1d661b7782454da5aaecf112a5d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempData: {fileID: 2086604935}
+  tempData: {fileID: 0}
   diceResultText: {fileID: 1367406394}
   diceResultText1: {fileID: 960864515}
   diceResultText2: {fileID: 1003713895}
@@ -8253,6 +8295,8 @@ MonoBehaviour:
   diceResultText4: {fileID: 329472372}
   diceResultText5: {fileID: 214400079}
   diceResultText6: {fileID: 1176077745}
+  _gameObject: {fileID: 0}
+  _playerControl: {fileID: 0}
 --- !u!4 &1671801106
 Transform:
   m_ObjectHideFlags: 0
@@ -8280,7 +8324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61934bbf54c15e4dbb907bea5114bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempData: {fileID: 2086604935}
+  tempData: {fileID: 0}
   txtDisplayNumber2: {fileID: 179322848}
   txtDisplayNumber3: {fileID: 1819922290}
   txtDisplayNumber4: {fileID: 1907976181}
@@ -8302,6 +8346,9 @@ MonoBehaviour:
   totalScoreText4: {fileID: 848391905}
   totalScoreText5: {fileID: 1338337655}
   totalScoreText6: {fileID: 339146869}
+  _gameObject: {fileID: 0}
+  _playerControl: {fileID: 0}
+  _control: {fileID: 0}
 --- !u!1 &1680210451
 GameObject:
   m_ObjectHideFlags: 0
@@ -10556,81 +10603,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
---- !u!1 &2086604934
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2086604936}
-  - component: {fileID: 2086604935}
-  m_Layer: 0
-  m_Name: TempData
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2086604935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086604934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b66deb853f110bb49abff916a74dac17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  KuvvetBase: 0
-  KuvvetZar: 0
-  KuvvetBaseArtiZar: 0
-  CeviklikBase: 0
-  CeviklikZar: 0
-  CevikeArtiZar: 0
-  DayaniklilikBase: 0
-  DayaniklilikZar: 0
-  DayaniklilikBaseArtiZar: 0
-  ZekaBase: 0
-  ZekaZar: 0
-  ZekaBaseArtiZar: 0
-  FizikselBase: 0
-  FizikselZar: 0
-  FizikselBaseArtiZar: 0
-  CiBase: 0
-  CiZar: 0
-  CiBaseArtiZar: 0
-  KarizmaBase: 0
-  KarizmaZar: 0
-  KarizmaBaseArtiZar: 0
-  Bukme: 
-  MaxValue: 0
-  Isim: 
-  _isRolledKuvvet: 0
-  _isRolledCeviklik: 0
-  _isRolledDayaniklilik: 0
-  _isRolledZeka: 0
-  _isRolledFiziksel: 0
-  _isRolledCi: 0
-  _isRolledKarizma: 0
---- !u!4 &2086604936
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086604934}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 384.20984, y: 176.33319, z: -156.45453}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2119521914
 GameObject:
   m_ObjectHideFlags: 0
@@ -10847,4 +10819,4 @@ SceneRoots:
   - {fileID: 2963425}
   - {fileID: 1551553855}
   - {fileID: 628576579}
-  - {fileID: 2086604936}
+  - {fileID: 1275942497}

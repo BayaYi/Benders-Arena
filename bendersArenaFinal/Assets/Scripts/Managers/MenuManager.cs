@@ -12,7 +12,7 @@ public class MenuManager : MonoBehaviour
 {
     public static MenuManager Instance;
 
-
+    int j = 0;
 
 
     [SerializeField] private GameObject _selectedPlayerObject,_tileObject,_tileUnitObject;
@@ -47,7 +47,7 @@ public class MenuManager : MonoBehaviour
 
     }
 
-    public void ShowSelectedPlayer(BasePlayer player)
+    public void ShowSelectedPlayer(BaseUnit player)
     {
        if (player == null)
         {
@@ -55,13 +55,22 @@ public class MenuManager : MonoBehaviour
             return ;
         }
 
-        _selectedPlayerObject.GetComponentInChildren<Text>().text = "Tur S�ras� \n" + player.UnitName ;
+        _selectedPlayerObject.GetComponentInChildren<Text>().text = player.UnitName ;
         _selectedPlayerObject.SetActive(true);
     }
 
     public void TurnStart(BaseUnit unit)
     {
         
+        if (j > 1) 
+        { 
+        BaseUnit unit2 = UnitManager.Instance.SelectedUnit;
+        UnitManager.Instance.SelectedUnit = null;
+        Tile.Instance.GetInRangeTiles();
+        Tile.Instance.AttackRange();
+        UnitManager.Instance.SelectedUnit = unit2;
+        }
+        j++;
         if (unit == null)
         {
             _attackButton.SetActive(false);

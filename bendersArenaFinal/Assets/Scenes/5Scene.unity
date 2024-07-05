@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -152,7 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3decb914fde6d42aa9012fa40061ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Oyuncu: {fileID: 0}
 --- !u!224 &5724206
 RectTransform:
   m_ObjectHideFlags: 0
@@ -172,6 +171,88 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &303694828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 303694830}
+  - component: {fileID: 303694829}
+  m_Layer: 0
+  m_Name: TempData3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &303694829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303694828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66deb853f110bb49abff916a74dac17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KuvvetBase: 0
+  KuvvetZar: 0
+  KuvvetBaseArtiZar: 0
+  CeviklikBase: 0
+  CeviklikZar: 0
+  CevikeArtiZar: 0
+  DayaniklilikBase: 0
+  DayaniklilikZar: 0
+  DayaniklilikBaseArtiZar: 0
+  ZekaBase: 0
+  ZekaZar: 0
+  ZekaBaseArtiZar: 0
+  FizikselBase: 0
+  FizikselZar: 0
+  FizikselBaseArtiZar: 0
+  CiBase: 0
+  CiZar: 0
+  CiBaseArtiZar: 0
+  KarizmaBase: 0
+  KarizmaZar: 0
+  KarizmaBaseArtiZar: 0
+  Bukme: 
+  MaxValue: 0
+  Isim: 
+  _isRolledKuvvet: 0
+  _isRolledCeviklik: 0
+  _isRolledDayaniklilik: 0
+  _isRolledZeka: 0
+  _isRolledFiziksel: 0
+  _isRolledCi: 0
+  _isRolledKarizma: 0
+  _maxHealth: 0
+  _physicalEnergy: 0
+  _chiEnergy: 0
+  _speed: 0
+  _physicalDefence: 0
+  _bendingDefence: 0
+  _initiative: 0
+--- !u!4 &303694830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303694828}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 384.20984, y: 176.33319, z: -156.45453}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &406631190
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +433,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5724205}
         m_TargetAssemblyTypeName: OyuncuCode, Assembly-CSharp
-        m_MethodName: "KarakterKa\u011Fidi"
+        m_MethodName: "KarakterKa\u011Fidi2"
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -683,6 +764,88 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469854879}
   m_CullTransparentMesh: 1
+--- !u!1 &492592122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 492592124}
+  - component: {fileID: 492592123}
+  m_Layer: 0
+  m_Name: TempData0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &492592123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492592122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66deb853f110bb49abff916a74dac17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KuvvetBase: 0
+  KuvvetZar: 0
+  KuvvetBaseArtiZar: 0
+  CeviklikBase: 0
+  CeviklikZar: 0
+  CevikeArtiZar: 0
+  DayaniklilikBase: 0
+  DayaniklilikZar: 0
+  DayaniklilikBaseArtiZar: 0
+  ZekaBase: 0
+  ZekaZar: 0
+  ZekaBaseArtiZar: 0
+  FizikselBase: 0
+  FizikselZar: 0
+  FizikselBaseArtiZar: 0
+  CiBase: 0
+  CiZar: 0
+  CiBaseArtiZar: 0
+  KarizmaBase: 0
+  KarizmaZar: 0
+  KarizmaBaseArtiZar: 0
+  Bukme: 
+  MaxValue: 0
+  Isim: 
+  _isRolledKuvvet: 0
+  _isRolledCeviklik: 0
+  _isRolledDayaniklilik: 0
+  _isRolledZeka: 0
+  _isRolledFiziksel: 0
+  _isRolledCi: 0
+  _isRolledKarizma: 0
+  _maxHealth: 0
+  _physicalEnergy: 0
+  _chiEnergy: 0
+  _speed: 0
+  _physicalDefence: 0
+  _bendingDefence: 0
+  _initiative: 0
+--- !u!4 &492592124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492592122}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 384.20984, y: 176.33319, z: -156.45453}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &540186975
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,6 +980,141 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540186975}
   m_CullTransparentMesh: 1
+--- !u!1 &634094449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 634094451}
+  - component: {fileID: 634094450}
+  m_Layer: 0
+  m_Name: TempData2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &634094450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634094449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66deb853f110bb49abff916a74dac17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KuvvetBase: 0
+  KuvvetZar: 0
+  KuvvetBaseArtiZar: 0
+  CeviklikBase: 0
+  CeviklikZar: 0
+  CevikeArtiZar: 0
+  DayaniklilikBase: 0
+  DayaniklilikZar: 0
+  DayaniklilikBaseArtiZar: 0
+  ZekaBase: 0
+  ZekaZar: 0
+  ZekaBaseArtiZar: 0
+  FizikselBase: 0
+  FizikselZar: 0
+  FizikselBaseArtiZar: 0
+  CiBase: 0
+  CiZar: 0
+  CiBaseArtiZar: 0
+  KarizmaBase: 0
+  KarizmaZar: 0
+  KarizmaBaseArtiZar: 0
+  Bukme: 
+  MaxValue: 0
+  Isim: 
+  _isRolledKuvvet: 0
+  _isRolledCeviklik: 0
+  _isRolledDayaniklilik: 0
+  _isRolledZeka: 0
+  _isRolledFiziksel: 0
+  _isRolledCi: 0
+  _isRolledKarizma: 0
+  _maxHealth: 0
+  _physicalEnergy: 0
+  _chiEnergy: 0
+  _speed: 0
+  _physicalDefence: 0
+  _bendingDefence: 0
+  _initiative: 0
+--- !u!4 &634094451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634094449}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 384.20984, y: 176.33319, z: -156.45453}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &748786195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 748786197}
+  - component: {fileID: 748786196}
+  m_Layer: 0
+  m_Name: TempDataControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &748786196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748786195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c025fc23cdb5a4f863ac3ec01beae0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameObject1: {fileID: 0}
+  GameObject2: {fileID: 0}
+  GameObject3: {fileID: 0}
+  GameObject4: {fileID: 0}
+  GameObject5: {fileID: 0}
+  GameObject6: {fileID: 0}
+  GameObject7: {fileID: 0}
+  GameObject8: {fileID: 0}
+  GameObject9: {fileID: 0}
+--- !u!4 &748786197
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748786195}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 384.20984, y: 176.33319, z: -156.45453}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &793356768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,6 +1334,76 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1145515376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1145515378}
+  - component: {fileID: 1145515377}
+  m_Layer: 0
+  m_Name: PlayerData3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1145515377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145515376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f146157f041d0694c89006d3c34bba71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UnitName: 
+  OccupiedTile: {fileID: 0}
+  Faction: 0
+  Speed: 0
+  Health: 0
+  Stamina: 0
+  Chi: 0
+  Initiative: 0
+  PhysicalDefence: 0
+  ChiDefence: 0
+  Strength: 0
+  Dexterity: 0
+  Constitution: 0
+  Intelligence: 0
+  PhysicalPower: 0
+  ChiPower: 0
+  Charisma: 0
+  tempData: {fileID: 0}
+  zarAirCode: {fileID: 0}
+  zarFireCode: {fileID: 0}
+  zarWaterCode: {fileID: 0}
+  zarToprakCode: {fileID: 0}
+  _gameObject: {fileID: 0}
+  _playerControl: {fileID: 0}
+  _elementCheck: {fileID: 0}
+  _control: {fileID: 0}
+--- !u!4 &1145515378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145515376}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 384.20984, y: 176.33319, z: -156.45453}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1274,7 +1642,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5724205}
         m_TargetAssemblyTypeName: OyuncuCode, Assembly-CSharp
-        m_MethodName: "KarakterKa\u011Fidi"
+        m_MethodName: "KarakterKa\u011Fidi4"
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1524,6 +1892,298 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438984237}
   m_CullTransparentMesh: 1
+--- !u!1 &1519915695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1519915697}
+  - component: {fileID: 1519915696}
+  m_Layer: 0
+  m_Name: TempData1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1519915696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519915695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66deb853f110bb49abff916a74dac17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KuvvetBase: 0
+  KuvvetZar: 0
+  KuvvetBaseArtiZar: 0
+  CeviklikBase: 0
+  CeviklikZar: 0
+  CevikeArtiZar: 0
+  DayaniklilikBase: 0
+  DayaniklilikZar: 0
+  DayaniklilikBaseArtiZar: 0
+  ZekaBase: 0
+  ZekaZar: 0
+  ZekaBaseArtiZar: 0
+  FizikselBase: 0
+  FizikselZar: 0
+  FizikselBaseArtiZar: 0
+  CiBase: 0
+  CiZar: 0
+  CiBaseArtiZar: 0
+  KarizmaBase: 0
+  KarizmaZar: 0
+  KarizmaBaseArtiZar: 0
+  Bukme: 
+  MaxValue: 0
+  Isim: 
+  _isRolledKuvvet: 0
+  _isRolledCeviklik: 0
+  _isRolledDayaniklilik: 0
+  _isRolledZeka: 0
+  _isRolledFiziksel: 0
+  _isRolledCi: 0
+  _isRolledKarizma: 0
+  _maxHealth: 0
+  _physicalEnergy: 0
+  _chiEnergy: 0
+  _speed: 0
+  _physicalDefence: 0
+  _bendingDefence: 0
+  _initiative: 0
+--- !u!4 &1519915697
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519915695}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 384.20984, y: 176.33319, z: -156.45453}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1526920704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1526920706}
+  - component: {fileID: 1526920705}
+  m_Layer: 0
+  m_Name: PlayerData0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1526920705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526920704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f146157f041d0694c89006d3c34bba71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UnitName: 
+  OccupiedTile: {fileID: 0}
+  Faction: 0
+  Speed: 0
+  Health: 0
+  Stamina: 0
+  Chi: 0
+  Initiative: 0
+  PhysicalDefence: 0
+  ChiDefence: 0
+  Strength: 0
+  Dexterity: 0
+  Constitution: 0
+  Intelligence: 0
+  PhysicalPower: 0
+  ChiPower: 0
+  Charisma: 0
+  tempData: {fileID: 0}
+  zarAirCode: {fileID: 0}
+  zarFireCode: {fileID: 0}
+  zarWaterCode: {fileID: 0}
+  zarToprakCode: {fileID: 0}
+  _gameObject: {fileID: 0}
+  _playerControl: {fileID: 0}
+  _elementCheck: {fileID: 0}
+  _control: {fileID: 0}
+--- !u!4 &1526920706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526920704}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 384.20984, y: 176.33319, z: -156.45453}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1564440179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1564440181}
+  - component: {fileID: 1564440180}
+  m_Layer: 0
+  m_Name: PlayerData1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1564440180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564440179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f146157f041d0694c89006d3c34bba71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UnitName: 
+  OccupiedTile: {fileID: 0}
+  Faction: 0
+  Speed: 0
+  Health: 0
+  Stamina: 0
+  Chi: 0
+  Initiative: 0
+  PhysicalDefence: 0
+  ChiDefence: 0
+  Strength: 0
+  Dexterity: 0
+  Constitution: 0
+  Intelligence: 0
+  PhysicalPower: 0
+  ChiPower: 0
+  Charisma: 0
+  tempData: {fileID: 0}
+  zarAirCode: {fileID: 0}
+  zarFireCode: {fileID: 0}
+  zarWaterCode: {fileID: 0}
+  zarToprakCode: {fileID: 0}
+  _gameObject: {fileID: 0}
+  _playerControl: {fileID: 0}
+  _elementCheck: {fileID: 0}
+  _control: {fileID: 0}
+--- !u!4 &1564440181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564440179}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 384.20984, y: 176.33319, z: -156.45453}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1615233117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1615233119}
+  - component: {fileID: 1615233118}
+  m_Layer: 0
+  m_Name: PlayerData2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1615233118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615233117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f146157f041d0694c89006d3c34bba71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UnitName: 
+  OccupiedTile: {fileID: 0}
+  Faction: 0
+  Speed: 0
+  Health: 0
+  Stamina: 0
+  Chi: 0
+  Initiative: 0
+  PhysicalDefence: 0
+  ChiDefence: 0
+  Strength: 0
+  Dexterity: 0
+  Constitution: 0
+  Intelligence: 0
+  PhysicalPower: 0
+  ChiPower: 0
+  Charisma: 0
+  tempData: {fileID: 0}
+  zarAirCode: {fileID: 0}
+  zarFireCode: {fileID: 0}
+  zarWaterCode: {fileID: 0}
+  zarToprakCode: {fileID: 0}
+  _gameObject: {fileID: 0}
+  _playerControl: {fileID: 0}
+  _elementCheck: {fileID: 0}
+  _control: {fileID: 0}
+--- !u!4 &1615233119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615233117}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 384.20984, y: 176.33319, z: -156.45453}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1622537279
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,6 +2378,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1943040575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1943040577}
+  - component: {fileID: 1943040576}
+  m_Layer: 0
+  m_Name: PlayerControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1943040576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943040575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89081bdfb3b2d3145bc6da8429819a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerNumber: 0
+--- !u!4 &1943040577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943040575}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 384.20984, y: 176.33319, z: -156.45453}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2004299556
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,7 +2524,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5724205}
         m_TargetAssemblyTypeName: OyuncuCode, Assembly-CSharp
-        m_MethodName: "KarakterKa\u011Fidi"
+        m_MethodName: "KarakterKa\u011Fidi3"
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2192,7 +2897,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2078681278}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1897190104}
+        m_TargetAssemblyTypeName: YonCode, Assembly-CSharp
+        m_MethodName: ileriNasil11
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2078681278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2240,3 +2957,13 @@ SceneRoots:
   - {fileID: 2024998445}
   - {fileID: 1385012115}
   - {fileID: 1897190105}
+  - {fileID: 492592124}
+  - {fileID: 1519915697}
+  - {fileID: 634094451}
+  - {fileID: 303694830}
+  - {fileID: 748786197}
+  - {fileID: 1943040577}
+  - {fileID: 1145515378}
+  - {fileID: 1615233119}
+  - {fileID: 1564440181}
+  - {fileID: 1526920706}

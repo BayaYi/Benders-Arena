@@ -40,10 +40,19 @@ public class TempData : MonoBehaviour
     public bool _isRolledFiziksel;
     public bool _isRolledCi;
     public bool _isRolledKarizma;
+
+    public int _maxHealth;
+    public int _physicalEnergy;
+    public int _chiEnergy;
+    public int _speed;
+    public int _physicalDefence;
+    public int _bendingDefence;
+    public int _initiative;
     public void Awake()
     {
+        Instance = this;
         // E�er ba�ka bir instance varsa bu instance'� yok et
-        if (Instance != null && Instance != this)
+        /*if (Instance != null && Instance != this)
         {
             Destroy(this.gameObject);
         }
@@ -51,7 +60,7 @@ public class TempData : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
-        }
+        }*/
     }
 
 

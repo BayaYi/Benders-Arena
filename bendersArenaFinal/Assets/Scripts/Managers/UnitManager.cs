@@ -10,7 +10,11 @@ static class Constants
 }
 public class UnitManager : MonoBehaviour
 {
-    
+    public BaseUnit tempUnit;
+    public GameObject tempData;
+
+    HealthSystemForDummies healthSystem;
+
     public int spawnCounter;
     public float speed;
     public int atkRange;
@@ -45,7 +49,12 @@ public class UnitManager : MonoBehaviour
 
         for (int i = 0; i < heroCount; i++)
         {
+            //tempData = GameObject.Find($"PlayerData{i}");
+            //tempUnit = tempData.GetComponent<BaseUnit>();
+
             var randomPrefab = GetRandomUnit<BasePlayer>(Faction.Player, i+2);
+            //CopyUnit(randomPrefab, tempUnit);
+            
             var spawnedPlayer = Instantiate(randomPrefab);
             var randomSpawnTile = GridManager.Instance.GetPlayerSpawnTile();
             _unitList.Add(spawnedPlayer);
@@ -92,6 +101,7 @@ public class UnitManager : MonoBehaviour
     public void SetSelectedEnemy(BaseEnemy enemy)
     {
         SelectedEnemy = enemy;
+        MenuManager.Instance.ShowSelectedPlayer(enemy);
         MenuManager.Instance.TurnStart(enemy);
         //MenuManager.Instance.ShowSelectedPlayer(enemy);
     }
@@ -120,7 +130,7 @@ public class UnitManager : MonoBehaviour
         {
             for(int j=_unitList.Count-1;j<i;j--)
             {
-                if (_unitList[j-1].Speed < _unitList[j].Speed)
+                if (_unitList[j-1].Initiative < _unitList[j].Initiative)
                 {
                     temp = _unitList[j-1];
                     _unitList[j-1] = _unitList[j];
@@ -155,5 +165,32 @@ public class UnitManager : MonoBehaviour
     {
         TurnNumber++;
         GameManager.Instance.ChangeState(GameState.TurnOrder);
+    }
+
+    public void CopyUnit(BasePlayer unit1, BaseUnit unit2)
+    {
+        unit1.UnitName = unit2.UnitName;
+        unit1.Speed = unit2.Speed;
+        unit1.Health = unit2.Health;
+        unit1.Stamina = unit2.Stamina;
+        unit1.Chi = unit2.Chi;
+        unit1.Initiative = unit2.Initiative;
+        unit1.PhysicalDefence = unit2.PhysicalDefence;
+        unit1.ChiDefence = unit2.ChiDefence;
+        unit1.Strength = unit2.Strength;
+        unit1.Dexterity = unit2.Dexterity;
+        unit1.Constitution = unit2.Constitution;
+        unit1.Intelligence = unit2.Intelligence;
+        unit1.PhysicalPower = unit2.PhysicalPower;
+        unit1.ChiPower = unit2.ChiPower;
+        unit1.Charisma = unit2.Charisma;
+    }
+
+    public void GetStatsFromUnit(BaseUnit unit)
+    {
+        healthSystem = gameObject.GetComponent<HealthSystemForDummies>();
+        healthSystem.MaximumHealth = unit.Health;
+
+
     }
 }
