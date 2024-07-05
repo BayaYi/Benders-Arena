@@ -48,6 +48,7 @@ public class TempData : MonoBehaviour
     public int _physicalDefence;
     public int _bendingDefence;
     public int _initiative;
+    public bool _isCreated;
     public void Awake()
     {
         Instance = this;

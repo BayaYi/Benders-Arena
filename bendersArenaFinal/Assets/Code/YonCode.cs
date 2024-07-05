@@ -5,6 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class YonCode : MonoBehaviour
 {
+    GameObject GameObject0;
+    GameObject GameObject1;
+    GameObject GameObject2;
+    GameObject GameObject3;
+    TempData tempData0;
+    TempData tempData1;
+    TempData tempData2;
+    TempData tempData3;
+    PlayerControl playerControl;
+
      public void ileri1()
     {
         // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
@@ -126,8 +136,31 @@ public class YonCode : MonoBehaviour
 
     public void ileriNasil11()
     {
-        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
-        SceneManager.LoadScene(19);
+        GameObject0 = GameObject.Find("TempData0");
+        tempData0 = GameObject0.GetComponent<TempData>();
+        GameObject1 = GameObject.Find("TempData1");
+        tempData1 = GameObject1.GetComponent<TempData>();
+        GameObject2 = GameObject.Find("TempData2");
+        tempData2 = GameObject0.GetComponent<TempData>();
+        GameObject3 = GameObject.Find("TempData3");
+        tempData3 = GameObject1.GetComponent<TempData>();
+
+        if (tempData0._isCreated && tempData1._isCreated && tempData2._isCreated && tempData3._isCreated)
+        {
+            // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+            SceneManager.LoadScene(19);
+        }
+    }
+
+    public void ileriNasil12()
+    {
+        GameObject0 = GameObject.Find("PlayerControl");
+        playerControl = GameObject0.GetComponent<PlayerControl>();
+        GameObject1 = GameObject.Find($"TempData{playerControl._playerNumber}");
+        tempData0 = GameObject1.GetComponent <TempData>();
+        tempData0._isCreated = true;
+
+        SceneManager.LoadScene(22);
     }
 
 
