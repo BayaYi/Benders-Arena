@@ -8,6 +8,19 @@ public class ToprakGeçişCode : MonoBehaviour
 {
     [SerializeField] private InputField _name1Input;
     public TempData _tempData;
+    public GameObject _gameObject,_playerControl;
+    public PlayerControl _control;
+
+
+    void Start()
+    {
+        _playerControl = GameObject.Find("PlayerControl");
+        _control = _playerControl.GetComponent<PlayerControl>();
+        _gameObject = GameObject.Find($"TempData{_control._playerNumber}");
+        _tempData = _gameObject.GetComponent<TempData>();
+
+
+    }
     // Start is called before the first frame update
     public void ToprakGeçişCodeButton()
     {

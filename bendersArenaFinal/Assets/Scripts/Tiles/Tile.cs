@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Tile : MonoBehaviour
@@ -86,20 +87,22 @@ public class Tile : MonoBehaviour
                     var enemy = (BaseEnemy)OccupiedUnit;
                     //Destroy(enemy.gameObject);  //Hasar mekaniði eklenecek...
                     Attack(UnitManager.Instance.SelectedPlayer, (BaseEnemy)OccupiedUnit);
-                    UnitManager.Instance.SetSelectedPlayer(null);
+                UnitManager.Instance.SelectedUnit.OccupiedTile._turnHighlight.SetActive(false);
+                UnitManager.Instance.SetSelectedPlayer(null);
                     UnitManager.Instance.SetSelectedUnit(null);
                     GameManager.Instance.ChangeState(GameState.ChangeTurnOrder);
                 }
                 
                 else if(UnitManager.Instance.SelectedUnit.Faction == Faction.Enemy && OccupiedUnit.Faction == Faction.Player && GameManager.Instance.GameState == GameState.AttackState)
                 {
-                    {
+                    
                         var player = (BasePlayer)OccupiedUnit;
                         MonsterAttack(UnitManager.Instance.SelectedEnemy, (BasePlayer)OccupiedUnit);
-                        UnitManager.Instance.SetSelectedEnemy(null);
+                    UnitManager.Instance.SelectedUnit.OccupiedTile._turnHighlight.SetActive(false);
+                    UnitManager.Instance.SetSelectedEnemy(null);
                         UnitManager.Instance.SetSelectedUnit(null);
                         GameManager.Instance.ChangeState(GameState.ChangeTurnOrder);
-                    }
+                    
                 }
                
             //}
@@ -132,8 +135,14 @@ public class Tile : MonoBehaviour
                 {
                     UnitManager.Instance.SelectedUnit.OccupiedTile._enemyHighlight.SetActive(false);
                 }
-                Move(UnitManager.Instance.SelectedUnit, _tile);
+
+                if (UnitManager.Instance.SelectedUnit.OccupiedTile._turnHighlight)
+                {
+                    Move(UnitManager.Instance.SelectedUnit, _tile);
+                }
                 //UnitManager.Instance.SetSelectedPlayer(null);
+                
+                    UnitManager.Instance.SelectedUnit.OccupiedTile._turnHighlight.SetActive(false);
                 
 
             }
@@ -175,10 +184,11 @@ public class Tile : MonoBehaviour
                 {
                     _tile._enemyHighlight.SetActive(true);
                 }
-
+                
                 UnitManager.Instance.SetSelectedPlayer(null); 
                 UnitManager.Instance.SetSelectedEnemy(null);
                 UnitManager.Instance.SetSelectedUnit(null);
+                
                 GameManager.Instance.ChangeState(GameState.ChangeTurnOrder);
                 
 

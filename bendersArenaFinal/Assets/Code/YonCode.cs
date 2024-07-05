@@ -124,7 +124,12 @@ public class YonCode : MonoBehaviour
         SceneManager.LoadScene(34);
     }
 
-    
+    public void ileriNasil11()
+    {
+        // İkinci sahneyi yükleyin (sahne adını doğru şekilde değiştirin)
+        SceneManager.LoadScene(19);
+    }
+
 
 
 

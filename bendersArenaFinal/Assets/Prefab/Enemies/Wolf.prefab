@@ -524,10 +524,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ba19c3351c499b4aa3057b6ef494e31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitName: Base Wolf
+  UnitName: Kurt
   OccupiedTile: {fileID: 0}
   Faction: 1
   Speed: 2
+  Health: 0
+  Stamina: 0
+  Chi: 0
+  Initiative: 2
+  PhysicalDefence: 0
+  ChiDefence: 0
+  Strength: 0
+  Dexterity: 0
+  Constitution: 0
+  Intelligence: 0
+  PhysicalPower: 0
+  ChiPower: 0
+  Charisma: 0
 --- !u!54 &1992908063696574318
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,7 @@ public class ArttirmaCode : MonoBehaviour
     [SerializeField] private Text txtDisplayNumber7;
     [SerializeField] private Text txtDisplayNumber8;
 
+    
     private int counter3 = 0;
     private int counter4 = 0;
     private int counter5 = 0;
@@ -22,9 +24,16 @@ public class ArttirmaCode : MonoBehaviour
     private int counter8 = 0;
     private int counter9 = 0;
     private int MaxValue = 0; // Artırma ve azaltma sınırları
-
+    public GameObject _gameObject,_playerControl;
+    PlayerControl _control;
     void Start()
     {
+        _playerControl = GameObject.Find("PlayerControl");
+        _control = _playerControl.GetComponent<PlayerControl>();
+        _gameObject = GameObject.Find($"TempData{_control._playerNumber}");
+        tempData = _gameObject.GetComponent<TempData>();
+
+
         LoadCounters(); // Kaydedilen değerleri yükle
         DisplayTheNumbers();
     }
@@ -192,7 +201,13 @@ public class ArttirmaCode : MonoBehaviour
 
     public void DeleteAllData()
     {
-        PlayerPrefs.DeleteAll();
+        tempData.KuvvetBase = 0;
+        tempData.CeviklikBase = 0;
+        tempData.DayaniklilikBase = 0;
+        tempData.ZekaBase = 0;
+        tempData.FizikselBase = 0;
+        tempData.CiBase = 0;
+        tempData.KarizmaBase = 0;
         counter3 = 0;
         counter4 = 0;
         counter5 = 0;

@@ -167,6 +167,19 @@ MonoBehaviour:
   OccupiedTile: {fileID: 0}
   Faction: 0
   Speed: 2
+  Health: 0
+  Stamina: 0
+  Chi: 0
+  Initiative: 3
+  PhysicalDefence: 0
+  ChiDefence: 0
+  Strength: 0
+  Dexterity: 0
+  Constitution: 0
+  Intelligence: 0
+  PhysicalPower: 0
+  ChiPower: 0
+  Charisma: 0
 --- !u!54 &3943432365450186096
 Rigidbody:
   m_ObjectHideFlags: 0
