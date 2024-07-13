@@ -10,6 +10,7 @@ static class Constants
 }
 public class UnitManager : MonoBehaviour
 {
+    public int _enemyCount = Constants.ENEMY;
     public BaseUnit tempUnit;
     public GameObject tempData;
 
@@ -144,17 +145,25 @@ public class UnitManager : MonoBehaviour
 
     public void TurnOrder()
     {
+        
+        
         if (_unitList[TurnNumber % _unitList.Count].Faction == Faction.Player)
         {
             SetSelectedPlayer((BasePlayer)_unitList[TurnNumber % _unitList.Count]);
+            SetSelectedUnit((BaseUnit)_unitList[TurnNumber % _unitList.Count]);
         }
 
         if (_unitList[TurnNumber % _unitList.Count].Faction == Faction.Enemy)
         {
             SetSelectedEnemy((BaseEnemy)_unitList[TurnNumber % _unitList.Count]);
+            SetSelectedUnit((BaseUnit)_unitList[TurnNumber % _unitList.Count]);
         }
-
-
+        
+        if (SelectedUnit == null)
+        {
+            GameManager.Instance.ChangeState(GameState.ChangeTurnOrder);
+        }
+        
         SetSelectedUnit(_unitList[TurnNumber % _unitList.Count]);
         SelectedUnit.OccupiedTile._turnHighlight.SetActive(true);
         GameManager.Instance.ChangeState(GameState.WaitState);
@@ -190,6 +199,7 @@ public class UnitManager : MonoBehaviour
     {
         healthSystem = unit.gameObject.GetComponent<HealthSystemForDummies>();
         healthSystem.MaximumHealth = unit.Health;
+        healthSystem.CurrentHealth = unit.Health;
 
 
     }

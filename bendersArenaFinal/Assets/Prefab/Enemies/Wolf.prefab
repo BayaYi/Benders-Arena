@@ -583,6 +583,7 @@ MonoBehaviour:
   IsAlive: 1
   CurrentHealth: 40
   MaximumHealth: 40
+  _baseUnit: {fileID: 0}
   HasAnimationWhenHealthChanges: 1
   AnimationDuration: 0.1
   OnCurrentHealthChanged:
