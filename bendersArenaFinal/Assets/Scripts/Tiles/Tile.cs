@@ -9,7 +9,7 @@ public class Tile : MonoBehaviour
     GameObject bullet;
     public int G, H;
     public int F { get {  return G + H; } }
-
+    public GameObject popup;
     public static Tile Instance;
     public Tile _previous,_tile;
     private Pathfinder _pathFinder;
@@ -35,6 +35,8 @@ public class Tile : MonoBehaviour
         _pathFinder = new Pathfinder();
         _rangeFinder = new RangeFinder();
         _bullet = new PlayerBullet();
+        popup = GameObject.Find("Canvas8");
+        popup.SetActive(false);
     }
 
     private void OnMouseEnter()
@@ -160,6 +162,11 @@ public class Tile : MonoBehaviour
 
     public void LateUpdate()
     {
+        if(UnitManager.Instance._enemyCount == 0)
+        {
+            popup.SetActive(true);
+        }
+
         if (_path.Count > 0)
         {
             var step = UnitManager.Instance.speed * Time.deltaTime;

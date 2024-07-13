@@ -59,6 +59,11 @@ public class GameManager : MonoBehaviour
                 throw new ArgumentOutOfRangeException(nameof(newState),newState,null);
         }
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
 
 public enum GameState

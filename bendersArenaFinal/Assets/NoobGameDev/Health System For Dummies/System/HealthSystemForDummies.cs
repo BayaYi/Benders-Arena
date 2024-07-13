@@ -5,6 +5,7 @@ public class HealthSystemForDummies : MonoBehaviour
     public bool IsAlive;
     public float CurrentHealth = 1000;
     public float MaximumHealth = 1000;
+    public BaseUnit _baseUnit;
 
     public bool HasAnimationWhenHealthChanges = true;
     public float AnimationDuration = 0.1f;
@@ -21,8 +22,20 @@ public class HealthSystemForDummies : MonoBehaviour
     public OnIsAliveChanged OnIsAliveChanged;
     public OnMaximumHealthChanged OnMaximumHealthChanged;
 
-    
-    
+    public void LateUpdate()
+    {
+        if(!IsAlive)
+        {
+
+            _baseUnit = GetComponent<BaseUnit>();
+            _baseUnit.OccupiedTile._enemyHighlight.SetActive(false);
+            UnitManager.Instance._enemyCount--;
+            Destroy(gameObject);
+
+        }
+    }
+
+
 
     public GameObject HealthBarPrefabToSpawn;
 
@@ -118,9 +131,10 @@ public class HealthSystemForDummies : MonoBehaviour
 
         CurrentHealth = 0;
         IsAlive = false;
-
+        
         OnIsAliveChanged.Invoke(IsAlive);
         OnCurrentHealthChanged.Invoke(new CurrentHealth(previousHealth, CurrentHealth, CurrentHealthPercentage));
+
     }
     
 }
